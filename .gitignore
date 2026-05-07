@@ -1,0 +1,34 @@
+# Large datasets — regenerate with data/pipeline/download.py + clean.py
+data/sharegpt_raw.json
+data/sharegpt_clean.json
+
+# Training data — regenerate with featurize.py
+data/training_data.csv
+
+# Model versioning — keep only current exports
+model/predictor_v2.json
+model/predictor_v3.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Go binaries
+scheduler/clairvoyant
+scheduler/clairvoyant-scheduler
+
+# macOS
+.DS_Store
+
+# Logs and raw benchmark output
+*.log
+stage3_*.txt
+stage3_*.log
+
+# IDE
+.idea/
+.vscode/
