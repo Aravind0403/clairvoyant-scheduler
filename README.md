@@ -194,7 +194,7 @@ This is a production hazard — any XGBoost 2.x model with binary features will 
 
 **Clairvoyant: Eliminating Head-of-Line Blocking in LLM Inference via Lexical-Feature SJF Scheduling**
 
-In preparation. Targeting MLSys 2026.
+In preparation. Targeting MLSys 2027.
 
 ---
 
