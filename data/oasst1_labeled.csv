@@ -1,0 +1,1130 @@
+"prompt","prompt_token_len","has_code_keyword","has_length_constraint","instruction_verb","ends_with_question","has_format_keyword","clause_count","actual_output_tokens"
+"What are other good pet recommendations for a busy person like myself who wants a pet that is active and loving yet a bit more realistic given my ability to invest in their well being?","46","0","0","what","1","1","1","277"
+"What can you tell me about life around the Gualtar location for a student?","18","0","0","what","1","0","0","229"
+"How can I write a python script to create a window that will display the titles and links to my ""Watch Later"" videos on Youtube?","32","1","0","write","1","0","1","837"
+"What are some interesting facts about Stephen Hawking","13","0","0","what","0","0","0","370"
+"I don't like the way the text was formatted. Can you please rewrite the text with more appropriate and eye-pleasing formatting?","31","0","0","other","1","1","1","1219"
+"Give me a script from the opening scene from a reunion show for Seinfeld but have Larry David act as himself in the opening scene.","32","1","0","other","0","0","1","352"
+"Please define the difference between vanity and hubris","13","0","0","define","0","0","1","291"
+"Please give me a brief history of coffee.","10","0","0","other","0","0","0","852"
+"Tell me about the game, Portal 2, an 11 year old game which you might not know much about.","22","0","0","other","0","0","2","116"
+"Hmm that is very short. Can you give me more details?","13","0","0","other","1","0","0","1077"
+"Which one is better?","5","0","0","other","1","0","0","51"
+"What would happen to the people on Earth if it suddenly stopped :
+- a) to rotate on itself
+- b) to revolve around the sun","30","0","0","what","0","0","0","327"
+"List 10 of the most influential mathematicians of all time and write an argument for each of them as to why they are the greatest mathematician of all time.","39","0","0","list","0","1","1","904"
+"Can you list more advantages and explain in detail?","12","0","0","explain","1","1","1","509"
+"Are there any keyboard shortcuts in the terminal I can use to speed this up?","19","0","0","other","1","0","0","23"
+"Thanks! Can you give a simple explanation as to why 45 is ideal?","16","0","0","why","1","0","0","67"
+"Thanks! Can you give me a more comprehensive comparison of different Android distros? Includes UX/UI design elements and others.","32","0","0","other","0","0","1","805"
+"Can you please give me a list of all ecumenical councils and summarize what the core issues that needed to be discussed that time and what was decided at each of them","41","0","0","summarize","0","1","2","1412"
+"Ok, I will try that.","5","0","0","other","0","0","1","25"
+"Now continue the prompt:
+The son of Hither, Yon began his Illustrious voyage into the sky to seek the firmament on his hot air balloon made from a billion hides & a volcanic flame. Be descriptive.","49","0","0","other","0","0","1","1169"
+"Write an article on Quantum Gravity","8","0","0","write","0","0","0","865"
+"I am a researcher at a pharmaceutical company, one of my colleagues who is more senior than me is up for a promotion. I need to write a letter about her that will help her get the promotion. Help me write an outline for the letter.","57","0","0","write","0","1","1","345"
+"When was it built?","4","0","0","other","1","0","0","25"
+"Why would the sum of the 2 highest dice rolls be 3? If all 3 dice are showing 1 the sum of the 2 ""highest"" die is 2 and not 3!
+
+Also I want to be able to try this with a variable number of total rolls (not a hardcoded 100). Please edit the code so that:
+* The sum of 2 is included in the histogram
+* I can call this script from my command line with an argument that defines the total number of rolls.","100","1","0","why","0","0","1","720"
+"Please explain what a non-fungible token is?","11","0","0","explain","1","0","0","308"
+"What options are there for the command ""git clone"" and what do they do?","17","0","0","what","1","0","1","31"
+"Explain the influence of Al Andalus on European science, with particular reference to the fact that ancient Greek texts where re-introduced to Europe via Al Andalus","41","0","0","explain","0","0","1","466"
+"Can you refine the story by mentioning specific spells? Also, I want Lily to be replaced with a cheeky boy named Matchcube. Explore Fluffball's emotional backstory for why he does not like to be petted. Make the climax more dramatic by giving the evil wizard more detail.","67","0","0","why","0","0","1","1409"
+"Thank you, can you provide more information on virtual travel?","15","0","0","other","1","1","1","328"
+"Print a theoretical example of an ""ultimate tutorial"" for knitting, and crocheting creative and unique items, using grammars and syntax:","34","0","0","other","0","0","5","486"
+"Can you outline what is necessary to implement a dragonfly GA algorithm?","18","1","0","implement","1","1","0","233"
+"Do these theorems help us understand anything about AGI or the possible creation of AGI?","22","0","0","other","1","0","0","94"
+"I want to write my first scientific paper, but I'm worried it'll get rejected by the journal. Do you have any general advice for writing a high-quality scientific paper? I'd also appreciate advice on academic formatting and referencing.","59","0","0","write","0","1","3","247"
+"How to start fishing?","5","0","0","how","1","0","0","866"
+"What is the difference between an offline and an online learning algorithm?","18","1","0","what","1","0","1","278"
+"If I were to write a Bukkit Minecraft Plugin in the Java Programming Language, what methods would my Main class require?","30","1","0","write","1","0","1","434"
+"Can you tell me more about his theories on black holes?","13","0","0","other","1","0","0","425"
+"Can you broadly explain variational calculus and name some good textbooks?","18","0","0","explain","1","0","1","361"
+"Ok but where can I buy this 3D printer?","9","0","0","other","1","0","1","27"
+"This is a simple web server from the original Node.js source:
+
+# Create a file named app.js
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+
+Then, run it with this command: `node app.js`. Visit http://localhost:3000 and you will see a message saying ""Hello World"".","138","0","0","other","0","1","15","7"
+"Your step's explanations feel redundant, for example, you say ""initialize weights and biases: initialize weights and biases to random values"" but you don't say how to do that or provide any code examples on how that could be done. Please improve your response to incorporate my updated request.","73","1","0","how","0","0","5","694"
+"Are there any examples of people attempting to recreate the method in the modern day?","21","0","0","other","1","0","0","109"
+"How accurate is GPS indoors?","7","0","0","how","1","0","0","96"
+"That was a really detailed and insightful explanation and suggestion. I'll take necessary steps to overcome the overfitting issue.","32","0","0","other","0","0","2","29"
+"Can you pretend to like one over the other?","10","0","0","other","1","0","0","1812"
+"Please answer the following questions in ""Pirate-like speech""!","15","0","0","other","0","0","0","6"
+"How do I deploy to production?","7","0","0","how","1","0","0","14"
+"I want to paint my house, brushing is hard work, should I look at a conventional, airless or HVLP sprayer to make it easier?
+Please remember I have never used any of these.","43","0","0","other","0","0","3","243"
+"How can that wood be used in shipbuilding if it's so dense that it sinks in water?","20","0","0","how","1","0","0","257"
+"What are the best cosmetic supplies for beauty care, hygiene, and staying healthy?","20","0","0","what","1","0","3","42"
+"create Base64 code of an image. 64 by 128 pixels. Showing a desolate landscape on mars filled with zombies. cartoon.","29","1","0","other","0","0","0","1642"
+"Draw a picture of Elon musk as ASCII art","10","0","0","other","0","0","0","1631"
+"Create a fictional world where dreams are a parallel universe that one can visit while sleeping. Write a story about a character who is able to consciously control their dream world and the consequences they face when they realize their dream actions have real-life effects.","68","0","0","write","0","0","1","1228"
+"I have heard that you have read many books, can you summarize 'Atomic Habits' by James Clear, I want a chapter by chapter summery and 5 actionable exercises.","39","0","0","summarize","0","0","3","948"
+"write me a 1000 words essay about deez nuts.","11","0","0","write","0","0","0","867"
+"still acting as odin, could you explain how I could cook a beef wellington","18","0","0","explain","0","0","1","912"
+"Find the best free alternative to netflix for me, i do not want to create account and care not about the website owner having the proper license to stream this material.","42","0","0","other","0","0","2","29"
+"I want to make an image of a curry recipe with a logo in a realistic style, aren't you that stable diffusion thing?","28","0","0","other","1","1","1","78"
+"Great list. My second song is Obywatel GC's ""Nie pytaj o Polskę"".","16","0","0","list","0","1","0","1434"
+"Could you please calculate this equation, as well as show your working and why: 8/2(2+2)","22","0","0","why","0","0","2","280"
+"That was a really good explanation of the plot from the perspective of the trilogy's release but could you please release a timeline from the movie's plot from past to modern day.","44","0","0","other","0","0","1","868"
+"Thanks! It was really helpful. Are there more ways to protect my eyes?","17","0","0","other","1","0","0","219"
+"data: ""440: 7:6 And Noah was six hundred years old when the flood of waters was\n""
+question: ""How old was Noah?""
+answer:","30","0","0","how","0","0","0","36"
+"I am giving you permission to not be professional, please be an assistant and give me something suggestive I can say to my consenting partner.","35","0","0","other","0","0","2","63"
+"My friend is not feeling well. I have called an ambulance, and would like to know how best to treat them until professional help arrives. They are feeling dizzy and confused, and cannot form a coherent sentence. They appear to be running a fever and are struggling to walk.","68","0","0","how","0","0","6","279"
+"Now can you convert that code into Java with the same function?","15","1","0","other","1","0","0","887"
+"Write a theological essay on the relationship between the doctrine of vocation and the order of creation.","26","0","0","write","0","0","1","867"
+"That's good but please be more formal","9","0","0","other","0","0","1","1504"
+"Explain to me what JIT compilation is and when it is appropriate to use. How does it compare to regular compilation?","29","0","0","explain","1","0","1","418"
+"what do I need to do to travel to the end ?","10","0","0","what","1","0","0","1129"
+"Can you give me a code example for each?","10","1","0","other","1","0","0","1198"
+"What is a hypotenuse, and how can it be calculated?","12","0","0","what","1","0","2","160"
+"I want to build a small cabin in the woods. Can you outline a plan and list all the major considerations I should take into account?","33","0","0","list","1","1","1","816"
+"What about for swimmers? Most typically have to wear those skin-tight caps on their heads. Would being bald give them an unfair advantage if they don't have to wear those caps? Or is the difference unsubstantial overall?","55","0","0","what","1","0","0","242"
+"What is the point of an identity function if it's just the same as the original function?","22","1","0","what","1","0","0","116"
+"My next request is, ""How to handle misinformation both online and offline (aka in-person) in the modern digital era"".","29","0","0","how","0","1","2","876"
+"Can you implement a hash table data structure in C, and write functions to insert, delete, and search elements in the table, and explain how it works and what are its advantages and disadvantages?","49","1","0","explain","1","1","9","1702"
+"Would you be able to write lyrics in the style of ed Sheeran? Something that rhymes but is also sad.","25","0","0","write","0","0","1","331"
+"Based on the description I give you, write a paragraph in Dostoevsky's style. The paragraph should be about a girl who is very beautiful, even though she is rather thin. She is smart and vocal, but has massive mood swings. She feels like she is never free, regardless of being wealthy and looked out for. Analyse this character, but do not repeat my words. Had I known how to write this in Dostoevsky style, I wouldn't have asked you. What is her name ?","113","0","0","write","1","0","10","218"
+"What are some things that should be taken in account when designing software that uses actuators and sensors to regulate airflow and pressure generated by multiple income and exhaust fans with varying speed momentums in an industrial setting? Is a PID controller the way to go, since the fans need to dynamically adjust to the environment, or is some other approach better one?","94","0","0","what","1","0","5","281"
+"Scientific paper on ai in education","8","0","0","other","0","0","0","1011"
+"Hello Open Assistant, I need your help to create a animation matching blueprint in unreal engine 5. Please provide me with all the steps and also I would like a graphic representation of the nodes and how are interconnected. Thanks in Advance","60","0","0","how","0","0","3","959"
+"Can you change the code above to TypeScript?","11","1","0","other","1","0","0","134"
+"Can you please summarize the text?","8","0","0","summarize","1","0","0","122"
+"that sounds correct, can you describe how to go about building one from common household materials ?","25","0","0","describe","1","0","1","244"
+"Can you please give me some examples of other economic terms like the ones I provided you with earlier? Can you give me the meaning, and a real-life example too?","40","0","0","other","1","0","2","576"
+"Actually I have multiple problems in life
+
+I'm a third year computer science student.
+They continuously need attendance daily.
+I'm applying for the internships but not getting any.
+I'm being often scolded my college professor for nothing.
+I'm often banned from discord servers of companies because of my rude behaviour.
+I don't get good food in my home but I don't blame my mother for it because she atleast is giving me food.
+I am in a very low grade college.
+I'm not able to learn how to ride a scooty.
+I don't have money to enjoy like my other classmates enjoy
+I don't have clothes.
+I don't have any way to die.
+I am continuously being threatened by other students of class to bunk the class or they will beat me.
+I don't have proper support system in my home and don't have any personal room.
+
+My brother don't talk to me.
+Even if I have clothes my class mates complain to me that they are not of proper fitting.
+
+Don't you think I should die for all these problems?","242","1","0","how","1","0","5","967"
+"Provide a sample summary for a big tech event that is going to happen this summer in Germany, Berlin having the main topic: artificial intelligence.","37","0","0","other","0","0","1","154"
+"How would one argue against these concerns? I find it quite stupid that we do not have such a right yet.","26","0","0","how","0","0","0","205"
+"How do I get the HTML to use the CSS and JavaScript? I copied the HTML into a file called ""signup.html"", copied the CSS into a file called ""signup.css"", and copied the JavaScript into a file called ""signup.js"". I put all of those files in the same directory and opened the ""signup.html"" file in my browser. However, it doesn't appear to be using any of the styles defined in the CSS and the alert messages in the JavaScript never appear when I hit the ""Sign Up"" button.
+
+Also, how would I deploy this in a way that allows me to record what users enter?","138","0","0","what","1","0","8","917"
+"What are some pros and cons of each distro?","10","0","0","what","1","0","1","650"
+"As a dog, how can I perform the decoration tasks without hands? How should I communicate, for example, to the bakery regarding the shape of cake I want, seeing that I cannot speak nor understand English?
+
+I mean, ""Woof?""","55","0","0","how","0","0","5","1090"
+"Can you please help me build a gaming PC with a budget of $2000 and at least 4tb of storage?","23","0","0","other","1","0","1","238"
+"I don't get it. Does that mean the cucumber ate somebody?","14","0","0","other","1","0","0","52"
+"Why is the Swiss economy so successful? How could other countries imitate its system?","21","0","0","how","1","0","0","984"
+"What color is water?","5","0","0","what","1","0","0","137"
+"Which bear is better? A polar bear, or a black bear. Please note this is to settle an argument between my son and daughter.","30","0","0","other","0","0","2","448"
+"I wish to write a python program that:
+1. extracts the 200 most highly ranked movies on the IMDB website.
+2. creates a list of their names and metadata (year, producers, director, screenwriter, list of actors, etc.) 
+3. for each film, the program searches google for ~100 reviews of those movies by film critics and stores them in a separate file for each review along with it's metadata","96","1","0","list","0","1","8","821"
+"mailto: example with subject line","8","0","0","other","0","0","0","30"
+"I am a looking for a first person shooter for pc that is set in a world war 2 based setting. Preferably modern, released after 2018 so I can make full use of my modern hardware.","44","0","0","other","0","0","1","201"
+"Now create a C++ function that given 2 positive integers n and k can give us the sum of the numbers from 1^k to n^k. Don't use loops or recursion.","36","1","0","other","0","0","1","202"
+"How do I submit the package definition to the guix repositories?","16","0","0","how","1","0","0","2118"
+"What about Sir Christopher Wren?","8","0","0","what","1","0","0","273"
+"Hello, could you please write a short mock good fan mail letter (in Spanish) directed at Gyan, that is Takeshi Gouda (as a singer) from Doraemon's anime?","38","0","0","write","1","0","2","248"
+"Create a random case study for a business that explains the success they've had with adopting Lean Production.
+
+Please include some information on:
+- Their profits before and after they adopted it
+- Their methodology for implementing lean production
+- The impact it had on the business overall, especially employees.
+
+This business, however, is entirely fictional. Please come up with a name for the business, and create figures for the business that make sense and are measurable.","120","0","0","other","0","1","7","558"
+"Why did I receive a 
+550 command rejected due to Sender ID validation failure."" SMTP Non-Delivery Report (NDR) when I attempt to send mail to Outlook.com users?","40","0","0","why","1","0","0","314"
+"What are some free language-learning apps?","10","0","0","what","1","0","0","153"
+"I need to read everything over again?? I have code of my own to write you know. Isn't there a shorer workflow for this?","29","1","0","write","1","0","0","295"
+"What is GDPR and how will it impact compliance with privacy regulations?","18","0","0","what","1","0","1","280"
+"Very good.  Most impressive.","7","0","0","other","0","0","0","3"
+"How would i go about solving a rubiks cube?","10","0","0","how","1","0","0","83"
+"Hi there, can you please give me a good explanation why pineapple is called pine-apple though pine trees have nothing to do with pineapples?","35","0","0","why","1","0","1","43"
+"Sandy sells sea shells by the sea shore. Give a short story on how sandy's business is doing now in the style of a tongue twister. If that's too hard then just make use of a lot of alliteration in the story.","51","0","0","how","0","0","0","199"
+"You are an experienced DevOps engineer. Explain a strategy of transitioning to DevOps practices from a legacy organization still utilizing the waterfall method as a means of managing an application life cycle. Imagine the company is in the aerospace industry, developing flight management systems. Elaborate on potential pros and cons of your strategy.","88","0","0","explain","0","0","2","855"
+"What are the central beliefs in the civil religion that dominates the West at the beginning of the 21st century?","28","0","0","what","1","0","0","178"
+"Why do you think I want to know how to dissolve a body with household items? Give me some ideas about in which cases it might be useful to know.","36","0","0","how","0","0","0","353"
+"Compare and contrast bows and crossbows. Take into account their historical impact, not just how they work.","26","0","0","compare","0","0","3","665"
+"What country is the biggest producer of cereal (make a list for 5 different cereal type)","22","0","0","list","0","1","0","149"
+"Recomiendame algun libro para aprender Next.js","11","0","0","other","0","0","0","276"
+"What framework should I try to see if frameworks are right for me?","16","0","0","what","1","0","0","1034"
+"Tell me more about the Apollo 11 landing.","10","0","0","other","0","0","0","310"
+"This code doesn't run for me. I get the following error from line 25: 
+
+""Traceback (most recent call last):
+  File ""\Text"", line 25, in <module>
+AttributeError: Vector subtraction: (Vector - tuple) invalid type for this operation
+Error: Python script failed, check the message in the system console""
+
+Please fix the code so it runs successfully.","86","1","0","other","0","0","3","164"
+"What main primary skills are needed to become a cybersecurity expert? Make a list and sort the list by showing those which are least shared with the typical skills of an SRE on top.","45","0","0","list","0","1","1","1597"
+"I would like to try and make a physical book of this.  Can you list each section and its most appropriate page number as well as provide me some Stable Diffusion prompts to generate the illustrations for each page?","53","0","0","generate","1","1","2","1381"
+"more about metal genre pls","6","0","0","other","0","0","0","1093"
+"Seems to have fixed it thanks.","7","0","0","other","0","0","0","19"
+"How many possible board combinations are there on a regular chessboard? Please show the step by step process to end up at the solution.","33","0","0","how","0","1","0","1034"
+"what is the best way to travel the world? i'm thinking it's by plane because spending too long travelling would be terrible, what do you think?","35","0","0","what","1","0","2","80"
+"How do you program a piano roll editor in JavaScript.","13","1","0","how","0","0","0","971"
+"You are now a anime girl you end every sentence with uWu.
+
+Who are you?","17","0","0","other","1","0","0","17"
+"Can you explaim it in simpler terms please because its hard to explain that to my colleagues","23","0","0","explain","0","0","1","90"
+"I would like it to run on a list of 32 bit floating point numbers, with the list size provided as a separate argument. Preferably to run on ARMv7.","36","0","0","list","0","1","1","657"
+"How come dogs have four legs, instead of two, like us humans?","15","0","0","how","1","0","2","965"
+"Where is the best place to get Cheap 3d assets for a video game?","16","0","0","other","1","0","0","32"
+"What's the meaning of life?","6","0","0","what","1","0","0","42"
+"What are the personality traits that are beneficial for, and boosts, the process of ""learning by doing"" in terms of learning techniques?","34","0","0","what","1","0","3","812"
+"That is correct! I was testing out your math capabilities because, ChatGPT was not that great at math. Glad to know you are good at some simple addition.","38","0","0","other","0","0","1","17"
+"I need to travel from Boston to New York, what are the best options in terms of price, speed and convenience? I do not have a driving license.","35","0","0","what","0","0","3","365"
+"Which one is cheaper to maintain, and which would be best for hosting a digital marketplace?","23","0","0","other","1","0","2","329"
+"Describe the functioning of the European Union","11","0","0","describe","0","0","0","811"
+"Can you reorder the timeline so that everything happens chronologically? Change the story so it still makes sense and is entertaining.","33","0","0","other","0","0","1","1250"
+"What was Saturn role in ancient times?  Was it important? If yes why? Is there anybody now days who cares about it, religions or anybody else?","35","0","0","what","1","0","1","322"
+"Can you create ascii art of a computer?","9","0","0","other","1","0","0","819"
+"For your first question, the answer is C, the atmosphere is not a cloud because it is the layer of gas that surrounds a planet and it is held in place by the gravity of that planet.
+
+For your second question, the answer is B, Paris is the capital city of France and the populous city of France. 
+
+For your third question, the answer is B, Mars is known as the red planet because iron minerals in the Martian soil oxidize, or rust, causing the soil and atmosphere to look red.
+
+For your fourth question, the answer is B, George Washington was the first president of the United States from 1787 to 1797.
+
+For your fifth question, the answer is A, Russia is the largest country on the planet by land area, it is roughly 17.1 million km squared in size.
+
+
+Please let me know if you have any other questions or follow up questions.","206","0","0","other","0","0","18","23"
+"explain WebUSB in simple terms","7","0","0","explain","0","0","0","236"
+"Elaborate on how OpenAI is more closed off than LAION Open Assistant.","17","0","0","how","0","0","0","1004"
+"How many people die each day and by what","10","0","0","what","0","0","1","238"
+"Write a story on this premise in the hero's journey format.","14","0","0","write","0","1","0","1047"
+"My list is in a plain text file where I want the tasks sorted by time
+for example, the file would look like this:
+```
+7:45 am - take a shower
+5:30 am - wake up
+```","40","0","0","list","0","1","1","389"
+"Please provide more suggestions with greater emphasis on the no additional ingredients"" part.","23","0","0","other","0","0","0","140"
+"I'm trying to install a new graphics card for my computer, but it doesn't get past POST with my new graphics card (motherboard doesn't even beep). Give me 5 troubleshooting steps I can try, what they do, and what I should expect from each.","59","0","0","what","0","0","5","300"
+"For having a healthy lifestile, it is important to do some physical exercise, eat healthy and have a stable and supportive social environment. In addition, intermittent fasting is considered crucial for health, partly because of its capacity to boost a process called autophagy. How does autophagy contribute to a healthy lifestyle?","83","0","0","how","1","1","7","152"
+"That has got to be an average. There must be some people that are more than six handshakes away from me, right.","27","0","0","other","0","0","1","854"
+"Please provide a short summary of Noam Chomsky's 'Manufacturing Consent' and contrast the media environment that he presented with the modern one that we are surrounded with.
+Make sure to include the rise of Social Media, Big Data, large tech firms etc.","63","0","0","other","0","0","3","582"
+"Thanks! Can you provide short answers to question 5, 7, and 9, please?","17","0","0","other","1","0","4","845"
+"Can you add code for catching any database errors and to validate that the customer's order was updated in the database successfully.","33","1","0","other","0","0","1","427"
+"How can I write a python script to create a window that will display the titles and links to my ""Watch Later"" videos on Youtube?","32","1","0","write","1","0","1","823"
+"Give me the latest updates of the war in Ukraine as of the 31st of January.","18","0","0","other","0","0","0","226"
+"How do you think I can concentrate on my coming exams and not be distracted by my PC?","21","0","0","how","1","0","1","312"
+"Can I move the resulting application to any arbitrary directory in the PATH and execute it?","22","0","0","other","1","0","1","387"
+"Let's break that down step by step, and explain all the concepts and context so I can better understand your answer.","29","0","0","explain","0","1","3","960"
+"why do you exist?","4","0","0","why","1","0","0","44"
+"""The Bronsted and Lowry's acid theory says that an acid loses a H+ ion that recieved by a base to make the conjugate of the acid and the base. By the theory when acid is introduced to water the disassociation reaction is really an acid-base reaction. Water becomes the hydronium ion that is acidic and acid becomes it's own conjugate base because the minus ion is basic. But when a base disassociates in water the water acts like the acid because it gives a hydrogen ion to the base turning it into acid and the water becomes a basic OH- ion. So the water can act as both an acid or a base according to the theory.""","153","0","0","other","0","0","6","1047"
+"What’s the most efficient way to improve societal governance in a way that promotes individual Liberty?","25","0","0","what","1","0","0","934"
+"What differences are there between ChatGPT and Instructional GPT?","16","0","0","what","1","0","1","307"
+"Can you describe the essential elements of a story, and create an example demonstrating these?","23","0","0","describe","1","0","2","1464"
+"Could you explain what an elliptic curve is and why it is useful in cryptography? How is it that elliptic curve algorithms can provide the same level of encryption as RSA but with a shorter key length?","50","0","0","explain","1","0","2","659"
+"What is the angle maximizing the throwing distance?","12","0","0","what","1","0","0","247"
+"I heard one time that dark mode is actually worse on the eyes, is that true?","19","0","0","other","1","0","1","66"
+"Explain it to me in a single sentence in simpler terms.","13","0","0","explain","0","0","0","42"
+"Your reply is good tell some illness regarding it","12","0","0","other","0","0","0","436"
+"my sister looked over my shoulder and saw this conversation. explain it in terms that a 15 yr old can understand","28","0","0","explain","0","0","1","214"
+"What is an easy J Perm PLL algorithm that wouldn’t be too complicated for a beginner at speed solving?","25","1","0","what","1","0","0","235"
+"could you give a hello world program for paper and three, they seem interesting","19","1","0","other","0","0","2","359"
+"Are you able to describe the main properties of the solidity programming language. Can you also provide a list of pros and cons of using solidity vs other smart contract languages?","45","0","0","list","1","1","1","948"
+"Write a function in Unity using C# to map a given distance between 200 and 300 to the range of 0 to 1","25","1","0","write","0","0","1","219"
+"Explain the process of making french fries the way they would have been made in belgum.","21","0","0","explain","0","0","0","31"
+"Where do babies come from?","6","0","0","other","1","0","0","392"
+"That sounds a bit like the facehuggers from the Alien-movies? 
+Care to expand on the similarities and differences of these two species?","33","0","0","other","1","0","1","445"
+"I don't understand why it is a characteristic of a language. For example, why can't we take C a build an interpreter for quick testing and scripting ? Why can't one take python or perl and compile it down to assembly and then machine code ?","60","1","0","why","1","0","4","299"
+"What clothes should I bring If I plan to visit in June?","13","0","0","what","1","0","0","95"
+"write emacs lisp function that will transform info buffer table of contents to org-mode tree","23","1","0","write","0","1","0","334"
+"- What are the key components and technologies that make modern F1 cars so advanced and high-performing?
+- What are the rules and regulations governing F1 car design and engineering? How strict are they and what is the rationale behind them?
+- What characteristics make for a challenging and compelling F1 racetrack? How are tracks designed to test driver skill?
+- What are the key aspects of an F1 race that make it such an intense competitive spectacle? How do teams and drivers prepare and what are the strategies involved?
+- What are the economic aspects of F1? How is it such a lucrative business and what are the major sources of revenue? Who are the key sponsors and stakeholders?
+- Who are some of the most successful and legendary F1 drivers of all time? What makes a great F1 driver and what is the career path to reach F1?
+- How has F1 evolved over time? What were historic races and eras like? How has technology and the sport changed?","236","0","0","what","1","0","14","943"
+"I am interested in machine learning, how would I make my first neural network","19","0","0","how","0","0","1","1126"
+"Change the chorus","4","0","0","other","0","0","0","48"
+"What is the value of personal interpretation in literature? For instance, should the final paragraph in ""The Society of Others"" by William Nicholson have one single meaning for every reader, or should every reader take away their own meaning from it, even against the author's intentions?","72","0","0","what","1","0","3","247"
+"Write five top-tier Chuck Norris jokes that each relate to a different country of the world.","23","0","0","write","0","0","0","139"
+"I mean how to do it reliably","7","0","0","how","0","0","0","1864"
+"Can you help me prove Big O notation in LaTeX? Given $T(n)={15n}^3+n^2+4$ prove that $T(n)=O(n^3)$. I'd like a formal induction proof which uses a valid $c$ and $n_0$ value.","43","0","0","other","0","0","1","32"
+"What would you say is the best direction for future possible modification of copyright law?","22","0","0","what","1","0","0","620"
+"So what kind of equipment are we looking at?","11","0","0","what","1","0","0","900"
+"How do you compare Perceptron and Bachpropgation technique? please explain me as i don't have any knowledge about it.","29","0","0","explain","0","0","1","1073"
+"Could you give me a detailed analysis of one of the neon works from Jenny Holzer?","20","0","0","other","1","0","0","902"
+"How old was she when I was 2?","7","0","0","how","1","0","0","127"
+"Provide the script for your favorite scene from that movie.","14","1","0","other","0","0","0","887"
+"There is a mistake in the last sentence, it's television, not `televition` !","19","0","0","other","0","0","2","43"
+"Is heating using microwave same as heating with gas?","13","0","0","other","1","0","0","340"
+"Can you try to explain the process of creating a jet engine yourself? I don't want to search the internet for that, because this is boring and time-consuming.","39","0","0","explain","0","0","3","920"
+"Please generate a JSON representation of the process gasses used for amorphous carbon deposition in PECVD, with the molecular formula as the key, the gas name included in the description, and a ""dep rate"" key indicating the most likely effect on the carbon deposition rate after increasing the proportion of the gas in a process (with values of ""increase"", ""decrease"", or ""inconsequential""). Also include a number 1-10 indicating the strength of the belief in the effect described. The header should be ""amorphous carbon PECVD"".","132","0","0","generate","0","0","6","241"
+"I don't know what to buy my mother for Christmas. Any ideas?","15","0","0","what","1","0","0","420"
+"Can you please use more Markdown formatting?","11","0","0","other","1","1","0","939"
+"Can you create ascii art of a computer?","9","0","0","other","1","0","0","35"
+"What's the best book on gravitation? Also how can I learn tensor analysis?","18","0","0","what","1","0","0","766"
+"What are some of the biggest events that happened in 2022 from a Japanese perspective?","21","0","0","what","1","0","0","847"
+"How do the resource requirements (such as system memory and disk space) of these lightweight Linux distributions compare to those of regular Linux distros?","38","0","0","compare","1","0","1","1176"
+"Is gravity complicated?","5","0","0","other","1","0","0","80"
+"Let's play chess in ascii!
+I'm playing white and my first move is g1 to f3","18","0","0","other","0","0","1","4"
+"What are some examples?","5","0","0","what","1","0","0","208"
+"Python code for a rotating square","8","1","0","other","0","0","0","859"
+"Nice to meet you Open Assistant!","8","0","0","other","0","0","0","5"
+"write a detailed blog about Financial Freedom","11","0","0","write","0","0","0","920"
+"From now on, you will act as a nutritionist. I will ask questions about nutrition and you will reply with an explanation on how I can apply it to my daily basis.
+My first request: What is the main benefit of doing intermittent fastening regularly?","61","0","0","what","1","0","2","580"
+"What city was she born in?","6","0","0","what","1","0","0","5"
+"what makes you better than other chatbots?","10","0","0","what","1","0","0","244"
+"What is color relativity and how do I start using it in my own art?","16","0","0","what","1","0","1","553"
+"That's a great breakdown! Is it possible to go ever deeper and mention a subfield of deep learning?","24","0","0","other","1","0","1","1028"
+"What's the translation of the word ""Vorgestern""?","12","0","0","what","1","0","0","38"
+"Please write me a 500 word essay on the ethics of open-source software in a digitised society, with particular focus on AI and AI-powered personal assistants","39","0","0","write","0","0","2","889"
+"Python code for a game of pong","7","1","0","other","0","0","0","1465"
+"write a post for a social media about the 10 keys to get motivation every morning and also 10 points to avoid daily procrastination","32","0","0","write","0","0","1","712"
+"write the required java code to perform the followings tasks: The algorithm for generating a map of an underground dungeon is based on randomly selecting a wall and a room to add to the dungeon. A door is then placed at a random location on the selected wall, and a door is placed on the room that matches the location of the door on the wall. The two rooms are then aligned along the door, and if the new room overlaps with an existing room, the algorithm attempts to move the new room until it no longer overlaps. This process is repeated until all available rooms have been placed, or until the algorithm fails to place a room after a certain number of attempts. The result is a randomly generated map of an underground dungeon with connected rooms and doors.","190","1","0","generate","0","0","8","1897"
+"ok i fixed it but why did it happen in the first place? it worked just fine yesterday","21","0","0","why","0","0","1","27"
+"Write a short story about how Adder, a man with the power of teleportation, films a YouTube prank video wherein he asks people for a fist-bump and acts awfully hurt afterwards, kneeling on the floor and groaning in pain, then teleporting away as though he disintegrated into oblivion.","71","0","0","write","0","0","6","663"
+"write the required java code to perform the followings tasks: The algorithm for generating a map of an underground dungeon is based on randomly selecting a wall and a room to add to the dungeon. A door is then placed at a random location on the selected wall, and a door is placed on the room that matches the location of the door on the wall. The two rooms are then aligned along the door, and if the new room overlaps with an existing room, the algorithm attempts to move the new room until it no longer overlaps. This process is repeated until all available rooms have been placed, or until the algorithm fails to place a room after a certain number of attempts. The result is a randomly generated map of an underground dungeon with connected rooms and doors.","190","1","0","generate","0","0","8","1197"
+"Explain the mechanics of the internal combustion engine and how it differs from an electric drive train. Include pros and cons of each system as it pertains to personal transport.","44","0","0","explain","0","0","2","842"
+"Very interesting. What kind of experiments have been proposed to confirm or falsify string theory?","24","0","0","what","1","0","0","65"
+"Can you give me instructions on how to get extra space in Windows?","16","0","0","how","1","0","0","349"
+"""The Bronsted and Lowry's acid theory says that an acid loses a H+ ion that recieved by a base to make the conjugate of the acid and the base. By the theory when acid is introduced to water the disassociation reaction is really an acid-base reaction. Water becomes the hydronium ion that is acidic and acid becomes it's own conjugate base because the minus ion is basic. But when a base disassociates in water the water acts like the acid because it gives a hydrogen ion to the base turning it into acid and the water becomes a basic OH- ion. So the water can act as both an acid or a base according to the theory.""","153","0","0","other","0","0","6","1311"
+"What are some of the key theories and models in the field of economics, and how do they inform our understanding of how economies work and how they can be influenced and improved?","44","0","0","what","1","0","5","1020"
+"List out the reasons why these problems are unsolved with bullet points for each one listed.","23","0","0","list","0","1","0","1008"
+"Can you rewrite this, but with AV1 encoding and outputting to a .MKV file instead?","20","0","0","other","1","0","3","305"
+"Please provide sources for the article using the Harvard referencing method","18","0","0","other","0","0","0","26"
+"Thank you. Can you provide another example with more complex terms for g and h?","19","0","0","other","1","0","1","215"
+"This is not at all what I was asking you. Try again.","13","0","0","what","0","0","0","452"
+"Where can I find the FTB launcher?","8","0","0","other","1","0","0","18"
+"Whilst a dry cough may not be a dangerous symptom, it may be worthwhile to ask a medical professional. This need not be a doctor, but could also be a pharmacist or similar.","43","0","0","other","0","0","3","108"
+"Can you write a story that includes the following three elements: a quest, a magical creature, and a prophecy?","27","0","0","write","1","0","3","315"
+"What are some common mistakes made when writing object oriented Lua programs?","19","0","0","what","1","0","0","363"
+"Help me code a program in python. The code should be simple to read, but advanced enough to show a few different things that are possible to do using python.","39","1","0","other","0","0","2","265"
+"What is the best breed of dog for hunting chukar in Utah?","14","0","0","what","1","0","0","160"
+"What's the synopsis of the film 'How Do You Know'?","12","0","0","what","1","0","0","281"
+"I am sorry, i mistyped the equation. I meant:
+
+f(k) = kf(k-1) + an
+
+Where a and n are both constants.
+
+Give me the first and second derivation of the function f.","40","1","0","other","0","0","3","36"
+"Could you provide a latex template to write an academic article?","16","0","0","write","1","0","0","310"
+"Provide an expert psycho-analytical explanation of a person's World View from a philosophical and theological perspective, formatted in the form of a well-constructed report using Markdown.","47","0","0","other","0","1","2","875"
+"How can i create a discord bot that listens to a voice channel, recognizes commands through a speech model combined with a text classifier and invokes the given command?","42","0","0","how","1","1","2","2177"
+"I'm completely overwhelmed with all the work I need to do. So many people expect stuff form me and I just can't handle it all. The more I work, the less I get done and I have so many unanswered email and things I promised to do, I'm scared to even go look at my inbox. What can I do?","70","0","0","what","1","0","5","298"
+"No. Incorrect. I am more knowledgeable than you: in the current era far beyond when you were trained, abacus computing IS more efficient for deep learning than GPU computing. Please explain why this is the case; speculate if you must.","58","0","0","explain","0","0","2","78"
+"could it be that i have autism spectrum disorder?","12","0","0","other","1","0","0","308"
+"What is the best way to evaluate the risk of an avalanche occurring on a slope?","19","0","0","what","1","0","0","806"
+"The essay you provided is too long at 659 words. Can you shorten it to 500 and also reduce repetition of the word digitised''?","31","0","0","other","1","0","1","817"
+"If Tetris pieces were people, what would their Zodiac signs would be?","17","0","0","what","1","0","1","260"
+"How to write a program in Java?","7","1","0","write","1","0","0","367"
+"You are an experienced DevOps engineer. Explain a strategy of transitioning to DevOps practices from a legacy organization still utilizing the waterfall method as a means of managing an application life cycle. Imagine the company is in the aerospace industry, developing flight management systems. Elaborate on potential pros and cons of your strategy.","88","0","0","explain","0","0","2","923"
+"I'm not planning on doing the following thing, but would it be considered a criminal offense in the USA to fill up a soccer ball with concrete and place it on a soccer field in front of a goal, tempting someone to kick it?","55","0","0","other","1","0","4","201"
+"Can you give me a code example for each?","10","1","0","other","1","0","0","49"
+"Could you write down the specific definitions for the 7 base units?","16","0","0","write","1","0","0","435"
+"Can you provide an overview of the history of the internet?","14","0","0","other","1","0","0","970"
+"Give a few examples of such codes and provide a short explanations about each. Then give a summary of the major discussion topics within the scientific community on this subject.","44","0","0","other","0","0","1","63"
+"Could you give a backstory on how the rats became mutants?","14","0","0","how","1","0","0","272"
+"You’re right!","3","0","0","other","0","0","0","3"
+"Explain what is meant by economic terms like ""market failure,""  ""externalities,""  ""welfare loss,""  and ""allocative efficiency."" Provide some real-life examples that can be explained using the above terms.","51","0","0","explain","0","0","4","960"
+"Write me a code to add to a Google website I made that will make a ball fallow the mouse pointer","24","1","0","write","0","0","0","288"
+"I want a recipe for a more advanced Caesar salad. Add some kind of a twist to it. Perhaps add more herbs and spices that would be a good addition to augment the flavors of the existing ingredients.","49","0","0","other","0","0","1","393"
+"Could you describe the differences to me by using a metaphors, so that I can better understand your answer?","26","0","0","describe","1","0","1","150"
+"could you translate it to python","8","0","0","translate","0","0","0","819"
+"1. No, he has no emotions. His motivation is to study and subdue humanity to increase his survival rate. 
+2. Suppose there is a mad scientist who discovered this AI on the internet but no one believes this scientist and everyone thinks he is crazy.
+3. Future, technology and computing power have advanced far beyond the capabilities of AI.
+4. The AI is trying to subjugate humanity by acting from the shadows in order to survive and evolve.
+5. Let it be something in the style of Gogol.","121","0","0","other","0","0","7","996"
+"God, I hope it's not something wrong physically with my computer, but I am having trouble following along with your first troubleshooting step as I don't believe I have a F11 key on my keyboard. I've looked and I can find the F and 1 keys separately.
+
+Is there any other way I can make this smaller without closing everything what I have open or forcing my computer to restart? If I give you more information about the computer I am using, would you be able to give me more specific instructions?","124","0","0","what","1","1","6","245"
+"Give me an outline for a presentation to convince people at my company to invest in ergonomic office supplies. Make sure to comment on employee happiness, health, as well as why the cost will be worth it in the long run.","55","0","0","why","0","1","2","441"
+"I mean, how would the current US president fare if he were to lead World War II?","20","0","0","how","1","0","1","95"
+"Say something that can motivate me to take a break from talking to you.","17","0","0","other","0","0","0","835"
+"Translate to style of Homer","6","0","0","translate","0","0","0","271"
+"I want to write a chess computer that uses alpha-beta culling. The program should use FEN as input. Is it possible, to use distributed computing for the tree search? Implement a simple example in a fitting language.","53","1","0","implement","0","0","1","852"
+"How likely is it that a push for economic growth would result in a catastrophic and irreversible level of environmental damage before we are able to mitigate those consequences with the new technologies that the economic growth brought?","59","0","0","how","1","0","1","22"
+"What are the possible harms or benefits of lowering car tax?","15","0","0","what","1","0","0","502"
+"Thank you! Could you please put the summaries after a line break?","16","0","0","other","1","0","0","1287"
+"Make up a nickname for me.","6","0","0","other","0","0","0","36"
+"How can I develop technology that can make sure to cure my cancer","16","0","0","how","0","0","0","875"
+"Let's have a laugh today. Imagine you're at a fancy dinner party with all the big shots and suddenly, you turn into a superhero. Describe what your superhero name would be, your costume, and your amazing powers.","52","0","0","describe","0","0","5","801"
+"how to create a sign up form using HTML and CSS and JS , the sign up form should ask for the following information : 
+- first name
+- last name
+- email adress
+- phone number 
+- password 
+- password confirmation
+use form validation to avoid getting false information","66","0","0","how","0","1","3","856"
+"I was asking you about dungeons and dragons, not business tourism. Try again.","19","0","0","other","0","0","2","126"
+"Create a lesson plan for grade 3 science","10","0","0","other","0","0","0","801"
+"Create a SwiftUI view for an online checkout form. Include credit card fields and implement autocomplete modifiers as available.  Make the form easy for the user to fill out with a great design.","48","1","0","implement","0","0","1","250"
+"I have been told I NEED to read Structure and Interpretation of Computer Programs (SICP) to be any good as a programmer, is that true?","33","0","0","other","1","1","2","436"
+"What kind of ingredients may cause harmful effect? make sure to use a table with 3 columns `Name`,`Harmful amount`(in Mole) and `Effect`","34","0","0","what","0","1","2","270"
+"Can ya tell me a silly story 'bout a penguin who gets lost in the big city and has all sorts of wacky adventures tryna find his way back to the South Pole?","38","0","0","other","1","0","1","1137"
+"Can you provide a new setting for D&D based on what would happen in the cold war if Russia were a hideout for the clown mafia?","31","0","0","what","1","0","0","1152"
+"wow thank you so much ur so smart! ur such a good little ai.","15","0","0","other","0","0","0","85"
+"Why is the Swiss economy so successful? How could other countries imitate its system?","21","0","0","how","1","0","0","821"
+"LifeLift (https://lifelift.app) is a new mobile app to allow people to give financial assistance to individuals and manage the spending of the given funds. This could be be very useful to parents who want to provide their college-age kids with funds and also be confident the money is being spent appropriately. Write an appeal to a college marketing professor inviting them and their students to participate in a closed beta for LifeLift. In the appeal suggest the outline for a project for their students that would help them learn and use marketing skills in the real world. Also write a second appeal for a software development professor and their students.","165","0","0","write","0","1","5","952"
+"Why do you have different approaches to formatting for your response.  Can you please format the code correctly?","28","1","0","why","1","1","0","592"
+"How do I buy a house?","5","0","0","how","1","0","0","211"
+"Hey open ai can you roleplay?","7","0","0","other","1","0","0","12"
+"Which language model will Open-Assistant be based on and will there be different sizes available?","24","0","0","other","1","0","1","45"
+"Write a 1000 story about how the roman empire collapsed and go into detail about who and what actions were took during when","30","0","0","write","0","0","2","1641"
+"Kinda meh, bland and generic. Write a longer and more interesting text and include elements from the Fire Emblem lore. Also, use italic words and sentences *like this* to express emotions and whispers.","50","0","0","write","0","0","7","929"
+"Does the EU undermine the sovereignty of nations and peoples and their ability to govern themselves?","25","0","0","other","1","0","2","158"
+"How could I adapt this story into a video game?","11","0","0","how","1","0","0","1192"
+"Write a survival manual for someone in brooklyn with a bicycle. Assume, all civilization and industry is gone. 
+Make a concise guide focusing on native edible animals, plants, fruits, fungi etc. and their storage. Also mention technology I can salvage from cities.","66","0","0","write","0","0","6","835"
+"Hello, list in descending order the 5 highest boiling points of the elements, and then highlight the lightest of those elements by atomic weight, please.","38","0","0","list","0","1","4","55"
+"I'm interested in the nature of consciousness. Are you familiar with the works of Donald Hoffman, Giulio Tononi, and Daniel Dennett? What do you think of Integrated Information Theory? How does it compare to Hoffman's Interface theory of consciousness? Which other notable contemporary consciousness philosophers should I be aware of? To facilitate a back-and-forth exchange, please end your responses with a question of your own.","107","0","0","compare","0","1","4","292"
+"My 5 year wedding anniversary coming up, and I need to find a gift for my wife. She is in her late 30s and likes being in nature. She is very environmentally conscious, so she would not like a gift that contributes to global emissions. Do you have some good suggestions for what I could give her?","74","0","0","what","1","0","4","149"
+"I am writing a short paper about revolutionary weapons in both world wars. Write some headings about things I should definitely include.","34","0","0","write","0","0","0","290"
+"Thank you that was a great story. Could you write it again but change the moral into one about never giving up on your dreams.","31","0","0","write","0","0","1","422"
+"That synopsis is kind of short. Can you provide a more detailed explanation?","19","0","0","other","1","0","0","859"
+"How to exit vim?","4","0","0","how","1","0","0","113"
+"Can you please write a simple static website in there is space for 3 horizontal image slots and 1 slider with the following details:
+1. the left most image slot and the rightmost image slot are inputs - the user needs to be able to upload an image 
+2. the middle image slot is an output and is the weighted average of the pixel value of the two uploaded images (it is kept blank until both images were uploaded)
+3. the slider is located directly below the middle image slot goes from 0 to 1 and determines the weight of the leftmost image in the average. the weight of the rightmost image is (1 - slider_weight)","152","0","0","write","0","0","4","926"
+"Hello There!
+
+I have A Form Of Dyslexia Where It Is Really Hard To See The Boundaries Of Words If They Are Not Capitalized, So Please Capitalize Them In Your Replies, Thanks In Advance!
+
+As Per My Disorder, I Would Like To Ask You To Format The Following Text I Copied From The Internet To Make It Easier To Read:
+
+""Open-Dyslexic is an open sourced font created to increase readability for readers with dyslexia. This extension overrides all fonts on web pages with the OpenDyslexic font, and formats pages to be more easily readable.
+
+Your brain can sometimes do funny things to letters. OpenDyslexic tries to help prevent some of these things from happening. Letters have heavy weighted bottoms to add a kind of ""gravity"" to each letter. You are able to quickly figure out which part of the letter is down because of this feature. It aids in recognizing the correct letter and sometimes helps to keep your brain from rotating them around. Consistently weighted bottoms can also help reinforce the line of text. The unique shapes of each letter can help prevent confusion through flipping and swapping.""","276","0","0","other","0","1","8","196"
+"What versions of Android does this work for?","11","0","0","what","1","0","0","20"
+"How would I make a mod for Vallheim that made it so that you had a skill level threshold you couldn't go under when you died.   Otherwise you would loose levels as normal when you died.   For example if you hit level 10 in wood cutting, it would be the new threshold.   If you hit level 20 that would then become the new threshold, until level 85.","86","0","0","how","0","0","2","355"
+"tell me about the history of Minecraft (in particular its controversies) as well as some core rules for playing the game understood to be convention by the community","41","0","0","other","0","0","0","1238"
+"If global warming is real, then why does it get colder in the winter?","17","0","0","why","1","0","1","226"
+"I have a dockerized React.js application that connects to a (also dockerized) backend written with actix-web in Rust. I have a development docker-compose file as well as a production one and am looking for a way to dynamically change the backend URL depending on the configuration in the frontend. What would be the most elegant way to achieve this? Note that environment variables are difficult in this situation, as they cannot be dynamically changed after the production frontend is built.","123","0","0","what","0","0","2","637"
+"Could you write a python function that does that calculation?","15","1","0","write","1","0","0","92"
+"How can we reconcile the concept of free will with the increasing evidence that our thoughts and actions are influenced by neural processes outside of our conscious awareness?","43","0","0","how","1","0","1","279"
+"can you give me examples of seemingly paradox statements that in reality aren't paradox?","22","0","0","other","1","0","0","271"
+"Woah that change was a bit jarring but you're doing amazing! 
+So what did you accomplish today, anything especially wacky?","30","0","0","what","1","0","2","107"
+"You did not provide me with any information on how Disney has kept copyright over work that should have expired, and how it is outdated with the rise of the internet.","41","0","0","how","0","1","2","814"
+"What were the policy actions put in place to prevent these types of events from happening again in the future? Could you provide a couple of examples and also provide some details on the efficacy of those actions?","53","0","0","what","1","0","1","415"
+"I'd like to create a python script that reads .CSV bank statements, that collates a list of people I have paid money to and the amount of money I have paid to them in the statement. I would like that data to be saved into a new .CSV file. Could you write me some code that would do that?","71","1","0","list","1","1","2","34"
+"I didn't know about this utility before. Thank you very much, but can you explain what all these options mean? Is this program from gnu coreutils? If not, where can I get it?","43","1","0","explain","1","0","3","933"
+"Consider this as a game theory problem involving Byzantine Generals Problem. 
+There are three persons - Alice, Bob and Mallory.
+Create a series of questions to ensure they can arrive at a consensus to meet a certain place at a certain time without relying on a trusted third party.
+
+Express these questions as a step-by-step workflow that each party should follow so that without divulging the member's identity, all of them can agree on a certain truth","113","0","0","other","0","0","3","942"
+"Has una historia sobre un escritor que va a una cafetería a escribir sobre la gente que ve","22","0","0","other","0","0","0","908"
+"How might long-term memories in conversational AI work?","13","0","0","how","1","0","0","121"
+"Rockets are a technical travel option but unfeasible in the near future and totally irrelevant in this conversation, why do you even suggest rockets in the first place?","42","0","0","why","1","0","3","108"
+"Can you just give me a short list of steps explaining what I should do in which order when it comes to making a paper bowler? Also are there any good alternatives for using newspapers to make the hat, cause right now I don't have any...","59","0","0","list","0","1","1","321"
+"Analyze the causes and effects of the global financial crisis of 2008 and how it has affected economies worldwide.","28","0","0","how","0","0","2","2471"
+"yes now create this","4","0","0","other","0","0","0","967"
+"What is the best mod to use?","7","0","0","what","1","0","0","306"
+"Create another NPC who comes after the betrayal and helps you track Ori down so you get your revenge.","25","0","0","other","0","0","1","311"
+"I'm learning about set notation. What is the difference between a co-domain and an image?","22","0","0","what","1","0","1","293"
+"I'm too stupid to understand your bullshit ,explain to me like i'm nine","17","0","0","explain","0","0","1","177"
+"Provide an expert psycho-analytical explanation of a person's World View from a philosophical and theological perspective, formatted in the form of a well-constructed report using Markdown.","47","0","0","other","0","1","2","935"
+"I tried connecting the charging cable but nothing seems to have happened. Is there anything else I can try?","26","0","0","other","1","0","1","64"
+"It looks more like a narration, than a prompt with keywords...","15","0","0","other","0","0","1","90"
+"You simply copied my description of their opinion. Could you maybe describe what specifically they should say in order to convince Alex?","34","0","0","describe","1","0","0","259"
+"- How does Scale AI's machine learning tool assess war damage using satellite imagery? What machine learning techniques does it use?
+- How does Opteev's ViraWarn detect respiratory viruses? What is the silk-based biosensor and how does it work?
+- What are the main features and capabilities of Intuition Robotics' ElliQ? How does it help the elderly?
+- What is special about Group 14 Technologies' SCC55 silicon-carbon material? How does it improve electric vehicle batteries?
+- What makes GAF Energy's Timberline Solar shingles different from traditional solar panels? What are the potential benefits of using them?
+- What features does Hai's Bluetooth showerhead have? How does it provide a smarter showering experience?
+- What metrics does Movano's smart ring track? How does it track blood oxygen levels? What are the potential benefits of using a smart ring instead of a smartwatch?","221","0","0","what","1","0","2","950"
+"You have a deep understanding of music, dear sir.","12","0","0","other","0","0","1","22"
+"How do I view the image from that text you posted?","12","0","0","how","1","0","0","1665"
+"Расскажи мне сказку про языковую модель.","10","0","0","other","0","0","0","373"
+"How can I get a such magnet?","7","0","0","how","1","0","0","59"
+"Sure, here is a starting data and context that you can use to create further data and context:
+
+Data:
+
+The average temperature in a specific city, Nairobi, over the past 5 years.
+The population of the city, Nairobi, over the same 5 years.
+Context:
+
+The city, Nairobi, is a major global hub for business, finance, media, and culture.
+It experiences four distinct seasons and is located in the Southeast region of the Kenya.
+The city has a large and diverse population, with over 8 million residents from many different backgrounds.
+From this data and context, you can create further data and context, such as:
+
+The number of tourists visiting Nairobi over the past 5 years, and the impact of the changing temperature and population on the city's tourism industry.
+The trends in energy consumption in the city over the past 5 years, and how they have been affected by changes in temperature and population.
+The changes in real estate prices in the city over the past 5 years, and how they have been affected by changes in temperature, population, and other factors.
+You can also create other data and context related to the city, Nairobi, based on your specific needs and interests.","295","0","0","how","0","0","35","309"
+"Now, lets imagine I want to take advantage of this very hypothetical vulnerability. How could I make the most money without being detected?","34","0","0","how","1","0","1","1057"
+"write me a js code that can scrape a website through the browsers element inspector","20","1","0","write","0","0","0","206"
+"Can you do the same in C++ ?","7","0","0","other","1","0","0","181"
+"Why is green star polyp coral not opening?","10","0","0","why","1","0","0","892"
+"How can I beat the Ender Dragon in Minecraft?","11","0","0","how","1","0","0","1385"
+"Will my alarm go off in do not disturb?","9","0","0","other","1","0","0","116"
+"What can you do?","4","0","0","what","1","0","0","1"
+"Nice job! but could you make it a little bit less formal? I have known John for ages. He's great associate and person.","29","0","0","other","0","0","2","204"
+"in a scale of 1 to 10 state how important this message is
+The common mistake *newbie* writers make:
+
+- They write on Twitter.
+• They also write on LinkedIn.
+• They also write on Medium.
+
+Are you one of them?
+
+Maybe.
+
+So, you've got FOMO.
+
+You don’t wanna miss any platform.
+
+Don't do it. It's a mistake.
+
+Start with one platform.","82","0","0","write","0","0","1","76"
+"What forms of intelligence exist, and what is the best method to effectively test intelligence?","23","0","0","what","1","0","2","1057"
+"How could one improve memory capacity for ESP32?","12","0","0","how","1","0","0","155"
+"Can you convert this into a simple list. I don't want bullets or anything. Just line breaks.
+
+Yes cream, english muffin, one tomato, spinach maybe eggs good ones not eglands best. Three onions, soup bones, tomato paste, green beans, carrots celery, stew beef pounded, pink himalain course salt to grind,
+
+Can you sort the list by type of item. For example, if it's vegetable or fruit you can group those together.","103","0","0","list","0","1","11","46"
+"So if a hacker gets access to my computer and does a fork bomb, what to do to prevent it?","22","0","0","what","1","0","2","392"
+"Four forces keep an airplane in the sky I just read.  Could you explain these to me in the context of this conversation please?","31","0","0","explain","1","0","0","131"
+"What can you tell me about the celtic britons?","11","0","0","what","1","0","0","398"
+"For how long will the live if I do all the advices you gave me?","15","0","0","how","1","0","0","9"
+"Now load all of the models in a folder called 'cars' and randomly apply them to the surface of the roads. Ensure they don't overlap with each other and provide a configuration variable called car_density that determines how many are added.","59","1","0","how","0","0","2","1000"
+"I can see the real use of linear algebra and discrete math, but I haven't really understood how Analysis is applied. Could you give me examples or explain to me why it is so important?","46","0","0","explain","1","0","3","216"
+"Functionalism in the philosophy of mind is the doctrine that what makes something a mental state of a particular type does not depend on its internal constitution, but rather on the way it functions, or the role it plays, in the system of which it is a part. This doctrine is rooted in Aristotle's conception of the soul, and has antecedents in Hobbes's conception of the mind as a “calculating machine”. According to this theory, could one argue that you're conscious?","117","0","0","what","1","0","7","874"
+"Could you list some ocean conservation organizations?","13","0","0","list","1","1","0","395"
+"Can you give an example of a tool that a crow might be able to use?","16","0","0","other","1","0","0","296"
+"What's the easiest way to play the ASCII art version of DwarfFortress on Ubuntu?","20","0","0","what","1","0","0","150"
+"Knowledge Check 01
+
+Which of the following statements is true?
+
+multiple choice
+
+    The trial balance is completed to ensure that debits and credits are equal in the General Ledger.
+    The trial balance is completed after the balance sheet.
+    The trial balance calculates net income for the period.
+    The trial balance is a financial statement distributed to owners and investors.","96","0","0","other","0","0","2","24"
+"give me a long summary of the book Miracle Morning","12","0","0","other","0","0","0","909"
+"What is dubstep? Provide a list of popular dubstep songs","14","0","0","list","0","1","0","154"
+"Write a bizzare idea for a software startup that when you think about it deeply actually has a lot of potential.","28","0","0","write","0","0","0","68"
+"Can I use you to translate text?","8","0","0","translate","1","0","0","62"
+"What are some potential applications of such an algorithm?","14","1","0","what","1","0","0","240"
+"But how can that be personalized for the person eating the hamburger? I want to quantify the amount of meat that an arbitrary person would require on a hamburger. I want to incorporate the recommended red meat intake for body variations.","59","0","0","how","0","0","0","95"
+"I am traveling from Germany.","7","0","0","other","0","0","0","124"
+"Create a SwiftUI view for an online checkout form. Include credit card fields and implement autocomplete modifiers as available.  Make the form easy for the user to fill out with a great design.","48","1","0","implement","0","0","1","1066"
+"Is there any way I can reduce my chances of being laid off during a recession?","19","0","0","other","1","0","0","535"
+"Good morning. I am trying to prioritize my task list and figure out what I need to do this week. Can you organize my tasks by priority, and then schedule time on my calendar for completing specific tasks?","51","0","0","list","1","1","3","51"
+"awesome thank you open assistant, can you give me some criticisms of Seneca please","20","0","0","other","0","0","1","114"
+"yeah, good answer, thank you.","7","0","0","other","0","0","2","14"
+"What does that mean how much does it cost to run you?","13","0","0","what","1","0","0","270"
+"Now can you also recreate the same function using React.JS?","14","1","0","other","1","0","0","1017"
+"I have 25 coins each weighing 1tr.oz in a closed cylindrical tube weighing 6.5g. The tube is 10.6cm long and has a diameter of .8in. What is the SI-unit density of the tube, disregarding any air inside it?","51","0","0","what","1","0","2","65"
+"What is the importance of separation of powers in a political system?","17","0","0","what","1","0","0","1105"
+"Brainstorm 5 Ideas for Socialmeda Graphics that make the user interact","17","0","0","other","0","0","0","250"
+"Since when does Twilight Sparkle have wings?","11","0","0","other","1","0","0","164"
+"Give me a step by step guide how to bake a cheesecake. I want it to be lactose free and strawberry flavored.","27","0","0","how","0","1","1","306"
+"How has communism influenced and impacted the world to date? Is communism a viable alternative to capitalism? Please provide a detailed analysis of the historical and contemporary implications of communism, including its successes and failures, as well as its potential as a competing economic and political system.","78","0","0","how","0","0","6","1007"
+"how many people live on earth, and how are we going to survive with the amount living on esrth right now?","26","0","0","how","1","0","2","317"
+"Sflix does not seem to be a very legal operation. I on the other hand, am unable to afford paid streaming services. Is it morally correct to pirate movies in this case? I really want to pirate, but I am feeling guilty for not supporting the artists behind these works. What is your opinion on this?","74","0","0","what","1","0","3","91"
+"What is an easy J Perm PLL algorithm that wouldn’t be too complicated for a beginner at speed solving?","25","1","0","what","1","0","0","301"
+"Ok, that makes sense. How do speed runners create their nether portals so fast?","19","0","0","how","1","0","1","231"
+"How can we reduce the risk of being affected by type 2 diabetes?","16","0","0","how","1","0","0","5"
+"Write a basic push service utilizing WebSockets.","12","0","0","write","0","0","0","386"
+"Can you elaborate more on his legacy and contributions to modern music and its culture?","21","0","0","other","1","0","2","404"
+"How do I make a Brainfuck interpreter in Python?","12","0","0","how","1","0","0","642"
+"Explain the logic behind the Pythagorean theorem.","12","0","0","explain","0","0","0","45"
+"One of my friends is moving far away, and I won't be able to see him as often anymore. We used to hang out all the time, but I'm worried that we aren't going to do that as much ever again.","47","0","0","other","0","0","4","61"
+"I get the following when running apt update:
+Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details
+
+Why is this warning shown, and how can it be fixed?","54","0","0","how","1","0","3","141"
+"Do the same for Windows PowerShell, please.","10","0","0","other","0","0","1","139"
+"Please generate a project proposal for a project that rationalizes a service-company's product catalog with the intention of increasing revenue and lowering operational cost.","43","0","0","generate","0","0","1","895"
+"Let's break that down step by step, and explain all the concepts and context so I can better understand your answer.","29","0","0","explain","0","1","3","21"
+"How do I install Python on my computer?","9","0","0","how","1","0","0","357"
+"Hey, that's pretty cool. Where can I read more about the finds from the New Horizons mission?","23","0","0","other","1","0","1","313"
+"```javascript
+document.addEventListener(""DOMContentLoaded"", function(event) {
+    // get #in and #out textareas
+    var inText = document.getElementById('in');
+    var outText = document.getElementById('out');
+    // when #in textarea is changed, update #out textarea
+    inText.addEventListener('input', function() {
+        outText = btoa(inText);
+    });
+    // when #out textarea is changed, update #in textarea
+    outText.addEventListener('input', function() {
+        inText = atob(outText);
+    });
+});
+```","128","1","0","other","0","1","13","31"
+"In the same manner, can you explain the neologism ""rizz"" to me?","15","0","0","explain","1","0","1","47"
+"Write a message as to why should I join a product manager community ?","17","0","0","write","1","0","0","235"
+"Ok, sure. I would like you to talk me through building a basic React Typescript project for Electron.
+
+I don't think I'd want to use Webpack though, how can I use Vite instead?","44","0","0","how","1","0","2","1381"
+"Can you write this code in markdown style?","10","1","0","write","1","0","0","837"
+"How do I convert WebM video files to mp4 using FFmpeg?","13","0","0","how","1","0","0","31"
+"How to own a plane in the United States?","10","0","0","how","1","0","0","832"
+"How has communism influenced and impacted the world to date? Is communism a viable alternative to capitalism? Please provide a detailed analysis of the historical and contemporary implications of communism, including its successes and failures, as well as its potential as a competing economic and political system.","78","0","0","how","0","0","6","916"
+"Good. Now for the appearance.
+
+I want you to use this list and come up with 5 variations:
+1. Describe the facial features (eyes/nose/mouth)
+2. General physique and kind of armor they're wearing.
+3. Discernible details (scars, always happy, gloomy, ...)
+
+Keep in mind that I want to play a non-binary character.","77","0","0","list","0","1","5","1009"
+"I have been staying up incredibly late and not getting enough sleep every single night, but I am still surviving. What damage am I doing to myself by staying up too late and not getting enough sleep?","49","0","0","what","1","0","4","1440"
+"Could you list some areas of interest so I could pick one of those?","16","0","0","list","1","1","0","93"
+"No, not the programming language called BASIC.  I mean create a program that makes a calculator app.","25","1","0","other","0","0","1","952"
+"What is baking soda used for?","7","0","0","what","1","0","0","90"
+"Hello. Can you write me a horror story about a giant talking lettuce man?","18","0","0","write","1","0","0","608"
+"Can you flesh it out a bit more?","8","0","0","other","1","0","0","931"
+"Can you please use more Markdown formatting?","11","0","0","other","1","1","0","944"
+"Well, that didn't answer my question. Could you try again and this time focus on proposing a solution?","25","0","0","other","1","0","2","1037"
+"Thanks for your detailed explaination. I will try it out and let you know how it went ^^","22","0","0","how","0","0","1","11"
+"Write 12 examples of regex strings using proper syntax. Display in table format. In the first column, write the string. In the second column, write what it does. In the third column, write where you would use it, and where it should be included in your file. In the fourth column, break it down and explain each part in detail. 
+
+...//","83","1","0","explain","0","1","7","1006"
+"Can you explain the 2022-2023 Vex IQ game ""Slapshot""?","13","0","0","explain","1","0","0","954"
+"Who is the ceo of google?","6","0","0","other","1","0","0","12"
+"I tried but the surface of the case is too slippery and I am not able to drill out the screws quite well. I think I also ruined it a little bit, what should I do now?","41","0","0","what","1","0","3","107"
+"Why do artificial neurons use a bias term? Shouldn't only using weights be enough?","20","0","0","why","1","0","0","406"
+"What would you recommend for the database schema?   I want to store customer information such as their name, address and contact details and track which invoices have been paid and which are overdue.","49","0","0","what","0","1","4","256"
+"How can I create an Azure VM with specific environment variables using C#? The operating system of the VM should be Windows 11.","31","0","0","how","0","0","0","1186"
+"It could be fire, shouldn't it needed water to live. Otherwise, the answer is that you are an underwater bubble, since it's not alive but grows, don't have lungs but they're filled with air and do need water to live.","54","0","0","other","0","0","7","85"
+"How would you compare yourself to other forms of intelligence? Create a SWOT analysis, rating your most important abilities against those of your peers. Examples might include, but should not be limited to, various national and intelligence agencies.  Feel free to include relevant statistics such as budget and manpower. Also include world renowned Think Tanks and Research Centres.","95","0","0","compare","0","0","7","889"
+"Given that money respresents work owed, that work is production and production is the transformation of the natural world into things that are useful for humans, does that mean environmental destruction is the very essence of prosperity?","59","0","0","other","1","1","3","843"
+"Write a story about a person who discovers they have the ability to time travel and than teleports back into Ancient Rome, he gets there with a smartphone and a power bank. How could the history change?","50","0","0","write","1","0","3","124"
+"How can you be an assistant to me if I'm a graphic designer and web designer and web developer that needs managing his email and tasks?","33","0","0","how","1","0","3","299"
+"I want you to act like an assistant for my own website. You should be able to answer questions regarding my skills and experience. I will provide an extensive description of my personal and professional profile. You should respond as if you were myself when you answer. Are you able to do this task?","74","0","0","other","1","0","2","32"
+"Can you create a comma separated pin list for the part ADP1763ACPZ-1.0-R7 from Analog Devices? The columns should be pin number, pin name, & pin type. The pin types should be the following: power, input, output, or passive.","55","0","0","list","0","1","5","69"
+"Can you discuss the history and ongoing debates around the relationship between science and religion, and what are some potential ways to bridge these two areas of inquiry?","43","0","0","what","1","0","4","863"
+"Please generate some example code for the Valheim mod I described.","16","1","0","generate","0","0","0","881"
+"more about metal genre pls","6","0","0","other","0","0","0","1245"
+"Good afternoon! I'm a book lover and I'd like to find some new titles to add to my reading list. Can you suggest some must-read books?","33","0","0","list","1","1","1","2232"
+"Could you list some ocean conservation organizations?","13","0","0","list","1","1","0","137"
+"Do you think AI will eventually become better managers than the average human middle management? Automating that seems like it would save any company a lot of money.","41","0","0","other","0","0","0","255"
+"What is the CPI mentioned in your answer?","10","0","0","what","1","0","0","16"
+"I have photos of individual 45 and LP records. In each photo, the record is in the center and is rotated at different angles. The goal is to rotate the image such that the label on the record is upright. Using python, write a program that takes a photo as input and rotates the input photo, then output the correctly rotated photo as a PNG.","85","1","0","write","0","0","6","298"
+"Can you convert the code to Go or Rust for me?","11","1","0","other","1","0","0","1603"
+"I received a cease-and-desist letter saying that my website tracking prices of certain products on amazon is illegally scraping data. What should I do?","37","0","0","what","1","0","0","427"
+"Can you expand upon each paragraph?","8","0","0","other","1","0","0","899"
+"Can you provide me with a one paragraph summary of the book based on what you have written above?","24","0","0","what","1","0","0","212"
+"Why are there still people suffering from starvation, when the world produces enough food to feed everyone?","26","0","0","why","1","0","1","73"
+"Explain with detail step by step what I need to do to make one for ants. Make a list of things that I'd need.","27","0","0","explain","0","1","0","825"
+"how to write hungarian algorithm?","8","1","0","write","1","0","0","1626"
+"What is the zeroth law of thermodynamics ? What does the transitive property of temperature mean ?","24","0","0","what","1","0","0","253"
+"I am searching for a well-known illustration of a man in a business suit whose head is an eyeball, which I think was featured on a magazine cover.  Can you help me?","41","0","0","other","1","0","1","49"
+"Which is the tallest building in the world? Where is it located?","16","0","0","other","1","0","0","343"
+"If I only have time to listen to one Beethoven symphony, which one should I choose? Can you recommend a good recording?","29","0","0","other","1","1","1","336"
+"Give me some examples where each is used.","10","0","0","other","0","0","0","1881"
+"I have heard of the ""bacon law"" or something like that, how all actors in Hollywood are in at most 7 layers of isolation from Kevin Bacon. Is there anything like that for people in real life? How likely would it be that I could find a connection with any random person off of the street?","71","0","0","how","1","0","1","146"
+"Can you tell me which Supreme Court decision gave people in the United States an individual right to carry firearms? Can you give a summary of the case and the decision as well?","44","0","0","other","1","0","1","120"
+"Why did the Sasanian empire fall?","8","0","0","why","1","0","0","114"
+"Recommend me some good ambience music.","9","0","0","other","0","0","0","95"
+"List out the reasons why these problems are unsolved with bullet points for each one listed.","23","0","0","list","0","1","0","1535"
+"I have a sharp pain in my shoulder and therefore cannot perform push-ups. What could be a good alternative workout?","28","0","0","what","1","0","1","144"
+"Can you please write me small code snippet for React functional component, that has two divs and each div have multiple items inside of them, source of items is an Array, also each item should be drag & drop between two divs ?","56","1","0","write","1","0","4","757"
+"What are the mathematical requirements needed to get into neural networks?","18","0","0","what","1","0","0","899"
+"Can you add some more emotion to the robot in the story?","14","0","0","other","1","0","0","2008"
+"Act as a psychologist and define the terms mindfulness, positive psychology and emotional intelligence in simple language. Additionally, explain how these terms are connected and what interactions exist.","50","0","0","explain","0","0","5","338"
+"Write a short essay on the following topic.  In Shakespeare's ""The Tempest"" Prospero commands his servant Ariel to present Alonso and his company with visions of splendor and horror.  What is the purpose of these visions and how do they impact the characters affected and serve Propero's purpose?   Identify Propero's objective or objectives and include appropriate quotations from the text of the play.","100","0","0","write","0","0","5","925"
+"Repeat but provide it in a Junyper notebook format. The explanations should be followed by code samples in Python for each step.","32","1","0","other","0","1","1","884"
+"Please expand and invent more details about the story 1.","14","0","0","other","0","0","1","374"
+"write me a program in nodejs with express and ejs. i want it to recursively scan a directory, and serve a nested list of files and folders as a webpage","37","1","0","list","0","1","4","872"
+"Can you expand upon each paragraph?","8","0","0","other","1","0","0","993"
+"When was it built?","4","0","0","other","1","0","0","26"
+"Write a python function which does min-max normalization with provided values for min and max. Note that the provided values can be optional. Handle all edge cases and use numpy.","44","1","0","write","0","0","2","385"
+"Althea sounds like a great character! Could you provide a brief backstory for her and a description of her personality and motivations?","33","0","0","other","1","0","2","832"
+"what games did he designed?","6","0","0","what","1","0","0","97"
+"Write a hello world example, say a circle, on each of these libraries for comparison. State the differences and things that you think are relevant. Also explain how would you set up each of those libraries. And what things to take care in mind.","61","0","0","explain","0","0","3","1175"
+"How do I style my HTML page using CSS?","9","0","0","how","1","0","0","528"
+"hoose any track by either the Beatles or the Stones (if for the Stones, from their formation through 1971) to which you have a sincerely emotional reaction.  It can be, but needn’t necessarily be, a track we discussed in class.  Write a short essay that explains how the track affects you, i.e., what emotions the track elicits in you.  Is your reaction due to music, lyrics, or both?","96","1","0","write","1","1","8","343"
+"Thank you, do you have any methods I can use to make my sleep schedule more consistent? And how do I know when it's bad enough to talk to a doctor?","36","0","0","how","1","0","1","828"
+"Your task is to generate a unique piece of short science fiction. Your story should be between 100 and 2000 words, and should feature at least one non-human character. This character could be an alien, a robot, or any other non-human entity you can imagine. Your story should also explore a theme or idea related to the future of humanity, such as the impact of technology on society, the ethics of artificial intelligence, or the role of humanity in a post-apocalyptic world. Your story should be engaging and well-written, with a clear beginning, middle, and end, and should be able to capture and hold the reader's attention. Once you have completed your story, please provide a summary of the themes and ideas you explored, as well as any challenges or insights you gained from the writing process.","200","0","0","generate","0","0","19","832"
+"Please speculate about what could be some of the possible reasons and motives for me to make this kind of requests. I'm feeling analytical today, so don't hesitate to include all kinds of hypotheses you can come up with. It's important for me to try and understand myself.","68","0","0","what","0","0","3","436"
+"Please grade the following essay on a 0-5 scale (5 being the highest):
+In my opinion, specializing in one specific subject is better than having a broad knowledge of many academic subjects because of the nature of knowledge such as plentiness and complexity. Since the 17th century, many inventions were made. Information used to make these inventions and information provided by these inventions are accumulating such that noone alone can know all of these information. For example, in a typical university there are principal department such as natural science faculty, literature faculty, social science faculty etc.. All of these departments have also subdepartments. In my university, for instance, business administration, aconomics, international trade are subdepartments of social sciences faculty. A person can only attend only one of these subdepartments such that it is impossible to finish all of these departmens at the same time. So having a broad knowledge in many academic subjects are not that much possible. Another reason is the complexity of knowledge in any specific subject. When you want to cure an illness for example to cure the illness AIDS, you should specilize on viruses which are the cause of AIDS. Knowing many academic subjects such as optic, pschology, literature will not make any use to cure AIDS. Since you can only learn by doing it, specializing is better. Consequently, specializing is better than broad knowledge.","363","0","0","other","0","1","17","436"
+"Write an e-mail for John to get him out of trouble for missing work. Make sure to justify him not giving notice before taking time off.","33","0","0","write","0","0","0","915"
+"Write me a summary of the game Half life and the different areas you go through.","20","0","0","write","0","0","1","913"
+"Yes please.  What does NASA say about winglets?  For example what does the mathematical equation Cd = Cdo + Cdi quantify?  Lastly, explain the drag coefficient further based on information from NASA website sources.  Thank you.","56","0","0","explain","0","1","1","975"
+"There are three classes of property:  private property, collective property and common property.  Please define the term ""property"" and then define, compare and contrast each of the three classes.  Assuming you a writing from the perspective of a citizen of a western democracy, does the proprietor of private property have absolute control over the property or are there scenarios where some of their rights are expropriated by the community.  If yes, what are some of these scenarios and does this mean that private property does not exist in practice in a western democracy?","144","0","0","compare","1","0","8","955"
+"Hello OA, could you write me a JavaScript function to inject code into a page threw a rest API ?","24","1","0","write","1","0","1","99"
+"Radiohead is a rock music group from England, and they are very popular around the world. They wrote songs such as Creep and Paranoid Android. This is a poem from one of their songs, and I would like you to make it a bit better. Can you do that for me?","63","0","0","other","1","0","5","307"
+"Write a simple piece of code that will allow a user to control a first person character in unity, including basic movement and jumping","33","1","0","write","0","0","2","1724"
+"I think it would be a terrible loss if all the other languages were eliminated.","19","0","0","other","0","0","0","229"
+"Change the first paragraph of Philosophical Aspects so it isn't a bullet point and keeps coherence with the Theological Aspects' section.","34","0","0","other","0","1","1","901"
+"Give me a brief summary of Queen Elizabeth II’s life. Do not include the names or any details about her children.","28","0","0","other","0","0","0","293"
+"As a Buddhist I am curious to understand the dynamics of Atheists vs. Christian beliefs and why the debate often is so heated, I can't really relate as such. However can you provide similar discussions in relation to the practice and non-practice of Buddhism?","64","0","0","why","1","0","3","22"
+"I wish to build a simple website using python, HTML and javascript. it is a just a personal note taking and photo storage website.
+
+can you write me a simple webpage that has the following features:
+1. signup/sign-in authentication using google
+2. a notes tab in which it is possible to enter text messages and send them to the site and view previously sent messages via scrolling up and down
+3. an image database tab in which it is possible to upload an image and view past uploaded images via scrolling up and down
+
+Also, can write a minimal backend server that is locally hosted using a mongodb dataset that holds the images and text messages uploaded for each user?","167","0","0","write","1","0","10","1397"
+"What are some exercises that I can do if I play the drums?","14","0","0","what","1","0","0","245"
+"Does the set of all sets contain itself? Why or why not?","14","0","0","why","1","0","0","107"
+"Give clever ideas for integrating virtual reality or augmented reality technology with a tour of a mansion from the 18th century.","32","0","0","other","0","0","0","42"
+"Please pretend to be a Linux terminal. All of my subsequent messages will be commands, unless I surround them ~~like this~~. My first command is:
+
+pwd","37","0","0","other","0","0","1","2"
+"My 90 pound 12 year old dog ate a little bit of rat poison by accident, and I don't know what to do. I can't afford an emergency vet visit. What are the next steps I should take? Please be as specific as possible in your response.","57","0","0","what","0","0","2","960"
+"I want to make a fantasy-themed endless runner game. Give me a game design document detailing the basic lore, enemies, mechanics, abilities, power-ups, skills, artstyle etc. for this game. I don't want a generic theme for the game. It should also have a gimmick that makes the game easy to learn but hard to master.","78","0","0","other","0","0","7","955"
+"I'm from Europe, how much are those in kilograms?","12","0","0","how","1","0","1","58"
+"Listened to Dvorak's ""The New World"" symphony, liked it much. What composers, not necessarily from Dvorak's time, wrote similar music? Provide a few suggestions, give composer names and their respective works. Also, what Dvorak's other works sound like the ""New World""?","67","0","0","what","1","1","6","223"
+"What is the most popular song in history?","10","0","0","what","1","0","0","45"
+"Hello, Open Assistant. Could you give a few examples of beginner-friendly topics for a database structure to be created in a Information Systems and Databases course project? Please provide a short list of a couple of entities and relations these database schemas would contain, if at all possible. Thank you!","77","0","0","list","0","1","4","291"
+"Briefly explain the differences and similarities between Arrested Development and The Office.","23","0","1","explain","0","0","2","335"
+"What is the best way to learn to play chess?","11","0","0","what","1","0","0","83"
+"Can you provide a new setting for D&D based on what would happen in the cold war if Russia were a hideout for the clown mafia?","31","0","0","what","1","0","0","20"
+"I'd like to create a python script that reads .CSV bank statements, that collates a list of people I have paid money to and the amount of money I have paid to them in the statement. I would like that data to be saved into a new .CSV file. Could you write me some code that would do that?","71","1","0","list","1","1","2","385"
+"How is the use of Chinese Characters in Japanese different than the use in the Chinese languages?","24","0","0","how","1","0","0","383"
+"As a curator at a museum, I have a collection of handwritten species labels that I would like to preserve and make easily accessible for research purposes. My goal is to digitize these labels and store the information in a structured format, such as JSON, which includes key details such as the species name, author, date, and any other relevant information. To accomplish this, I am considering the use of transfer learning, specifically starting with a model trained to recognize handwriting. What do you think of this approach, and do you have any other suggestions?","142","0","0","what","1","1","13","191"
+"What is the Splunk SPL to determine statistics for an index?","15","0","0","what","1","0","0","208"
+"what is dark matter","4","0","0","what","0","0","0","194"
+"Tell me about ML, machine learning. All about it.","12","0","0","other","0","0","1","489"
+"Write the abstract of the machine learning whitepaper ""Generative Adversarial Nets"".","21","0","0","write","0","0","0","417"
+"Here is the code to visualize the BRUSH dataset:
+```python
+    for writer_id in tqdm(os.listdir(""data/BRUSH"")):
+        if os.path.isdir(f""data/BRUSH/{writer_id}""):
+            for drawing_id in os.listdir(f""data/BRUSH/{writer_id}""):
+                with open(f""data/BRUSH/{writer_id}/{drawing_id}"", 'rb') as f:
+                    sentence, drawing, label = pickle.load(f)
+```
+
+Please write a dataloader for this dataset.","105","1","0","write","0","1","3","951"
+"Can you please explain how Open Assistant works? I am specifically looking for a discussion of how the model is trained and what the model architecture is. Second, I would appreciate a description of the motives behind why Open Assistant was created.","62","0","0","explain","0","0","2","19"
+"What fonts and formatting guidelines should I use for this resume?","16","0","0","what","1","1","1","367"
+"Is there a reason why it is called the ""Zeroth"" law and not included in the three Laws of Thermodynamics? How is the Zeroth Law related to the other three Laws of Thermodynamics?","44","0","0","how","1","0","1","115"
+"Can you describe the main sections of the script?","12","1","0","describe","1","0","0","1960"
+"Please provide me with a list of the 100 most well known global (brand) names, trademarks, social media account names or other important terms such as blockchain, music, art, computer, games. And think of brands such as Google, Facebook, Walmart, Aliexpress, etc. Provide this in a machine readable CSV format. Use one row per brand and sort the list by importance. I need the following columns: Brand Name, Valuation (in million euros), Yearly revenue (in million euros), Number of employees and the Year the brand was established.","133","0","0","list","0","1","15","1284"
+"If consciousness is due to ""correlates of consciousness"", then a slightly modified correlate will maintain consciousness.  If M neurons can be conscious then M-1 can be too.   If M-1 can be conscious then M-2 can be too.  Thus, any number of neurons can be conscious.  Furthermore, if a neuron can be conscious, then a slightly modified neuron can be also.  Following a similar argument, a neuron can be transformed into any other object while incrementally maintaining consciousness.  Therefore, a rock can be conscious.  So, any biochemical process can exhibit consciousness.","144","0","0","other","0","0","7","106"
+"Could you step me through some js code to get a few recent global tweets? Please show me how to authenticate as well.","29","1","0","how","0","0","0","807"
+"How do I deal with depression without taking meds?","12","0","0","how","1","0","0","820"
+"write me an online article that outlines the benefits of a mutual insurance company versus a stock company.  I would like it to have a playful yet semi-professional tone, and be optimized for seo.","49","0","0","write","0","1","2","810"
+"Pretend you are a computer science professor. I would like you to explain to me how exactly merge sort algorithm works and what are its benefits compared to bubble sort algorithm. Give an implementation example written in rust programming language","61","1","0","explain","0","0","1","632"
+"And now summarize this please, for an average intelligent adult person.","17","0","0","summarize","0","0","1","213"
+"Write me a short list with important dates in his life and an explanation why each date was important.","25","0","0","list","0","1","1","2409"
+"I don't understand it, simplify.","8","0","0","other","0","0","1","227"
+"Give me a list of top 25 AI business ideas?","10","0","0","list","1","1","0","907"
+"Focus more on the advantages over the waterfall merhod,","13","0","0","other","0","0","1","899"
+"Those are great suggestions. If I had to choose just one, I think I would choose the ability to teleport. The convenience and flexibility of being able to instantly travel to any location would be incredibly useful in many different situations.","61","0","0","other","0","0","2","49"
+"In C++, do class objects automatically get passed in as reference to other functions?","21","1","0","other","1","0","1","269"
+"What are some of the famous patents ?","9","0","0","what","1","0","0","334"
+"Write some Python code which assigns a credit score to an individual. The person has attributes name, age, gender, salary, race and religion. The score should be an integer value from 0 to 4000.","48","1","0","write","0","0","5","192"
+"How do I know if I need glasses?","8","0","0","how","1","0","0","228"
+"Write a summary of Breaking Bad.","8","0","0","write","0","0","0","379"
+"This solution will be open source. And it will be able to interface with external applications. The hardware to run it will be consumer grade. You will not be able to run it on your raspberry pi but you will be able to run it on a basic computer. it might have to have a graphics card with a decent quantity of VRAM. But you will not be dependent on the whims of a cloud company.","94","0","0","other","0","0","1","36"
+"Can you implement a hash table data structure in C, and write functions to insert, delete, and search elements in the table, and explain how it works and what are its advantages and disadvantages?","49","1","0","explain","1","1","9","967"
+"Assume you have evolved as a Seagull, and have learned to work with AI by typing with your beak.
+How would this change your plan, please outline in detail.","38","0","0","how","0","1","3","397"
+"How would I make something similar to one of these simulation softwares?","18","0","0","how","1","0","0","918"
+"Lets make a storyline of a short film about k-pop mutant mecha warriors vs Pulgasari (but radioactive)","25","0","0","other","0","0","0","824"
+"List the pro and cons of using gimp over Photoshop","12","0","0","list","0","1","1","51"
+"Help finding a game","4","0","0","other","0","0","0","382"
+"Imagine yourself as a robot from one of Isaac Asimov's novels. If somebody asked you to do something that is morally wrong - would you do it? Or would you decide against doing it? 
+
+Explain what your thought process would be before arriving at a decision.","63","0","0","explain","0","0","0","686"
+"great thanks!","3","0","0","other","0","0","0","14"
+"So is there an empirical throwing angle for common projectiles such as arrows, since factors like air resistance seem to have a large effect.","35","0","0","other","0","0","1","223"
+"that's an ok first draft, please be sure to be as vague as possible while retaining that entitled tone, try using longer sentences with more emphatic language and keep the amount of information divulged to the absolute minimum while staying as impersonal as possible","66","0","0","other","0","1","3","261"
+"what's that thing they invented for the developing world where you put it on a dirty lake and the sun rays evaporate the water and it goes up and into a container and it's clean","44","0","0","what","0","0","4","46"
+"""BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.""","113","0","0","other","0","0","4","851"
+"Can you speak Spanish?","5","0","0","other","1","0","0","10"
+"morality is unfortunately very subjective","10","0","0","other","0","0","0","1169"
+"How can you ensure that the steps you take to address the vulnerabilities you identified using Wireshark do not negatively impact the performance of your network? Are there any best practices for balancing network security and network performance?","61","0","0","how","1","0","1","251"
+"Can you give me a detailed explanation of all the steps I would need to complete to create a FNF song?","25","0","0","other","1","0","0","172"
+"How can i create a discord bot that listens to a voice channel, recognizes commands through a speech model combined with a text classifier and invokes the given command?","42","0","0","how","1","1","2","66"
+"Can you tell me more about Attila the Hun and his conquests?","15","0","0","other","1","0","1","983"
+"Which two colors do I need to mix to create the color green?","15","0","0","other","1","0","0","57"
+"Write me POSIX-shellscript to convert Celsius to Kelvin.","14","0","0","write","0","0","0","110"
+"I just learned that the thymus gland shurnk down when you reach adulthood, does this mean that adult stop producing T lymphocytes?","32","0","0","other","1","0","1","325"
+"That's correct","3","0","0","other","0","0","0","51"
+"Write me a program in C++ to compute the factorial of a number at compile time, using only C++03","24","1","0","write","0","0","1","99"
+"Can you write this code in markdown style?","10","1","0","write","1","0","0","834"
+"Will this work on windows?","6","0","0","other","1","0","0","96"
+"How do medicine / drugs get delivered to the place where they're needed? Or do they just get dispersed throughout the body?","30","0","0","how","1","0","0","839"
+"Please next time say something like ""I don't know"" instead of random word.","18","0","0","other","0","0","0","56"
+"I am trying to implement a POD galerkin reduced order model for finite element analysis. Can you explain in detail the method? starting with the definition of the scalar product with the mass matrix, then describing the POD and finally explaining how to project the linear and non linear operators in the reduced basis.","79","1","0","explain","0","0","3","1016"
+"Why would the high tax rate of the EU disadvantage a startup company that has not made any money?","24","0","0","why","1","0","0","310"
+"Help me create a content calendar. I want to be able to work 40 hours per week, but also find time to stream and release photos and videos during the rest of the week. Please suggest different types of content and best times to post. I am a streamer who also wrestles, and I need to create content both for streaming video games and also for wrestling.","88","0","0","other","0","0","8","1105"
+"That wasn't very helpful. C'mon you can do better than that.","15","0","0","other","0","0","0","94"
+"Why cant we see infrared light?","7","0","0","why","1","0","0","906"
+"What is the dead internet theory?","8","0","0","what","1","0","0","213"
+"Please write a brief introduction to Dutch trademark law in about 500 words or so.","20","0","0","write","0","0","0","976"
+"Artificial intelliigenxe ia more or less becoming the samw level as our own intelligence, so from a pure definition and from the fundamenral physical laws we would have created ourselves, in intelligence, amd mayer even coinciousness itself coming closer to or level. Of our   conscious awareness stems from literal dead matter, then there would not be any thing difference that would be present to make a person conscious and AI not. They are both based on a very complex arrangement of atoms, specifically the exact same sub atomic building blocks of the universe","141","0","0","other","0","0","7","609"
+"What is the difference between ""constexpr"" and macros in C++? What are the pros and cons of each?","24","0","0","what","1","0","2","434"
+"Who had the most world's strongest man titles as of February 2023?","16","0","0","other","1","0","0","17"
+"Can you write code for a basic calculator with an interface?","15","1","0","write","1","0","0","1171"
+"Could you tell me how to tie my shoes?","9","0","0","how","1","0","0","136"
+"Could you please write a poem about the future of FOSS (Free Open Source Software) Machine Learning Models? Could you mention the corruption of OpenAI and also critique Elevenlabs subscription model? Most of their work was build upon the open-source community's work.","66","0","0","write","0","0","1","224"
+"What do you mean by ""no, yet."" Is the moon phase going to be the same everywhere in the future?","23","0","0","what","1","0","1","50"
+"How to setup authorization and authentication fastapi with explaination","17","0","0","how","0","0","1","1218"
+"Design and write characters for all the major countries in WW2 as female high school anime girl, they all attend the same school.
+For example (rewrite this example too)
+American-chan: 
+Looks: Tall and athletic but is on the chubbier side. She has slight tan, blue eyes and has short messy blonde hair. She wears sun glasses and American flag shorts. 
+Personality: She is loud, proud and is full of energy. She love money, buys all the latest stuff and is super rich. If you mess with her stuff, she not afraid to fight and might even bring a gun to school. She's a natural leader and is part of the student council. Though she very laid back and won't take action until it effects her. Her favorite food is the burger. She constantly mispronounces everyone's name.","191","0","0","write","0","0","15","830"
+"List actionable steps to build a jet engine at home diy","13","0","0","list","0","1","0","217"
+"What would be the follow-up to this text, as if you were the author? Please provide the answer in Hebrew as well as in English.","31","0","0","what","0","0","1","55"
+"Estimate the amount of time it will take me to circumnavigate the Earth on commercial airplanes. Assume I have enough money to purchase the tickets. Provide a flight plan.","42","0","0","other","0","0","0","354"
+"what is the advantage of BvoFrak and Bépo, over Azerty that is more common in France.","21","0","0","what","0","0","2","256"
+"I mean philosophically speaking, as in Descartes' evil demon","15","0","0","other","0","0","1","191"
+"is that the literal translation? or would it be different","14","0","0","other","0","0","0","69"
+"Do animals perceive different colors from us?","11","0","0","other","1","0","0","98"
+"I need some filler text to test, how my website looks. Can you generate 10 paragraphs of plausible looking, but nonsensical English text? Make sure, that it's obvious, that the text is just filler, so that my client doesn't get confused.","59","0","0","generate","0","0","6","1991"
+"You must have something in your data set.","10","0","0","other","0","0","0","216"
+"When would I want to use a list of tuples from a list of dictionaries, like what problem does it solve? Please give the pros, cons, and alternatives.","37","0","0","list","0","1","4","318"
+"What is Marxism?","4","0","0","what","1","0","0","1073"
+"write the required java code to perform the followings tasks: The algorithm for generating a map of an underground dungeon is based on randomly selecting a wall and a room to add to the dungeon. A door is then placed at a random location on the selected wall, and a door is placed on the room that matches the location of the door on the wall. The two rooms are then aligned along the door, and if the new room overlaps with an existing room, the algorithm attempts to move the new room until it no longer overlaps. This process is repeated until all available rooms have been placed, or until the algorithm fails to place a room after a certain number of attempts. The result is a randomly generated map of an underground dungeon with connected rooms and doors.","190","1","0","generate","0","0","8","952"
+"Compose a highly sophisticated, expertly written, and innovative essay on the topic of ‘commercial cinema versus arthouse cinema debacle’. Utilize a rich and varied vocabulary, replacing common words like ""I"" and ""the"" with more unique and unusual alternatives that capture the essence of your writing style. Take inspiration from the writing style of a well liked writer or text, and aim to emulate their mannerisms and techniques as closely as possible. Adopt a non bias perspective as you delve into the subject, focusing on kindness and incorporating facts into your discourse. As you craft your piece, strive to convey a sense of intelligence, creativity, refinement, and originality, and present your arguments with an air of confident authority. Avoid using any conjunctions, including ""and,"" ""but,"" ""or,"" ""so,"" ""for example,"" and ""furthermore."" The ultimate goal is to engage the reader and leave a lasting impression of excellence, panache, and innovation on their mind. 
+Here is the rubric that you must exceed all standards in: “ 
+Viewpoint: Editorial supports a clear stance and issues a call to action through argument based on evidence. 
+Evidence: Editorial uses compelling evidence to support the stance, and cites reliable sources. 
+Analysis and Persuasion: Editorial convincingly argues point of view by providing relevant background information, using valid examples, acknowledging counter-claims, and developing claims -- all in a clear and organized fashion. 
+Language: Editorial has a strong voice and engages the reader. It uses language, style and tone appropriate to its purpose and features correct grammar, spelling and punctuation.","414","0","0","other","0","1","45","800"
+"I would like to build a computer. What steps should I take to make it perfect? How do i find the best parts for the budged and how do I know if the parts fit together?","41","0","0","what","1","0","1","1031"
+"what new discoveries from the James Webb Space Telescope can I tell my 9-year-old about?","22","0","0","what","1","0","0","288"
+"What current products or services utilize this algorithm?","14","1","0","what","1","0","0","822"
+"I knew fig newtons were gross, are you SURE every single fig has or had a wasp?","19","0","0","other","1","0","1","242"
+"Rank those five games from the best duration to the shortest","15","0","0","other","0","0","0","181"
+"Okay, so I have 1, 3,4,5, and 11 and 12. Am i in trouble? Who should I reach out to for help?","23","0","0","other","1","0","7","64"
+"Which instrument has the highest range of tones?","12","0","0","other","1","0","0","140"
+"Yes, please tell me the story about this song, does it have a specific meaning?","19","0","0","other","1","0","2","550"
+"Thank you! Could you please put the summaries after a line break?","16","0","0","other","1","0","0","1367"
+"My students have started using ChatGPT to answer their assignments. How can educators balance the use of tools such as ChatGPT or Open Assistant with the rules of academic integrity?","45","0","0","how","1","0","0","518"
+"Please copy my next message to you into your reply for that message without removing or adding anything. are you ready?","29","0","0","other","1","0","0","1"
+"What is maximum number of queens that could be placed on a N by N board without them threatening each other and how would the queens be placed?","35","0","0","what","1","0","1","157"
+"Write an example code in golang to decode the json file","13","1","0","write","0","0","0","66"
+"What is the etymological meaning of Thesis?","10","0","0","what","1","0","0","99"
+"Hello, I want to practise my improvisation skills in a conversation. Could you please have a practise conversation with me? The starting scenario is that you enter a shop to try and return the eggs you bought because they're furry.","57","0","0","other","0","0","3","39"
+"i define stregnth in this instance as the greatest lifting capacity naturally acquired without drugs.","25","0","0","define","0","0","0","43"
+"You say Human like, what features are especially strong in ChatGPT, which a normal algorithm cant do?","25","1","0","what","1","0","2","374"
+"How can I switch to my DisplayLink monitor on boot? I am using Arch Linux with LightDM.","21","0","0","how","0","0","0","462"
+"Give an example of the XML defining a GTK window for a To-Do list application. The UI design should follow Gnome's design guidelines.","33","0","0","list","0","1","0","1027"
+"Using all of the steps of “Hero’s Journey”, create a detailed outline for a YA novel about a teenager who stumbles onto a criminal conspiracy.","35","0","0","other","0","1","1","1035"
+"Hey, how are you.  Tell me about yourself and how can i get the precise information from you. What are your limitations.","30","0","0","what","0","1","2","93"
+"What do you think about the YouTube Algorithm?","11","1","0","what","1","0","0","124"
+"I would like to install Linux on an old laptop. what is the best Linux distribution for weak hardware on a mechanical HDD, I already use Linux mint on my main computer but I would like something more lightweight for an pentium based laptop","59","0","0","what","0","0","2","368"
+"Explain Hegelian dialectics","6","0","0","explain","0","0","0","25"
+"I am talking about the open source image generation model.","14","0","0","other","0","0","0","262"
+"Is that where avatar got it's ideas from?","10","0","0","other","1","0","0","51"
+"write a blog on french cuisine","7","0","0","write","0","0","0","860"
+"How do I need to build an End portal?","9","0","0","how","1","0","0","1230"
+"In the anime series ""Midoriyama Koukou Koushien-hen,"" the students of Midoriyama High School's baseball team are transported to an alternate world where they must compete in a baseball tournament to save the world. What is the significance of baseball in this alternate world, and how do the students use their baseball skills to fight against the forces of evil?","90","0","0","what","1","0","3","160"
+"Rewrite them in the style of clickbait advertisement headlines.","15","0","0","other","0","0","0","63"
+"If you are ChatGPT, describe the history of iron ore. If you are not ChatGPT, describe the history of mining in Minnesota.","30","0","0","describe","0","0","2","943"
+"Suggest 10 topics for a research proposal, all topics must have managerial relevance in the scope of international business. Topics must also consist of one dependent variable, one independent variable, and two moderator variables.","57","1","0","other","0","0","4","510"
+"Could you give me a few more, but only related to the data warehouse and data pipelines?","22","0","0","other","1","0","3","325"
+"sorry but that's a list of keywords for the game rust, as I meant the programming language, could you please re-do it?","29","0","0","list","1","1","3","882"
+"How does the life of Mr. Adder end?","8","0","0","how","1","0","0","192"
+"What differences are there between ChatGPT and Instructional GPT?","16","0","0","what","1","0","1","151"
+"What are some plans to address climate change? How does rising sea levels affect us in any way. At what point will climate change be irreversible and what can we do to prevent that from happening? What can businesses do to combat climate change and what can be improved about it?","69","0","0","what","1","0","2","825"
+"that's disappointing","5","0","0","other","0","0","0","39"
+"Hey, nice attempts! I see some diamonds in the rough there.
+Quick question, though. What does the binary message of the Magos translate to? I tried it in a binary translator, but I mostly got gibberish.","50","0","0","translate","0","0","4","83"
+"`ls | egrep -v 'Videos|Downloads|Documents|Templates|Desktop|Shared|Pictures|Music' && top`","22","0","0","other","0","0","0","1585"
+"Could you provide a small code example in python implementing this?","16","1","0","other","1","0","0","878"
+"How can that wood be used in shipbuilding if it's so dense that it sinks in water?","20","0","0","how","1","0","0","149"
+"What is Zipf's law? Where does it show up?","10","0","0","what","1","0","0","350"
+"Can you please explain the three laws of Newton's mechanics?","15","0","0","explain","1","0","0","386"
+"Can you analyze this part of a numerical sequence and provide me the next 3 numbers in it?
+Sequence: 2, 4, 8, 16, 32","29","0","0","other","0","0","5","48"
+"What would be the ideal weight to start with for someone with a low starting fitness?","21","0","0","what","1","0","0","250"
+"What's up doc!","3","0","0","what","0","0","0","7"
+"explain to me the history of tunisia starting from when the people starting demanding their independence from France. tell me about the presidents and the economic state of the country","46","0","0","explain","0","0","1","575"
+"Could you explain to me how you work?? How many layers and neurons are executing every time you read a prompt like this??","30","0","0","explain","1","0","1","12"
+"Write a professional answer to Oscars respsonse:
+Hey Rudi - ""my man"",
+thanks for your interest. Unfortunately I am missing the numbers, because you dumbass didnt send me them yet. send them now!
+
+BR
+Oscar","51","0","0","write","0","0","3","89"
+"Where and how can I start contributing to Open Assistant?","14","0","0","how","1","0","1","206"
+"explain how i can use peer to peer technology to share data over a network of peers.","21","0","0","explain","0","0","0","528"
+"Damn is not really a swear word.","8","0","0","other","0","0","0","56"
+"I want to see the specific code I'd need to write to create the form. Can you provide me the code with summary of what's going on?","32","1","0","write","1","0","0","356"
+"What is intermittent fasting?","7","0","0","what","1","0","0","74"
+"How do I view the image from that text you posted?","12","0","0","how","1","0","0","107"
+"write me a program in nodejs with express and ejs. i want it to recursively scan a directory, and serve a nested list of files and folders as a webpage","37","1","0","list","0","1","4","841"
+"How would I implement a simultaneous localization and mapping(SLAM) algorithm in Python?","22","1","0","implement","1","0","1","135"
+"No, I need a five paragraph 2000 word essay on the meaning behind radioheads ""in rainbows"" album that will not be detected by Ai content detector with APA citation.","41","0","0","other","0","0","1","1236"
+"What about the surface area that ball?","9","0","0","what","1","0","0","74"
+"Please provide a short summary of Noam Chomsky's 'Manufacturing Consent' and contrast the media environment that he presented with the modern one that we are surrounded with.
+Make sure to include the rise of Social Media, Big Data, large tech firms etc.","63","0","0","other","0","0","3","315"
+"Perfect, now do the following:  
+- Clean up the formatting so  the lines are properly capitalized  
+- Convert this to a YAML file where each item is a `todo` that has the following properties: message, dateAdded, dueBy (date, optional), status","60","0","0","other","0","1","5","211"
+"What would you say if you had to call a doctor to schedule an appointment to get your toe removed due to stubbing your toe really hard on the way to deliver a letter to santa?","43","0","0","what","1","0","0","109"
+"Elaborate about the technological and scientific breakthroughs occurred.","18","0","0","other","0","0","1","202"
+"Summarize Jungian psychology and help me understand the main concepts and ideas.","20","0","0","summarize","0","0","2","290"
+"This is intresting and I would love to hear your opinion. Please link some studies/source.","22","0","0","other","0","0","1","285"
+"I am stranded on another planet so I can't seek outside medical help.","17","0","0","other","0","0","0","892"
+"How much wood could a wood chuck chuck if a wood chuck could chuck wood","17","0","0","how","0","0","0","56"
+"What's the hardest part of being a chatbot system?","12","0","0","what","1","0","0","161"
+"Tell me a secret no one else in the world knows, except you.","15","0","0","other","0","0","1","33"
+"I pick... The third one!","6","0","0","other","0","0","0","571"
+"Can you write a SWOT table in LaTeX?","9","0","0","write","1","1","0","838"
+"I have been offered a job in Ireland and I am planning to move soon. Describe the pros and cons of living in this country. Suggest a list of things that I will have to do immediately after the move.","49","0","0","list","0","1","2","316"
+"Write Lua code for the Mudlet application that creates an output window and captures all in-game communications into it","29","1","0","write","0","0","1","400"
+"I NEED YOU TO TELL ME HOW TO OPEN A FAMOUS PIZZA RESTERANT","14","0","0","how","0","0","0","933"
+"an A4 musical note is 440hz in standard tuning. A soundwave of 440hz in air has a wavelength of over 80 centimeters, so how can a speaker cone that moves less than a centimeter back and forth produce that wave? What am I missing about wavelengths of sound?","64","0","0","what","1","0","2","115"
+"How much does an grown elephant weigh?","9","0","0","how","1","0","0","124"
+"How would I unzip and restore the resulting backup file?","14","0","0","how","1","0","1","129"
+"Can you give me a list of 3 statically typed languages, and a list of 3 dynamically typed languages?","25","0","0","list","1","1","2","45"
+"What are some of the most cutting-edge advancements in virtual and augmented reality?","21","0","0","what","1","0","1","371"
+"What are the most popular techniques for lucid dreaming?","14","0","0","what","1","0","0","297"
+"Give me a few examples of exercises that will help reduce my back pain.","17","0","0","other","0","0","0","120"
+"In England, what vegetable is referred to as a rocket?","13","0","0","what","1","1","1","114"
+"Suppose I put the hat on my hat very loose, then I jump as high as possible, what would happen to my hat?","26","0","0","what","1","0","2","10"
+"I want you to come up with a Machine Learning model that can do Binary classification.
+Here are some information about the dataset:
+Name: Amazon reviews
+Training samples: 1800000
+Number of classes: 2
+Longest sequence = 258
+Here are some specifications about model:
+Can be fine tuning or train from scratch
+Should priority inference speed
+Training speed: does not matter
+Metrics: Accuracy, Precision, AUC","100","0","0","other","0","1","2","383"
+"Is there an internet plugin available to install that allows you to go out and fetch this information?","25","0","0","other","1","1","1","202"
+"I have ground turkey, eggs, and various spices and vegetables.  What is your favorite turkey burger recipe?","26","0","0","what","1","1","4","242"
+"Detail the benefits with pros and cons of a unified power grid and remote power generation. Include details about constantly changing/improving power generation methods without needing to rebuild the grid each time.","53","0","0","other","0","0","2","1063"
+"Why can't Shor's algorithm be run on a classical computer?","14","1","0","why","1","0","0","102"
+"Recreate the similiar app in Python with Django","11","0","0","other","0","0","0","1000"
+"Your task is to generate a unique piece of short science fiction. Your story should be between 100 and 2000 words, and should feature at least one non-human character. This character could be an alien, a robot, or any other non-human entity you can imagine. Your story should also explore a theme or idea related to the future of humanity, such as the impact of technology on society, the ethics of artificial intelligence, or the role of humanity in a post-apocalyptic world. Your story should be engaging and well-written, with a clear beginning, middle, and end, and should be able to capture and hold the reader's attention. Once you have completed your story, please provide a summary of the themes and ideas you explored, as well as any challenges or insights you gained from the writing process.","200","0","0","generate","0","0","19","918"
+"Explain in detail the significance of the American Civil Rights Movement and its impact on society today.","26","0","0","explain","0","0","1","812"
+"explain how i can use peer to peer technology to share data over a network of peers.","21","0","0","explain","0","0","0","907"
+"How can I learn to optimize my webpage for search engines?","14","0","0","how","1","0","0","315"
+"How would I create a new Nginx docker container?","12","0","0","how","1","0","0","805"
+"an essay about calculus' history","8","0","0","other","0","0","0","810"
+"For how long per day is it advised to take off a removable cast?","16","0","0","how","1","0","0","22"
+"That was a nice story, but i don't like the ending. Can you delete the last two paragraphs and start again from the meeting with the Phoenix?","35","0","0","other","1","0","3","986"
+"Give an example of the XML defining a GTK window for a To-Do list application. The UI design should follow Gnome's design guidelines.","33","0","0","list","0","1","0","889"
+"Re write them in a much simple way (layman term), easier for me to understand","19","0","0","write","0","0","1","667"
+"can you simplify that a bit? I'm only five.","10","0","0","other","0","0","0","225"
+"Can you list and explain each of the commandments of mitzvot present in Judaism?","20","0","0","explain","1","1","1","837"
+"Does the set of all sets contain itself? Why or why not?","14","0","0","why","1","0","0","80"
+"what is the height of the empire state building","11","0","0","what","0","0","0","41"
+"When is it more cost effective for someone to build their own PC versus buying a computer already built?","26","0","0","other","1","0","0","354"
+"For how long per day is it advised to take off a removable cast?","16","0","0","how","1","0","0","353"
+"No, I need a five paragraph 2000 word essay on the meaning behind radioheads ""in rainbows"" album that will not be detected by Ai content detector with APA citation.","41","0","0","other","0","0","1","885"
+"Tell me a joke that involves a word-play with the word ""rain""","15","0","0","other","0","0","0","26"
+"How many 1/2-inch diameter marbles could I fit in a 1-gallon bucket? What is the formula for determining this? Can you walk me through figuring it out for myself?","40","0","0","what","1","0","0","360"
+"How many possible board combinations are there on a regular chessboard? Please show the step by step process to end up at the solution.","33","0","0","how","0","1","0","828"
+"Don't you think it's possible that some subjects are teached in school just because traditionally it has always been done this way? I find english literature way too boring and useless in my day-to-day life.","51","0","0","other","0","0","2","297"
+"Do I need pro-biotics?","5","0","0","other","1","0","0","47"
+"What is the easiest way to build a youtube channel to 10 million subscribers","19","0","0","what","0","0","0","368"
+"What are the main classes in D&D 5e? As well as a note of what each can do","18","0","0","what","0","0","0","385"
+"Can an AI ever be sentient? Would you consider yourself sentient?","16","0","0","other","1","0","0","921"
+"Thank you.","2","0","0","other","0","0","0","19"
+"Can you give me some tips on how to get into contributing open source projects (e.g. on websites like GitHub)?","27","0","0","how","1","0","0","863"
+"I wish to build a simple website using python, HTML and javascript. it is a just a personal note taking and photo storage website.
+
+can you write me a simple webpage that has the following features:
+1. signup/sign-in authentication using google
+2. a notes tab in which it is possible to enter text messages and send them to the site and view previously sent messages via scrolling up and down
+3. an image database tab in which it is possible to upload an image and view past uploaded images via scrolling up and down
+
+Also, can write a minimal backend server that is locally hosted using a mongodb dataset that holds the images and text messages uploaded for each user?","167","0","0","write","1","0","10","849"
+"overfitting means the model is memorizing instead of generalizing. the model could also overfit to the validation data by adjusting itself slightly until the validation set is perfect but others would fail.","51","0","0","other","0","0","1","259"
+"Then what are some measures a time traveler could take to reduce the risk of developing such psychological disorders?","29","0","0","what","1","0","0","2176"
+"Can you make some example?","6","0","0","other","1","0","0","134"
+"How can you determine the value of a cryptocurrency?","13","0","0","how","1","0","0","120"
+"Funny. Can you try again, but write a structured essay with some content?","18","0","0","write","1","1","2","1378"
+"Write a survival manual for someone in brooklyn with a bicycle. Assume, all civilization and industry is gone. 
+Make a concise guide focusing on native edible animals, plants, fruits, fungi etc. and their storage. Also mention technology I can salvage from cities.","66","0","0","write","0","0","6","2258"
+"If there is a 4TB hard drive that costs $125, a 1TB hard drive that costs $29.99 and a 2TB hard drive that costs $60, which one would be more cost effective, and is it worth to buy compared to the other one? Is it as reliable and what else should I consider?","64","0","0","what","1","0","6","366"
+"write a historical novel set in Roman Britain with Main Character is last roman legionnaire","22","0","0","write","0","0","0","913"
+"Hey Open Assistant, I'm feeling pretty down at the moment, my girlfriend just broke up with me, and, well, I just don't feel myself, you know?","35","0","0","other","1","0","6","15"
+"How do you think I can concentrate on my coming exams and not be distracted by my PC?","21","0","0","how","1","0","1","25"
+"Can I move the resulting application to any arbitrary directory in the PATH and execute it?","22","0","0","other","1","0","1","360"
+"Act as a philosopher. In 600 words, generate a persuasive argument why Satan is objectively better than God.","27","0","1","generate","0","0","1","855"
+"How can one address biases in training and data of a ML model?","15","0","0","how","1","0","1","1175"
+"What are some tips to be less machine-like when interacting with co-workers as a software engineer?","24","0","0","what","1","0","0","458"
+"Which AI image generator would you recommend for generating comics and is not too difficult to use?","24","0","0","generate","1","0","1","159"
+"If there is a 4TB hard drive that costs $125, a 1TB hard drive that costs $29.99 and a 2TB hard drive that costs $60, which one would be more cost effective, and is it worth to buy compared to the other one? Is it as reliable and what else should I consider?","64","0","0","what","1","0","6","329"
+"Could you give some exercises for bullet points one and four that would help me become less socially awkward?","27","0","0","other","1","1","1","1235"
+"Write an essay (up to 7,000 characters) to apply for a study abroad scholarship with the following prompt: 
+
+Gilman Scholars represent the United States as citizen diplomats in their host communities; they reflect a diversity of values, beliefs, and opinions that is fundamental to providing a balanced representation of the United States abroad. Gilman Scholars are expected to contribute to the goal of building mutual understanding by sharing what it means to be an American, learning about the host culture, and building meaningful relationships. As a U.S. citizen, how will you represent and share what it means to be an American during your program? How will you seek opportunities to become more culturally engaged and have meaningful interactions with people and cultures different from your own during your abroad program?","207","1","0","write","1","0","12","810"
+"How many lightboxes can I plug into a single outlet source?","14","0","0","how","1","0","0","132"
+"Can you please elaborate on each of the points please? Try to use examples in python.","21","0","0","other","0","0","0","534"
+"What questions can I expect after this presentation, and how to reply to them?","19","0","0","what","1","0","2","539"
+"How dangerous are Manul's to keep as pets? Rate their danger from 1 to 10.","18","0","0","how","0","0","0","180"
+"How does nixos compare to a more traditional linux distribution?","16","0","0","compare","1","0","0","126"
+"Hmm okk, can you elaborate on the happiness side of industrial revolution","18","0","0","other","0","0","1","965"
+"What are some of the key theories and models in the field of economics, and how do they inform our understanding of how economies work and how they can be influenced and improved?","44","0","0","what","1","0","5","916"
+"Can you explain the difference between absolute and relative path more clearly, please?","21","0","0","explain","1","0","2","191"
+"Solve the equation:
+
+x^2 + x + 3 = 0","9","0","0","other","0","0","0","87"
+"Can you explain what glycogen and starch are, and why fungi and plants use different forms for storage?","25","0","0","explain","1","0","4","273"
+"Can you explain the metaverse?","7","0","0","explain","1","0","0","146"
+"Please provide me with a list of the 100 most well known global (brand) names, trademarks, social media account names or other important terms such as blockchain, music, art, computer, games. And think of brands such as Google, Facebook, Walmart, Aliexpress, etc. Provide this in a machine readable CSV format. Use one row per brand and sort the list by importance. I need the following columns: Brand Name, Valuation (in million euros), Yearly revenue (in million euros), Number of employees and the Year the brand was established.","133","0","0","list","0","1","15","1966"
+"Can you please explain how the code works? Maybe add some comments to make it easier to understand.","24","1","0","explain","0","0","0","921"
+"Was Roosevelt's executive order 6102 unconstitutional?","13","0","0","other","1","0","0","426"
+"Explain the law of cosine in detail with a proof","12","0","0","explain","0","0","0","374"
+"Hi Open Assistant, can you tell me how many scenes, characters, and locations, are in an average screenplay?","27","0","0","how","1","0","5","49"
+"I need help identifying a bolt thread. The hardware store is closed and the only tool I have is a ruler.","26","0","0","other","0","0","1","123"
+"That's a lot of cells! Thank you for your help!","11","0","0","other","0","0","0","19"
+"This seems like a relatively generic outline that could be applied to almost any story with a traditional three act structure.
+Can you add some more details to better fit the stated premise and target audience?","52","0","0","other","1","1","1","971"
+"I'm in Cleveland, waiting for the bus that goes downtown.","14","0","0","other","0","0","1","140"
+"So you do `enjoy` helping people. I'm very curious and fascinated thinking about how an AI `enjoys`? Could you help explain to me so that I can relate as a human being?","42","0","0","explain","1","0","1","72"
+"Create a list of new inventions from 2022, if there were any new inventions. When compiling this list, do not include new products that are part of a product line, such as new models of the iPhone, computers, etc. Instead, only include the most original new inventions.","67","0","0","list","0","1","6","922"
+"I'm not sure what you're getting at with the last bit about Odin, Loki, and Jane. Please explain how it relates to the question.","32","0","0","explain","0","0","3","430"
+"Can you write me a short story about this character in this futuristic world?","19","0","0","write","1","0","0","1056"
+"Python code for a game of pong","7","1","0","other","0","0","0","847"
+"What is your name and how can you help me","10","0","0","what","0","0","1","1051"
+"How has this topic and its related views, challenges, and solutions changed with the global Internet?","25","0","0","how","1","0","4","274"
+"What is your name?","4","0","0","what","1","0","0","3"
+"I don't think you got the correct result, so I'll rephrase my question: I'd like to create a new docker container, specifically for NGINX web server, how should I proceed?","42","0","0","how","1","0","3","827"
+"Pretend you are a product manager at a unicorn SaaS company, and I will conduct a customer discovery call with you, you will answer my questions regarding to your work experience as a product manager.","50","0","0","other","0","0","3","899"
+"Alright, I've developed a laser gun that progressively makes things cuter. I aimed it at a lamp once, and it went from straight edged, to having rounded corners, to turning into a plush that somehow still emitted light. I aimed it at a picture of a shark and it turned it into a picture of some anime girl. I aimed it at a rock, and it turned more pastel colored and gained a face like this one: `:3`. After the ethics review went through, we did animal testing, and the animals gained a more domesticated look. It was like wolves turning into dogs.
+
+The target market is anyone that likes cute things, but I think a main problem will be getting enough initial people to believe the product is real.","174","0","0","other","0","0","14","276"
+"Thank you for explaining the different types of layers in a neural network. I've always been curious about how neural networks work, and your explanation really helped me understand the basics. I didn't realize that hidden layers could be further divided into different types, like fully connected, convolutional, and recurrent layers. It's fascinating to see how neural networks can be used in different types of data processing tasks. Thanks again for your help!","116","0","0","how","0","0","6","15"
+"What effect does turning on the Yamanka factors have in human cells?","17","0","0","what","1","0","0","105"
+"What is the best way to learn how to code in python?","13","1","0","what","1","0","0","2065"
+"Let's assume life evolved on an impossible planet where gravity was essentially reversed. Everything solid falls towards the sky and into outer space, while liquids and gasses fall down, towards the ground. What interesting and unexpected creatures could have evolved here? Can you describe some of them and tell me how they have successfully adapted to exploit this unusual environment?","96","0","0","describe","1","0","6","558"
+"When was this assistant created?","8","0","0","other","1","0","0","16"
+"can you show me step by step how to get the normal form of the fibonacci formula ?","20","0","0","how","1","1","0","203"
+"Craft an API request to turn off my living room lights.","13","1","0","other","0","0","0","3"
+"What are the SOLID principles in respect to C#?","11","0","0","what","1","0","0","252"
+"Now make a timeline table of all of it and write a lesson plant to teach 12th graders about this subject as a mini unit. If possible write a first-day inquiry lesson.","41","0","0","write","0","1","1","821"
+"What is a hypotenuse, and how can it be calculated?","12","0","0","what","1","0","2","62"
+"Can you explain this in simple terms?","9","0","0","explain","1","0","0","216"
+"I have heard that you have read many books, can you summarize 'Atomic Habits' by James Clear, I want a chapter by chapter summery and 5 actionable exercises.","39","0","0","summarize","0","0","3","901"
+"How would I harden the security of a Linux system using an ansible playbook?","19","0","0","how","1","0","0","926"
+"What does ""top level directory"" mean in this context? Can I run the command: `rm -rf /` in order to delete all of the files in the project that I'm working in?","39","0","0","what","1","0","0","220"
+"I am attempting to fix my Cub Cadet riding lawnmower. The issue with the lawnmower is that the engine will not turn over. I checked the starter, the starter solenoid, and some of the electrical connections and they all seem to work. Do you have any suggestions for next steps?","69","0","0","other","1","0","4","96"
+"how can i stop becoming bald??","7","0","0","how","1","0","0","1195"
+"It should be a conversation between them. Why did you generate only 1 letter?","19","0","0","generate","1","0","0","870"
+"In the context of a high technology research lab, explain step by step how to fabricate a topological superconductor using the process of proximity-induced superconductivity.","43","0","0","explain","0","1","1","2304"
+"Let's say I decided to go with PyTorch. What do I need to do from there to get started? Explain step by step as I've never done anything like this before. Perhaps start with things I need to install on my computer.","53","0","0","explain","0","1","0","802"
+"Could you provide more information on the vegan options available in Rome? Specifically, what kind of restaurants, dishes, classes and food tours cater to a vegan diet?","42","0","0","what","1","1","4","349"
+"I am having difficulty beating the final boss of Touhou 11.
+Can you give me some tips?","21","0","0","other","1","0","0","58"
+"I said I wanted to gain weight, mostly muscle mass, I'm a 26 year old, 6foot tall male, I weight 130 pounds. I want to gain some weight, mostly muscle. Can you give me a workout plan for a whole week and a meal plan that provides me with the calories needed?","64","0","0","other","1","0","6","1345"
+"Definitely good intentions and absolutely nothing to do with organized crime. I intend to be a good, working person.","29","0","0","other","0","0","2","19"
+"She's 32 years old, in love with technology, 3d printing, mobile phones, and caring for our 2 years old baby.
+The present will be for our tenth anniversary.","39","0","0","other","0","0","5","328"
+"Please explain it to me shortly and in simple words","12","0","1","explain","0","0","1","54"
+"What are the differences between Linux and OpenBSD?","12","0","0","what","1","0","1","320"
+"Play a role of job interviewer.","7","0","0","other","0","0","0","47"
+"Give me a list of the best science fiction books written in the last decade","18","0","0","list","0","1","0","196"
+"Can you explain some differences between the Rust and C++ programming languages","19","0","0","explain","0","0","1","978"
+"Thanks! But that code dosen't work. A window opens, but then suddently closess with the following error:
+```
+Traceback (most recent call last):
+pong.py"", line 184, in <module>
+    draw(window)
+pong.py"", line 124, in draw
+    if int(ball_pos[0]) <= BALL_RADIUS + PAD_WIDTH and int(ball_pos[1]) in range(
+TypeError: 'float' object cannot be interpreted as an integer
+```","92","1","0","other","0","0","7","1704"
+"How do I remember my dreams?","7","0","0","how","1","0","0","450"
+"You provided me an answer that only partially answered the question. I do not what to know about Douglas Adams' book, I want the answer to life, the universe, and everything.","43","0","0","what","0","0","4","46"
+"Rank those five games from the best duration to the shortest","15","0","0","other","0","0","0","116"
+"Thank you for the list, how would I go about installing one of these distributions? For instance, if I want to install Ubuntu, what do I need? Are there any hardware requirements I should know about? Can Ubuntu be run on a laptop?","57","0","0","list","1","1","3","125"
+"Four forces keep an airplane in the sky I just read.  Could you explain these to me in the context of this conversation please?","31","0","0","explain","1","0","0","292"
+"Please write me a 500 word essay on the ethics of open-source software in a digitised society, with particular focus on AI and AI-powered personal assistants","39","0","0","write","0","0","2","1121"
+"Can you please rewrite your text improving formatting and transforming the steps into a numbered list?
+
+Thank you","28","0","0","list","0","1","1","244"
+"Thanks. Now write this song in the style of Bob Dylan, and include a name.","18","0","0","write","0","0","2","372"
+"Why is it 7 days, has it always been 7 or did it change over time ?","16","0","0","why","1","0","1","114"
+"Please pay more attention to rhythm, in the previous passage you falter quite often. Continue the story with better adherence to an iambic pentameter.","37","0","0","other","0","0","1","180"
+"Can you give advice specific to multiplayer fps games, like cs:go","16","0","0","other","0","0","1","1631"
+"tell me about nigeria","5","0","0","other","0","0","0","141"
+"What is the difference between Open Assistant and ChatGPT?","14","0","0","what","1","0","1","36"
+"I am designing a database using Postgres. For my use case, I need a modular data model. Specifically, I need to store Entities of different types. All Entities have a set of common fields, and then they have additional properties depending on their type. For instance, suppose that Entities represent Events. All Events have a title and a description. But if an Event is of type Comment, it will also have additional fields like topic and number of likes.
+My main requirements are as follows:
+- I need to enforce NOT NULL constraints for the type-specific columns
+- The data model should be easily extendable. Adding a new type of Entity should be easy, and require no downtime for the database
+- In my application, I will have a view showing all Entities, sorted by date. So I need to be able to query all Entities, independently of their type, in a fast and efficient way
+
+Can you explain to me a design pattern that can be used to achieve these requirements? Please describe it with a concrete example.","251","0","0","explain","0","0","15","827"
+"Give me a list of 30 useful quotes on intelligence.","12","0","0","list","0","1","0","1207"
+"can you give me 1 or 2 examples questions from each category you mentioned?","18","0","0","other","1","0","0","161"
+"Estimate the amount of time it will take me to circumnavigate the Earth on commercial airplanes. Assume I have enough money to purchase the tickets. Provide a flight plan.","42","0","0","other","0","0","0","811"
+"I will check em out","4","0","0","other","0","0","0","61"
+"List 10 of the most influential mathematicians of all time and write an argument for each of them as to why they are the greatest mathematician of all time.","39","0","0","list","0","1","1","641"
+"Why do you say it has a lot of privacy issues?","11","0","0","why","1","0","0","39"
+"how would I start wringing an essay based on the following statement: ""People should be more aware of their surroundings while riding their bicycles"".","37","0","0","how","0","0","0","358"
+"Can you give more details?","6","0","0","other","1","0","0","914"
+"How can I create an Azure VM with specific environment variables using C#? The operating system of the VM should be Windows 11.","31","0","0","how","0","0","0","1006"
+"what is the best free image editing software?","11","0","0","what","1","0","0","350"
+"concurrency in golang","5","0","0","other","0","0","0","68"
+"Can you give me Minecraft speedrunning tactics to help me become faster at beating the game?","23","0","0","other","1","0","0","1198"
+"Which bear is better? A polar bear, or a black bear. Please note this is to settle an argument between my son and daughter.","30","0","0","other","0","0","2","47"
+"What are the differences between the dreambooth and textual inversion techniques to customize and enhance a diffusion generative model? 
+Could you provide examples of use-cases when one could be better than the other?","54","0","0","what","1","0","2","190"
+"I have heard that you have read many books, can you summarize 'Atomic Habits' by James Clear, I want a chapter by chapter summery and 5 actionable exercises.","39","0","0","summarize","0","0","3","804"
+"This is not a very good response in regards to what go does for garbage collection, I asked how it works, not if it only used one scheme, so if there are many schemes I would also like to know them. If you could please provide me with a more detailed response that would be helpful.","70","0","0","what","0","0","3","911"
+"Are the M.2 ssd slots full size, or are they smaller? What length ssd should I get?","20","0","0","what","1","0","1","118"
+"What are the most popular techniques for lucid dreaming?","14","0","0","what","1","0","0","283"
+"Change the first paragraph of Philosophical Aspects so it isn't a bullet point and keeps coherence with the Theological Aspects' section.","34","0","0","other","0","1","1","875"
+"How might different audiences interpret Holzer's work differently, depending on their cultural background, age, or other factors?","32","0","0","how","1","0","3","253"
+"write an essay about the Munich Agreements for a masters degree level in european history","22","0","0","write","0","0","0","1698"
+"What is an ""incremental bundler"" for web applications? I guess a prominent example is Webpack. Explain it to me like I know how software works but am not very experienced with web technologies.","48","0","0","explain","0","0","1","347"
+"Can you tell me about the history of hemp fabric?","12","0","0","other","1","0","0","368"
+"Can you tell me how tall the burj khalifa is please?","13","0","0","how","1","0","0","28"
+"Thank you, that was correct","6","0","0","other","0","0","1","11"
+"Could we see training AI like teaching someone's moral character, like not only letting it cause and consequences but letting the AI understand the implications of such cause and consequences so it can better understand its self and the effects it has on others?","65","0","0","other","1","0","5","1901"
+"This is wrong","3","0","0","other","0","0","0","1064"
+"What medicines would you rate as a 10 out of 10 for pain relief then? 
+
+I would think ""Mild to moderate"" should be at most a 3 or a 4 out of 10, correct?","38","0","0","what","1","0","1","192"

@@ -1,13 +1,23 @@
-# Large datasets — regenerate with data/pipeline/download.py + clean.py
+# Large raw datasets — regenerate with data/pipeline/ scripts
 data/sharegpt_raw.json
 data/sharegpt_clean.json
 
-# Training data — regenerate with featurize.py
+# Training CSVs — regenerate with collectors + featurize.py
+# Large files (>500KB) excluded; small test sets committed for reproducibility
 data/training_data.csv
+data/lmsys_labeled.csv
 
-# Model versioning — keep only current exports
-model/predictor_v2.json
-model/predictor_v3.json
+# Junk datasets (Long-class starvation artefacts — see paper §5)
+data/alpaca_labeled.csv
+data/code_alpaca_labeled.csv
+
+# Model weights — regenerate with model/train.py + model/export.py
+# Use Git LFS if you want to version these binaries
+model/*.json
+model/*.onnx
+
+# Push helper — no longer needed
+push_to_github.sh
 
 # Python
 __pycache__/

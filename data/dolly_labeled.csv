@@ -1,0 +1,432 @@
+"prompt","prompt_token_len","has_code_keyword","has_length_constraint","instruction_verb","ends_with_question","has_format_keyword","clause_count","actual_output_tokens"
+"What does percolate mean?","6","0","0","what","1","0","0","98"
+"Are the Golden State Warriors a good basketball team?","13","0","0","other","1","0","0","347"
+"How do we increase voter turnout in the United States?","13","0","0","how","1","0","0","1972"
+"What is Unified Payments Interface (UPI) in India","12","0","0","what","0","0","0","834"
+"Extract all the locations in the text
+
+Context: Todd, third son of Ira and Sally (Hmman) Todd, was born in Hartwick, New York., March 4, 1813. He had spent one year at Amherst College, before entering as Sophomore at Yale College, where he graduated in 1836. He taught a high school in Canaan, Conn., until the spring of 1837, when he began law studies with Judge Arphaxad Loomis, of Little Falls, New York. Upon his admission to the bar in 1839, he decided to emigrate to the West. He selected St. Louis and arrived there in November, 1839, beginning practice in March, 1840. He gave special attention to questions affecting real property, and achieved distinguished success in litigated cases of this nature. Through apprehensions with regard to his health, he retired in 1860, at a comparatively early age, from active practice, confining himself thereafter to office consultations. He declined all political nominations until 1854, when he was elected to the Missouri House of Representatives. In 1860 he was an unsuccessful candidate for US Congress on the Bell and Everett ticket. In 1875, he was a member of the convention which revised the Constitution of Missouri. He was a director of Washington University, in St. Louis, and served gratuitously for fifteen years in its Law Department as lecturer. Among his students was Lemma Barkaloo, the first female law student in the United States. After a month's illness, he died at his home in St. Louis, of meningitis, April 30, 1885, in his 73rd year.","376","0","0","other","0","0","36","17"
+"Give me an example of a screened subnet","9","0","0","other","0","0","0","289"
+"What should you do when your rock climbing partner calls out ""On Belay?""","18","0","0","what","0","0","0","215"
+"What planning should you do to visit Walt Disney World?","13","0","0","what","1","0","0","1123"
+"What are the types of space objects ?","9","0","0","what","1","0","0","356"
+"Why Do We Need GIS?","4","0","0","why","1","0","0","1376"
+"Write a creative writing prompt to give to students for an exam about creative non-fiction about nature.","26","0","0","write","0","0","0","58"
+"Should superheroes be allowed to break the law?","11","0","0","other","1","0","0","1209"
+"What causes ocean tides?","6","0","0","what","1","0","0","281"
+"Where was William José born?
+
+Context: Born in Porto Calvo, Alagoas, Willian José started his career at local CRB's youth setup, before joining Grêmio Barueri in 2008, aged 17. On 1 August 2009 he made his first team – and Série A – debut, coming on as a late substitute in a 2–1 loss at Botafogo.
+
+Willian José scored his first goal as a professional on 17 January of the following year, netting his side's only in a 1–1 draw at Sertãozinho for the Campeonato Paulista championship. He scored six further times during the campaign, which ended in relegation.","139","0","0","other","0","1","8","33"
+"What are the best complex board games for two players?","13","0","0","what","1","0","0","70"
+"What is ""Six Feet Under""?
+
+Context: Six Feet Under is an American drama television series created and produced by Alan Ball. It premiered on the premium network HBO in the United States on June 3, 2001, and ended on August 21, 2005, spanning 63 episodes across five seasons. It depicts the lives of the Fisher family, who run a funeral home in Los Angeles, along with their friends and lovers.","98","0","0","what","0","0","9","283"
+"What was special about the 2021 Formula 1 World Championship?","15","0","0","what","1","0","0","240"
+"What happened on January 6, 2021?
+
+Context: On January 6, 2021, following the defeat of U.S. President Donald Trump in the 2020 presidential election, a mob of his supporters attacked the United States Capitol Building in Washington, D.C. The mob sought to keep Trump in power by preventing a joint session of Congress from counting the electoral college votes to formalize the victory of President-elect Joe Biden. According to the House select committee investigating the incident, the attack was the culmination of a seven-part plan by Trump to overturn the election. Five people died either shortly before, during, or following the event: one was shot by Capitol Police, another died of a drug overdose, and three died of natural causes. Many people were injured, including 138 police officers. Four officers who responded to the attack died by suicide within seven months. As of July 7, 2022, monetary damages caused by attackers exceed $2.7 million.","238","0","1","what","0","0","14","1289"
+"Name all of the field positions in baseball in a bulleted list.","15","0","0","list","0","1","0","40"
+"What are the advantages and disadvantages of learning Java over Python?","17","0","0","what","1","0","1","1915"
+"Who is Thomas Jefferson?
+
+Context: Thomas Jefferson (April 13, 1743 – July 4, 1826) was an American statesman, diplomat, lawyer, architect, philosopher, and Founding Father who served as the third president of the United States from 1801 to 1809. Among the Committee of Five charged by the Second Continental Congress with authoring the Declaration of Independence, Jefferson was the Declaration's primary author. Following the American Revolutionary War and prior to becoming the nation's third president in 1801, Jefferson was the first United States secretary of state under George Washington and then the nation's second vice president under John Adams.","164","0","0","other","0","0","12","1417"
+"Name some famous poets and their poems.","9","0","0","other","0","0","1","1492"
+"What are the components of a passive crossover?
+
+Context: A passive crossover is an electronic circuit that uses a combination of one or more resistors, inductors and capacitors. These components are combined to form a filter network and are most often placed between the full frequency-range power amplifier and the loudspeaker drivers to divide the amplifier's signal into the necessary frequency bands before being delivered to the individual drivers. Passive crossover circuits need no external power beyond the audio signal itself, but have some disadvantages: they may require larger inductors and capacitors due to power handling requirements. Unlike active crossovers which include a built-in amplifier, passive crossovers have an inherent attenuation within the passband, typically leading to a reduction in damping factor before the voice coil","213","0","0","what","0","0","9","23"
+"Please tell me a little bit about the personal lives of the best hockey players at this time.","23","0","0","other","0","0","0","796"
+"Should the US government pay reparations?","10","0","0","other","1","0","0","1295"
+"Give me a bulleted list of the 5 most recent UK Prime Ministers","15","0","0","list","0","1","0","20"
+"Write a conversation between two long-time friends who run into one another five years after they initially drifted apart.","30","0","0","write","0","0","0","472"
+"A las vegas seven days trip itinerary including budget and activities for a group of 5 friends.","23","0","0","other","0","0","1","540"
+"Write a paragraph about AI governance.","9","0","0","write","0","0","0","1162"
+"When was the last financial crisis and what caused it?","13","0","0","what","1","0","1","80"
+"what is Stoicism
+
+Context: Stoicism is a school of Hellenistic philosophy founded by Zeno of Citium in Athens in the early 3rd century BCE. It is a philosophy of personal virtue ethics informed by its system of logic and its views on the natural world, asserting that the practice of virtue is both necessary and sufficient to achieve eudaimonia (happiness, lit. 'good spiritedness'): one flourishes by living an ethical life. The Stoics identified the path to eudaimonia with a life spent practicing virtue and living in accordance with nature.
+
+Alongside Aristotelian ethics, the Stoic tradition forms one of the major founding approaches to virtue ethics. The Stoics are especially known for teaching that ""virtue is the only good"" for human beings, and that external things, such as health, wealth, and pleasure, are not good or bad in themselves (adiaphora) but have value as ""material for virtue to act upon"". Many Stoics—such as Seneca and Epictetus—emphasized that because ""virtue is sufficient for happiness"", a sage would be emotionally resilient to misfortune. The Stoics also held that certain destructive emotions resulted from errors of judgment, and they believed people should aim to maintain a will (called prohairesis) that is ""in accordance with nature"". Because of this, the Stoics thought the best indication of an individual's philosophy was not what a person said but how a person behaved. To live a good life, one had to understand the rules of the natural order since they believed everything was rooted in nature.
+
+Stoicism flourished throughout the Roman and Greek world until the 3rd century CE, and among its adherents was Emperor Marcus Aurelius. It experienced a decline after Christianity became the state religion in the 4th century CE. Since then, it has seen revivals, notably in the Renaissance (Neostoicism) and in the contemporary era (modern Stoicism).","472","0","0","what","0","0","28","466"
+"What are Uncontacted peoples?
+
+Context: Uncontacted peoples are groups of indigenous peoples living without sustained contact with neighbouring communities and the world community. Groups who decide to remain uncontacted are referred to as indigenous peoples in voluntary isolation. Legal protections make estimating the total number of uncontacted peoples challenging, but estimates from the Inter-American Commission on Human Rights in the UN and the non-profit group Survival International point to between 100 and 200 uncontacted peoples numbering up to 10,000 individuals total. A majority of uncontacted peoples live in South America, particularly northern Brazil, where the Brazilian government and National Geographic estimate between 77 and 84 tribes reside.
+
+Knowledge of uncontacted peoples comes mostly from encounters with neighbouring indigenous communities and aerial footage.","222","0","0","what","0","0","11","1717"
+"Categorize each of the following foods based on the five taste sensations (sweet, salty, sour, bitter, and umami).","28","0","0","other","0","0","5","37"
+"Write a letter to my mum and dad detailing the reasons why they should buy me a pet tortoise","23","0","0","write","0","0","1","957"
+"Describe how you planned a father and son high school senior trip","16","0","0","describe","0","0","1","381"
+"What is Venezuela?
+
+Context: Venezuela (/ˌvɛnəˈzweɪlə/; American Spanish: [beneˈswela] (listen)), officially the Bolivarian Republic of Venezuela (Spanish: República Bolivariana de Venezuela), is a country on the northern coast of South America, consisting of a continental landmass and many islands and islets in the Caribbean Sea. It has a territorial extension of 916,445 km2 (353,841 sq mi), and its population was estimated at 29 million in 2022. The capital and largest urban agglomeration is the city of Caracas.","129","0","0","what","0","1","11","1069"
+"Give me a list of the dog breeds
+
+Context: This list of dog breeds includes both extant and extinct dog breeds, varieties and types. A research article on dog genomics published in Science/AAAS defines modern dog breeds as ""a recent invention defined by conformation to a physical ideal and purity of lineage"".","77","0","0","list","0","1","4","2205"
+"Classify the following as smooth or sharp: broken glass, thorn, leather, baby skin, cactus, mirror","24","0","0","other","0","0","5","23"
+"How do I wire an electrical outlet?","8","0","0","how","1","0","0","800"
+"here is some text about Grand-Lahou Department, What year did Grand-Lahou become part of Lagunes District?
+
+Context: Grand-Lahou Department was created in 1988 as a first-level subdivision via a split-off from Abidjan Department.
+
+In 1997, regions were introduced as new first-level subdivisions of Ivory Coast; as a result, all departments were converted into second-level subdivisions. Grand-Lahou Department was included in Lagunes Region.
+
+In 2011, districts were introduced as new first-level subdivisions of Ivory Coast. At the same time, regions were reorganised and became second-level subdivisions and all departments were converted into third-level subdivisions. At this time, Grand-Lahou Department became part of Grands-Ponts Region in Lagunes District.","191","0","0","what","0","0","9","2"
+"What are five cities in the state of North Carolina?","13","0","0","what","1","0","0","20"
+"Why is the indictment of a former President such a divisive topic in the United States?","21","0","0","why","1","0","0","272"
+"Are these surfing terms or not? Nutted, pitted, drop in, shwabang, glass, poot, crest","21","0","0","other","0","0","6","16"
+"Who is the best men's test cricket player to have come from New Zealand?","18","0","0","other","1","0","0","563"
+"What are some of the most accessible jazz albums for someone new to jazz?","18","0","0","what","1","0","0","822"
+"What is glass made of","5","0","0","what","0","0","0","839"
+"Write a story about somebody, anybody, nobody and everybody","14","0","0","write","0","0","3","247"
+"On a backcountry backpacking trip where we expect to cross waterways, categorize each of the following as either 'useful', 'not useful', 'dangerous' or 'neither'.  A chinchilla, a compass, granola, dry bag, seventeen oars, thermite, ten tons of uranium ore","64","0","0","other","0","0","9","72"
+"What are some vacation ideas this summer?","10","0","0","what","1","0","0","71"
+"Is it possible to live life without having to use a door?","14","0","0","other","1","0","0","226"
+"Who is Hugo Chavez?
+
+Context: Hugo Rafael Chávez Frías (Spanish pronunciation: [ˈuɣo rafaˈel ˈtʃaβes ˈfɾi.as] (listen); 28 July 1954 – 5 March 2013) was a Venezuelan politician who was president of Venezuela from 1999 until his death in 2013, except for a brief period in 2002. Chávez was also leader of the Fifth Republic Movement political party from its foundation in 1997 until 2007, when it merged with several other parties to form the United Socialist Party of Venezuela (PSUV), which he led until 2012.","127","0","0","other","0","1","4","1048"
+"When is Tax Day not on April 15?","8","0","0","other","1","0","0","45"
+"Give me a bulleted list of the five most recent Italian prime ministers.","18","0","0","list","0","1","0","20"
+"Is it better to buy a used car compared to a new car?","13","0","0","other","1","0","0","995"
+"Why are Christmas markets so popular in Germany?","12","0","0","why","1","0","0","120"
+"Is it better to invest in the stock market or to keep money in a savings account?","20","0","0","other","1","0","0","268"
+"Who are Torvill and Dean?
+
+Context: Torvill and Dean (Jayne Torvill and Christopher Dean) are English ice dancers and former British, European, Olympic, and World champions. At the Sarajevo 1984 Winter Olympics the pair won gold and became the highest-scoring figure skaters of all time for a single programme, receiving twelve perfect 6.0s and four 5.9s which included artistic impression scores of 6.0 from every judge, after skating to Maurice Ravel's Boléro. One of the most-watched television events ever in the United Kingdom, their 1984 Olympics performance was watched by a British television audience of more than 24 million people.The couple went on to record an even higher score at the 1984 World Championships, thirteen 6.0s and five 5.9s.","188","0","0","other","0","0","15","518"
+"what to ask when interviewing doulas?","9","0","0","what","1","0","0","238"
+"Will robots ever feel and think like humans? Will these robots solve all of our problems, or will they spell the end of the human race?","33","0","0","other","1","0","2","777"
+"What are the different types of art?","9","0","0","what","1","0","0","626"
+"How do you cook ribs?","5","0","0","how","1","0","0","269"
+"What makes Destiny 2 a popular game?","9","0","0","what","1","0","0","636"
+"What are some typical attributes of a tortoiseshell cat?","14","0","0","what","1","0","0","66"
+"What is Emotional Quotient (EQ)/Emotional Intelligence, and why is it a critical trait for leaders to possess?","27","0","0","what","1","0","2","290"
+"Write do's and don'ts for handling a PR crisis. Make them directive and easy for anyone to understand and follow.","28","0","0","write","0","0","3","358"
+"Who is the greatest artist of all time?","9","0","0","other","1","0","0","582"
+"What's the significance of the lighthouse in Virginia Woolf's ""In The Lighthouse?""","20","0","0","what","0","0","0","270"
+"Write a beautiful bedtime 5 paragraph story for a 4 years old. The outline of the story is: a small boy, named Jonny goes on an adventure with his family.","38","0","0","write","0","1","1","249"
+"Who is John Quincy Adams?
+
+Context: John Quincy Adams (/ˈkwɪnzi/ (listen); July 11, 1767 – February 23, 1848) was an American politician, diplomat, lawyer, and diarist who served as the sixth president of the United States, from 1825 to 1829. He previously served as the eighth United States Secretary of State from 1817 to 1825. During his long diplomatic and political career, Adams also served as an ambassador, and as a member of the United States Congress representing Massachusetts in both chambers. He was the eldest son of John Adams, who served as the second president of the United States from 1797 to 1801, and First Lady Abigail Adams. Initially a Federalist like his father, he won election to the presidency as a member of the Democratic-Republican Party, and in the mid-1830s became affiliated with the Whig Party.","207","0","0","other","0","1","18","1132"
+"Name the BRICS nations.","5","0","0","other","0","0","0","9"
+"What is the nuclear magnetic resonance spectroscopy of proteins?","16","0","0","what","1","0","0","812"
+"What are the best National Parks in the United States","13","0","0","what","0","0","0","41"
+"Name some famous Sci-Fi books","7","0","0","other","0","0","0","41"
+"Wthat is the difference between Speed and Velocity ?","13","0","0","other","1","0","1","205"
+"What are the top 5 rock bands of all time?","10","0","0","what","1","0","0","145"
+"How do I cast on a knitting project?","9","0","0","how","1","0","0","300"
+"Please write a story that puts a modern twist on a fairy tale","15","0","0","write","0","0","0","1201"
+"What is a bank run?","4","0","0","what","1","0","0","202"
+"Best way to buy a new or used car?","8","0","0","other","1","0","0","205"
+"How do you increase your output on a Peloton ride?","12","0","0","how","1","0","0","396"
+"Sea or Mountain","3","0","0","other","0","0","0","32"
+"Write a short story about a botanist who discovers a part of a forest where plants are communicating with each other.","29","0","0","write","0","0","0","439"
+"road trip to Kerala from Bangalore.","8","0","0","other","0","0","0","237"
+"What is the Canada's national sport?","9","0","0","what","1","0","0","61"
+"What are the key steps for building a an in ground pool?","14","0","0","what","1","0","0","884"
+"What is the difference between the right and left side of the brain?
+
+Context: The lateralization of brain function is the tendency for some neural functions or cognitive processes to be specialized to one side of the brain or the other. The median longitudinal fissure separates the human brain into two distinct cerebral hemispheres, connected by the corpus callosum. Although the macrostructure of the two hemispheres appears to be almost identical, different composition of neuronal networks allows for specialized function that is different in each hemisphere.","141","1","0","what","0","1","3","2208"
+"How do Nietzsche and Haraway critique the concept of scientific knowledge and its pursuit of objectivity? How do they use the ideas of ""the god-trick"" and ""pride"" to explain the faults in scientific discoveries?","52","0","0","explain","1","0","3","1269"
+"Who is the greatest basketball player of all time?","12","0","0","other","1","0","0","607"
+"What is geostatistics?","5","0","0","what","1","0","0","201"
+"Brainstorm what is the best virtual cycling platform ?","13","0","0","what","1","0","0","532"
+"What teams were a part of the 2021 Valletta Cup?
+
+Context: The 2021 Valletta Cup was a Twenty20 International (T20I) cricket tournament held in Malta between 21 and 24 October 2021. It was the second edition of the Valletta Cup. The matches were played at the Marsa Sports Club in Marsa. The participating teams were the hosts Malta along with Bulgaria, Gibraltar and Switzerland.
+
+This was the first international tournament for Switzerland since the introduction of global T20I status in January 2019, and their re-admittance to the International Cricket Council (ICC) in July 2021. Cricket Switzerland (previously known as the Swiss Cricket Association), had been suspended by the ICC in 2012 due to non-compliance following the formation of a second organization also claiming to oversee cricket in the country. They were one of three nations to gain Associate membership after the ICC's annual general meeting in July 2021.
+
+Switzerland finished on top of the round-robin stage with three wins. Malta defeated Switzerland in the final, after Bulgaria defeated Gibraltar in the third-place playoff. After the tournament, Malta and Gibraltar played a rain-affected two-match bilateral T20I series that was shared after one game was lost to the weather and the other finished as a DLS method tie.","324","0","0","what","0","1","10","24"
+"What is ""the Scully effect?""","7","0","0","what","0","0","0","64"
+"Classify each of the following as water-soluble vitamins and fat-soluble vitamins and which food come under them?","28","0","0","other","1","0","2","872"
+"What is the concept of a good life according to Socrates and Aristotle, and what are the components that contribute to it? Is a good life innate or learned, and can anyone achieve it?","45","0","0","what","1","0","5","2449"
+"What is the plot of the movie John Wick?","10","0","0","what","1","0","0","908"
+"When is the best time of year to visit Seattle?","11","0","0","other","1","0","0","108"
+"What is the best modern motorcycle for a beginning rider?","14","0","0","what","1","0","0","2220"
+"Give me a list of the top 5 Colleen Hoover books","12","0","0","list","0","1","0","18"
+"Write a short story about how a man named Larry Joe proposed to his girlfriend, known as The President. The proposal should take place in an unusual manner, among friends.","42","0","0","write","0","0","2","828"
+"Who where the San Diego Stingrays","8","0","0","other","0","0","0","245"
+"how do you decide which job to take?","9","0","0","how","1","0","0","115"
+"How would you build me a plane out of duct tape? You can leverage other materials, but the exterior of both the fuselage and the wings must be duct tape.","38","0","0","how","0","0","3","383"
+"Give me a simpler way to tell someone that Layli and Majnun is Persian literature that borrows storytelling techniques from Varqeh and Golshah, Orwa wa Afra, Vameq and Ozra, Metiochus and Parthenope, and Vis and Ramin.","54","0","0","other","0","0","10","48"
+"What is the list of football clubs in England by competitive honours won?","18","0","0","list","1","1","0","1143"
+"Why is the band Phish so popular?","8","0","0","why","1","0","0","339"
+"What is pleitropy?","4","0","0","what","1","0","0","430"
+"Is art useless?","3","0","0","other","1","0","0","246"
+"Explain how ""work from home"" has an opportunity cost. Provide anecdotes to support your points.","23","0","0","explain","0","0","0","2041"
+"Why is Citizen Kane considered the Best Film?","11","0","0","why","1","0","0","646"
+"What is the number one selling dog?","8","0","0","what","1","0","0","49"
+"My wife and I have two kids: one boy, age 4, and one girl, age 1. We are thinking of buying a pet. What are some good pet options for our family of four? Please include some advantages and disadvantages for each option.","54","0","0","what","0","0","6","911"
+"How many U.S. President were lawyers?","9","0","0","how","1","0","0","1196"
+"Classify the following celebrities as sports or acting personalities or both : Arnold Schwarzenegger, Brad Pitt, Kevin Durant, Shohei Ohtani, Harrison Ford, Dwayne Johnson, Jason Statham, Stephen Curry, Robin Williams, Scarlett Johansson, Tom Brady, Patrick Mahomes","66","0","0","other","0","0","11","218"
+"Explain how new technologies, like LLMs and ChatGPT, may revolutionize Application Programming Interfaces (APIs) in the future. Provide an example of how these APIs might work.","44","0","0","explain","0","0","3","1103"
+"Which is a species of fish? Silver hake or Silverback","13","0","0","other","0","0","0","2"
+"Identify which instrument is string or percussion: Maddale, Banhu","16","0","0","other","0","0","1","9"
+"Who were the Beatles?
+
+Context: The Beatles were an English rock band, formed in Liverpool in 1960, that comprised John Lennon, Paul McCartney, George Harrison and Ringo Starr. They are regarded as the most influential band of all time and were integral to the development of 1960s counterculture and popular music's recognition as an art form. Rooted in skiffle, beat and 1950s rock 'n' roll, their sound incorporated elements of classical music and traditional pop in innovative ways; the band also explored music styles ranging from folk and Indian music to psychedelia and hard rock. As pioneers in recording, songwriting and artistic presentation, the Beatles revolutionised many aspects of the music industry and were often publicised as leaders of the era's youth and sociocultural movements.","199","0","0","other","0","0","19","812"
+"Who won the best new artist as well as award for the Best Pop Vocal Album in 64th Annual Grammy Awards","25","0","0","other","0","0","0","3"
+"What is the best way to live life","8","0","0","what","0","0","0","12"
+"Who is RFK?
+
+Context: Robert Francis Kennedy (November 20, 1925 – June 6, 1968), also known by his initials RFK and by the nickname Bobby, was an American politician and lawyer. He served as the 64th United States Attorney General from January 1961 to September 1964 and as a U.S. senator from New York from January 1965 until his assassination. Like his brothers John F. Kennedy and Ted Kennedy, he was a prominent member of the Democratic Party and is viewed by some historians as an icon of modern American liberalism.","130","0","0","other","0","0","10","851"
+"Write a short story about a little girl that saves her neighbors home from a bee infestation.","23","0","0","write","0","0","0","1987"
+"What are some examples of frequently purchased essential oils?","15","0","0","what","1","0","0","36"
+"What is Hispania
+
+Context: Hispania (Latin: Hispānia [hɪsˈpaːnia], Spanish: [isˈpanja]; nearly identically pronounced in Spanish, Portuguese, Catalan, and Italian) was the Roman name for the Iberian Peninsula and its provinces. Under the Roman Republic, Hispania was divided into two provinces: Hispania Citerior and Hispania Ulterior. During the Principate, Hispania Ulterior was divided into two new provinces, Baetica and Lusitania, while Hispania Citerior was renamed Hispania Tarraconensis. Subsequently, the western part of Tarraconensis was split off, first as Hispania Nova, later renamed ""Callaecia"" (or Gallaecia, whence modern Galicia). From Diocletian's Tetrarchy (AD 293) onwards, the south of the remainder of Tarraconensis was again split off as Carthaginensis, and all of the mainland Hispanic provinces, along with the Balearic Islands and the North African province of Mauretania Tingitana, were later grouped into a civil diocese headed by a vicarius. The name Hispania was also used in the period of Visigothic rule.
+
+The modern place names Spain and Hispaniola are both derived from Hispania.","278","0","0","what","0","0","24","272"
+"List some of the greatest leadership and business books ever written.","17","0","0","list","0","1","1","326"
+"What are the names of the songs from The Story of June which don't have Chinese names?
+
+Context: The Story of June is a Cantopop album by Edmond Leung.
+
+Track listing:
+Love Blind (戀愛盲)
+Elevator Men (電梯男)
+Hey June
+Driven To Distraction (失魂落魄)
+Daydream (白日夢)
+Romantic (羅曼蒂克)
+Y3
+Get Away with Miriam Yeung (滾)
+The Aftermath (戰後餘生)
+The Long Journey (路漫漫)","87","0","0","what","0","1","0","2"
+"What is a digital twin?","5","0","0","what","1","0","0","208"
+"Who is TIME
+
+Context: Li ""Oliveira"" Peinan (born June 28, 2000) is a Chinese Terran player who is currently playing for DKZ Gaming.
+
+He is formerly known as ""TIME"".","41","0","0","other","0","0","1","947"
+"Why did Rome have so many bad emperors?","9","0","0","why","1","0","0","309"
+"Why should you get out of your comfort zone?","11","0","0","why","1","0","0","202"
+"What should I look for when looking for a used car?","12","0","0","what","1","0","0","1981"
+"Write an essay about whether corona policy measures are beneficial towards society or not","22","0","0","write","0","0","0","1885"
+"Monster Hunter 4 Unlimited (hereafter, ""MH4U"") was a video game released exclusively for the Nintendo 3DS circa 2013. Elden Ring was a video game released for multiple platforms in circa 2022 to critical acclaim. 
+
+If MH4U and Elden Ring were considered to be siblings nine years apart in a small family, how might the experiences of MH4U have influenced the growth and development of Elden Ring?","99","0","0","how","1","0","4","958"
+"What is the capital of the united kingdom?","10","0","0","what","1","0","0","11"
+"Give me a suggestion where I should go for spring break if I live in the United States.","21","0","0","other","0","0","0","243"
+"How did Legos get their name?","7","0","0","how","1","0","0","25"
+"Classify these foods as vegan, vegetarian or neither: frittata, yogurt, apple, lard, chicken noodle soup, tofu, flour, cheesecake","32","0","0","other","0","0","8","37"
+"What are 5 unique recipes for any kind of potatoes?","12","0","0","what","1","0","0","1543"
+"Who is FDR?
+
+Context: Franklin Delano Roosevelt (/ˈdɛlənoʊ ˈroʊzəvɛlt, -vəlt/ DEL-ə-noh ROH-zə-velt, -⁠vəlt; January 30, 1882 – April 12, 1945), commonly known as FDR, was an American statesman and political leader who served as the 32nd president of the United States from 1933 until his death in 1945. He previously served as the 44th governor of New York from 1929 to 1933, the Assistant Secretary of the Navy from 1913 to 1920, and a member of the New York State Senate from 1911 to 1913.","123","0","0","other","0","0","11","898"
+"What is HiFI?
+
+Context: High fidelity (often shortened to Hi-Fi or HiFi) is the high-quality reproduction of sound. It is popular with audiophiles and home audio enthusiasts. Ideally, high-fidelity equipment has inaudible noise and distortion, and a flat (neutral, uncolored) frequency response within the human hearing range.
+
+High fidelity contrasts with the lower-quality “lo-fi” sound produced by inexpensive audio equipment, AM radio, or the inferior quality of sound reproduction that can be heard in recordings made until the late 1940s.","136","0","0","what","0","0","8","2184"
+"Name some famous songs by the Beatles","9","0","0","other","0","0","0","30"
+"Can you provide a summary of who Harvey Marion LaFollette was?
+
+Context: Harvey Marion LaFollette (September 8, 1858 – September 20, 1929) was an American teacher and educator, who as a young man, served two terms as Indiana Superintendent of Public Instruction. He then moved to Tennessee, where he established the town of LaFollette. His company, LaFollette Coal, Iron, and Railway Company, eventually employed more than 1500 people and was the largest blast furnace in the Southern United States.","124","0","0","other","0","0","12","1152"
+"Write a story with the theme ""Be wise when you speak.""","13","0","0","write","0","0","0","213"
+"Given this paragraph, how much control of the world's cocaine market did the Cali Cartel have at its peak?
+
+Context: The Cali Cartel (Spanish: Cartel de Cali) was a drug cartel based in southern Colombia, around the city of Cali and the Valle del Cauca. Its founders were the brothers Gilberto Rodríguez Orejuela, Miguel Rodríguez Orejuela and José Santacruz Londoño. They broke away from Pablo Escobar and his Medellín associates in 1987, when Hélmer ""Pacho"" Herrera joined what became a four-man executive board that ran the cartel.
+
+At the height of the Cali Cartel's reign from 1993 to 1995, they were cited as having control of over 80% of the world's cocaine market and were said to be directly responsible for the growth of the cocaine market in Europe, controlling 80% of the market there as well. By the mid-1990s, the leaders of the Cali Cartel's multibillion-dollar international drug trafficking empire were operating a US$20 billion a year global criminal empire.","244","0","0","what","0","0","11","25"
+"Please give me a list of qualities that make the Masters is golf's top tournament unique?
+
+Context: The Masters is the first major championship of the year. Since 1948, its final round has been scheduled for the second Sunday of April, with several exceptions.
+
+The Masters has the smallest field of the four golf major championships.
+
+The Masters is an invitation only tournament.
+
+Previous Champions are eligible to play for life.","108","0","0","list","0","1","2","1025"
+"Why do humans play sports?","6","0","0","why","1","0","0","65"
+"write short essay on Neil Armstrong experience on moon","13","0","0","write","0","0","0","297"
+"Give me a short summary of the movie Gladiator.
+
+Context: Gladiator is a 2000 epic historical drama film directed by Ridley Scott and written by David Franzoni, John Logan, and William Nicholson.  It stars Russell Crowe, Joaquin Phoenix, Connie Nielsen, Ralf Möller, Oliver Reed (in his final role), Djimon Hounsou, Derek Jacobi, John Shrapnel, Richard Harris, and Tommy Flanagan. Crowe portrays Roman general Maximus Decimus Meridius, who is betrayed when Commodus, the ambitious son of Emperor Marcus Aurelius, murders his father and seizes the throne. Reduced to slavery, Maximus becomes a gladiator and rises through the ranks of the arena to avenge the murders of his family and his emperor.","174","0","0","other","0","0","21","961"
+"Why is Utah a top destination for skiing","10","0","0","why","0","0","0","130"
+"What was the Great Depression?","7","0","0","what","1","0","0","256"
+"Extract the sources of electricity mentioned in the text and the percentage of electricity that comes from that source in Canada and list them using bullets in the format {Source} - {Percentage}
+
+Context: Forgiven,X-Men,Generation X,X-Corps,New Warriors,Patsy Walker Temp Agency","69","0","0","list","0","1","7","461"
+"Why did you take so long to get home last night?","12","0","0","why","1","0","0","229"
+"What is the sport called Cricket","8","0","0","what","0","0","0","949"
+"Write a letter to Dear Abby on relationship advice.","12","0","0","write","0","0","0","155"
+"Classify each of the following as either a title by Isaac Asimov or Jules Verne: Pebble in the Sky, The Stars, Like Dust, Foundation, The Robots of Dawn, The Naked Sun, Around the World in Eighty Days, From the Earth to the Moon, Martin Paz, Journey to the Centre of the Earth, A Drama in the Air","74","0","0","other","0","0","10","60"
+"Is the lacavore diet beneficial?","8","0","0","other","1","0","0","897"
+"Tell me why your dog likes dog daycare.","9","0","0","why","0","0","0","299"
+"Based on the paragraph about the Korean War, what is the name of the new sovereign state created in the north?
+
+Context: In 1910, Imperial Japan annexed Korea, where it ruled for 35 years until its surrender at the end of World War II on 15 August 1945. The United States and the Soviet Union divided Korea along the 38th parallel into two zones of occupation. The Soviets administered the northern zone and the Americans administered the southern zone. In 1948, as a result of Cold War tensions, the occupation zones became two sovereign states. A socialist state, the Democratic People's Republic of Korea, was established in the north under the totalitarian communist leadership of Kim Il-sung, while a capitalist state, the Republic of Korea, was established in the south under the autocratic leadership of Syngman Rhee. Both governments of the two new Korean states claimed to be the sole legitimate government of all of Korea, and neither accepted the border as permanent.","244","0","0","what","0","1","14","9"
+"What is the best way to get faster at running long distances?","15","0","0","what","1","0","0","60"
+"What is genome analysis?","6","0","0","what","1","0","0","1038"
+"Name all of the NBA Championship teams in history.","12","0","0","other","0","0","0","1824"
+"Give me a summary of 1812 war
+
+Context: The War of 1812 (18 June 1812 – 17 February 1815) was fought by the United States of America and its indigenous allies against the United Kingdom and its allies in British North America, with limited participation by Spain in Florida. Tensions originated in long-standing differences over territorial expansion in North America and British support for Native American tribes who opposed U.S. colonial settlement in the Northwest Territory.","119","0","0","other","0","0","4","813"
+"Name some famous actors from the 1930's","9","0","0","other","0","0","0","59"
+"Who is Ruth Bader Ginsburg?
+
+Context: Joan Ruth Bader Ginsburg (/ˈbeɪdər ˈɡɪnzbɜːrɡ/ BAY-dər GHINZ-burg; March 15, 1933 – September 18, 2020) was an American lawyer and jurist who served as an associate justice of the Supreme Court of the United States from 1993 until her death in 2020. She was nominated by President Bill Clinton to replace retiring justice Byron White, and at the time was generally viewed as a moderate consensus-builder. She eventually became part of the liberal wing of the Court as the Court shifted to the right over time. Ginsburg was the first Jewish woman and the second woman to serve on the Court, after Sandra Day O'Connor. During her tenure, Ginsburg wrote majority opinions, including United States v. Virginia (1996), Olmstead v. L.C. (1999), Friends of the Earth, Inc. v. Laidlaw Environmental Services, Inc. (2000), and City of Sherrill v. Oneida Indian Nation of New York (2005).","229","0","0","other","0","0","16","902"
+"Given this paragraph, what is the definition of Long short-term memory ?
+
+Context: Long short-term memory (LSTM) is an artificial neural network used in the fields of artificial intelligence and deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. Such a recurrent neural network (RNN) can process not only single data points (such as images), but also entire sequences of data (such as speech or video). This characteristic makes LSTM networks ideal for processing and predicting data. For example, LSTM is applicable to tasks such as unsegmented, connected handwriting recognition, speech recognition, machine translation, speech activity detection, robot control, video games, and healthcare.","183","0","0","what","0","0","15","50"
+"What is the most invaded country in history?","11","0","0","what","1","0","0","326"
+"What is the least common birthday?","8","0","0","what","1","0","0","324"
+"Who is Barack Obama?
+
+Context: Barack Hussein Obama II (/bəˈrɑːk huːˈseɪn oʊˈbɑːmə/ (listen) bə-RAHK hoo-SAYN oh-BAH-mə; born August 4, 1961) is an American former politician who served as the 44th president of the United States from 2009 to 2017. A member of the Democratic Party, he was the first African-American president of the United States. Obama previously served as a U.S. senator representing Illinois from 2005 to 2008 and as an Illinois state senator from 1997 to 2004, and worked as a civil rights lawyer before holding public office.","136","0","0","other","0","1","6","944"
+"Why should people convert lawns and ornamental gardens to native plants?","18","0","0","why","1","0","1","986"
+"Given this paragraph about surfboards, summarize what a surfboard is made of
+
+Context: Most modern surfboards are made of fiberglass foam (PU), with one or more wooden strips or ""stringers"", fiberglass cloth, and polyester resin (PE). An emerging board material is epoxy resin and Expanded Polystyrene foam (EPS) which is stronger and lighter than traditional PU/PE construction. Even newer designs incorporate materials such as carbon fiber and variable-flex composites in conjunction with fiberglass and epoxy or polyester resins. Since epoxy/EPS surfboards are generally lighter, they will float better than a traditional PU/PE board of similar size, shape and thickness. This makes them easier to paddle and faster in the water. However, a common complaint of EPS boards is that they do not provide as much feedback as a traditional PU/PE board. For this reason, many advanced surfers prefer that their surfboards be made from traditional materials.","238","1","0","summarize","0","0","15","36"
+"What is a good city to visit in Michigan in the summer?","13","0","0","what","1","0","0","281"
+"Give me a list of herbs I can plant in my garden","12","0","0","list","0","1","0","14"
+"What is a Wonton?","4","0","0","what","1","0","0","102"
+"Why do people like playing video games?","9","0","0","why","1","0","0","162"
+"Identify which instrument is string or percussion: Berimbau, Soku","16","0","0","other","0","0","1","9"
+"How deep can the roots of Big Bluestem grass go into the ground?","16","0","0","how","1","0","0","20"
+"Describe a plan for driving from Florida to New York with some great places to stop with American History.","26","0","0","describe","0","0","0","210"
+"What is recency bias?","5","0","0","what","1","0","0","73"
+"What are the advantages of a progressive consumption tax?","14","0","0","what","1","0","0","586"
+"Write a journal entry from the pandemic.","10","0","0","write","0","0","0","1690"
+"What are five totally distinct, creative ways to describe the usefulness of extra fingers?","22","0","0","describe","1","0","1","81"
+"What plant do cats like to chew or sniff, which may give them a ""high""?","17","0","0","what","1","0","1","14"
+"What is a newspaper?","5","0","0","what","1","0","0","106"
+"Why isn't multi-threading making my Python code faster? How can I fix it.","18","1","0","how","0","0","0","296"
+"In what industries is GIS indispensable?","10","0","0","what","1","0","0","1146"
+"Write a story about an ice fishing trip in Minnesota. Make sure to include what you need for a successful trip.","27","0","0","write","0","0","0","978"
+"Who is Géraldine Chauvet
+
+Context: Géraldine Chauvet is a French operatic mezzo-soprano.","22","0","0","other","0","0","0","1325"
+"Is California a great place to live?","9","0","0","other","1","0","0","928"
+"What happened on September 11, 2001?
+
+Context: The September 11 attacks, commonly known as 9/11, were four coordinated suicide terrorist attacks carried out by the militant Islamist extremist network al-Qaeda against the United States on September 11, 2001. That morning, nineteen terrorists hijacked four commercial airliners scheduled to travel from the East Coast to California. The hijackers crashed the first two planes into the Twin Towers of the World Trade Center in New York City and the third into the Pentagon (the headquarters of the United States military) in Arlington County, Virginia, near Washington, D.C. The fourth plane was similarly intended to hit a federal government building in D.C., but crashed in a field following a passenger revolt. The attacks killed nearly 3,000 people and instigated the global war on terror.","210","0","0","what","0","0","13","1019"
+"When does the world  celebrates  Hindi diwas every year","13","0","0","other","0","0","0","3"
+"What are some examples of movies that won best picture in the 1990s?","17","0","0","what","1","0","0","35"
+"What is geovisualization?","6","0","0","what","1","0","0","304"
+"What's the capital of Brazil?","7","0","0","what","1","0","0","10"
+"What are the differences between Data Lakehouse vs Data Warehouse vs Data lake","19","0","0","what","0","0","0","290"
+"How can I decide what bike I should get?","10","0","0","what","1","0","0","201"
+"Who is JFK?
+
+Context: John Fitzgerald Kennedy (May 29, 1917 – November 22, 1963), often referred to by his initials JFK, was an American politician who served as the 35th president of the United States from 1961 until his assassination in 1963. He was the youngest person to assume the presidency by election and the youngest president at the end of his tenure. Kennedy served at the height of the Cold War, and the majority of his foreign policy concerned relations with the Soviet Union and Cuba. A Democrat, Kennedy represented Massachusetts in both houses of the U.S. Congress prior to his presidency.","151","0","0","other","0","0","9","866"
+"What are the applications of game theory in NBA basketball?","14","0","0","what","1","0","0","230"
+"What factors should I consider in choosing an electric vehicle?","15","0","0","what","1","0","0","914"
+"Describe a trip through the United States for a 14 day vacation in a rental car","19","0","0","describe","0","0","0","1144"
+"what is Modern Talking?
+
+Context: Modern Talking was a German pop music duo consisting of arranger, songwriter and producer Dieter Bohlen and singer Thomas Anders. They have been referred to as Germany's most successful pop duo, and have had a number of hit singles, reaching the top five in many countries. Their most popular singles are ""You're My Heart, You're My Soul"", ""You Can Win If You Want"", ""Cheri, Cheri Lady"", ""Brother Louie"", ""Atlantis Is Calling (S.O.S. for Love)"" and ""Geronimo's Cadillac"".
+Modern Talking worked together from 1983 to 1987, then the band disbanded. In 1998, they reunited and made a successful comeback, recording and releasing music from 1998 to 2003. The duo released singles (many of which involved American rapper Eric Singleton) which again entered the top ten in Germany and abroad, one of which was the re-recorded version of ""You're My Heart, You're My Soul '98"". After the duo's second and final break-up in 2003, their global sales had reached 120 million singles and albums combined.","256","0","0","what","0","0","24","1496"
+"What is the difference between AWD and 4WD?","10","0","0","what","1","0","1","255"
+"Where did Christopher Columbus sail his ship when he discovered America?","18","0","0","other","1","0","0","3"
+"Give me an enumerated list of Four Noble Truths mentioned in Buddhism","17","0","0","list","0","1","0","269"
+"From the passage provided, extract the population of Andhra Pradesh
+
+Context: Andhra Pradesh (English: /ˌɑːndrə prəˈdɛʃ/, Telugu: [ãːndʱrɐ prɐdeːʃ] (listen) abbr. AP) is a state in the south-eastern coastal region of India. It is the seventh-largest state by area covering an area of 162,975 km2 (62,925 sq mi) and tenth-most-populous state, with 49,386,799 inhabitants. It is bordered by Telangana to the north-west, Chhattisgarh to the north, Odisha to the north-east, Tamil Nadu to the south, Karnataka to the west and the Bay of Bengal to the east. It has the second longest coastline in India after Gujarat, of about 974 km (605 mi). Andhra State was the first state to be formed on a linguistic basis in India on 1 October 1953. On 1 November 1956, Andhra State was merged with the Telugu-speaking areas (ten districts) of the Hyderabad State to form United Andhra Pradesh. In 2014, these merged areas of Hyderabad State were bifurcated from United Andhra Pradesh to form the new state Telangana. The present form of Andhra is similar to Andhra state, but some mandalas like Bhadrachalam are still included in Telangana. Amaravati serves as the capital of the state with the largest city being Visakhapatnam.
+
+Andhra Pradesh was once a major Buddhist pilgrimage site in the country and a Buddhist learning center which can be seen in many sites in the state in the form of monastery ruins, chaityas, and stupas. It is also known for being the land of Koh-i-Noor and other globally known diamonds from Kollur Mine. It is also a major producer of rice known as the ""Rice bowl of India"". Its official language is Telugu; one of the classical languages of India, the fourth most spoken language in India, and the 13th-most spoken language in the world. Andhra Pradesh's second official language is Urdu.","451","0","0","other","0","1","27","11"
+"Explain the answer to this riddle: What has four legs in the morning, two legs in the afternoon, and three legs in the evening?","31","0","0","explain","1","0","3","48"
+"What is a console war in video games?
+
+Context: In the video game industry, a console war describes the competition between two or more video game console manufacturers in trying to achieve better consumer sales through more advanced console technology, an improved selection of video games, and general marketing around their consoles. While console manufacturers are generally always trying to out-perform other manufacturers in sales, these console wars engage in more direct tactics to compare their offerings directly against their competitors or to disparage the competition in contrast to their own, and thus the marketing efforts have tended to escalate in back-and-forth pushes.
+
+While there have been many console wars to date, the term became popular between Sega and Nintendo during the late 1980s and early 1990s as Sega attempted to break into the United States video game market with its Sega Genesis console. Through a novel marketing approach and improved hardware, Sega had been able to gain a majority of the video game console market by 1991, three years after the Genesis’ launch. This caused back and forth competition between the two companies throughout the early 1990s. However, Nintendo eventually regained its market share and Sega stopped making home console hardware by 2001.","326","0","0","compare","0","0","16","6504"
+"Who is Richard Wayne Bogosian?
+
+Context: Richard Wayne Bogosian (born July 18, 1937) is an American diplomat.","27","0","0","other","0","0","1","443"
+"What is Cricket?
+
+Context: Cricket is a bat-and-ball game played between two teams of eleven players on a field at the center of which is a 22-yard (20-metre) pitch with a wicket at each end, each comprising two bails balanced on three stumps. The batting side scores runs by striking the ball bowled at one of the wickets with the bat and then running between the wickets, while the bowling and fielding side tries to prevent this (by preventing the ball from leaving the field, and getting the ball to either wicket) and dismiss each batter (so they are ""out""). Means of dismissal include being bowled, when the ball hits the stumps and dislodges the bails, and by the fielding side either catching the ball after it is hit by the bat, but before it hits the ground, or hitting a wicket with the ball before a batter can cross the crease in front of the wicket. When ten batters have been dismissed, the innings ends and the teams swap roles. The game is adjudicated by two umpires, aided by a third umpire and match referee in international matches. They communicate with two off-field scorers who record the match's statistical information.","286","0","0","what","0","1","18","210"
+"Write a story where a princess discovers an abandon cave. The story should have a beginning, middle and end.","27","0","0","write","0","0","2","826"
+"What is the recipe for a successful hackathon?","11","0","0","what","1","0","0","746"
+"how to do a self-diagnose of burning out?","10","0","0","how","1","0","0","94"
+"How do you reverse sear a steak on the Big Green Egg?","13","0","0","how","1","0","0","815"
+"Imagine you are the last person on Earth. Write a diary entry describing your thoughts and feelings.","25","0","0","write","0","0","1","866"
+"How can you prepare for a longer airplane flight with children?","15","0","0","how","1","0","0","298"
+"What is a geodetic system?","6","0","0","what","1","0","0","235"
+"Identify which animal species is alive or extinct: Procoptodon, Polar Bear","18","0","0","other","0","0","1","11"
+"Why are there so many rules about table manners?","12","0","0","why","1","1","0","827"
+"Provide a list of things a young felon can do when they get out of jail to turn their life around","24","0","0","list","0","1","0","1015"
+"What should I do in Ho Chi Minh City, Vietnam for a day?","14","0","0","what","1","0","1","907"
+"How would it feel to be the only person left alive in the US?","15","0","0","how","1","0","0","252"
+"Identify which animal species is alive or extinct: Microraptor, Whale","17","0","0","other","0","0","1","9"
+"From the passage provided, extract the acquisition details of Tableau.
+
+Context: Tableau Software (/tæbˈloʊ/ tab-LOH) is an American interactive data visualization software company focused on business intelligence. It was founded in 2003 in Mountain View, California, and is currently headquartered in Seattle, Washington. In 2019 the company was acquired by Salesforce for $15.7 billion. At the time, this was the largest acquisition by Salesforce (a leader in the CRM field) since its foundation. It was later surpassed by Salesforce's acquisition of Slack.
+
+The company's founders, Christian Chabot, Pat Hanrahan and Chris Stolte, were researchers at the Department of Computer Science at Stanford University. They specialized in visualization techniques for exploring and analyzing relational databases and data cubes, and started the company as a commercial outlet for research at Stanford from 1999 to 2002.
+
+Tableau products query relational databases, online analytical processing cubes, cloud databases, and spreadsheets to generate graph-type data visualizations. The software can also extract, store, and retrieve data from an in-memory data engine.","290","0","0","generate","0","1","21","15"
+"Write a few paragraphs to describe the benefits of living in Arizona versus California","21","0","0","write","0","0","0","1880"
+"Plan a 10-15 day trip from bay area to Arizona, Las Vegas, San Diego, Los Angeles","20","0","0","other","0","0","3","360"
+"Identify which instrument is string or percussion: Cabasa, Huqin","16","0","0","other","0","0","1","9"
+"Who is LBJ?
+
+Context: Lyndon Baines Johnson (/ˈlɪndən ˈbeɪnz/; August 27, 1908 – January 22, 1973), often referred to by his initials LBJ, was an American politician who served as the 36th president of the United States from 1963 to 1969. He previously served as the 37th vice president from 1961 to 1963 under President John F. Kennedy, and was sworn in shortly after Kennedy's assassination. A Democrat from Texas, Johnson also served as a U.S. representative, U.S. Senator and the Senate's majority leader. He holds the distinction of being one of the few presidents who served in all elected offices at the federal level.","156","0","1","other","0","0","10","1427"
+"Who are Sinti people?
+
+Context: The Sinti are a subgroup of Romani people mostly found in Germany. They arrived in Austria and Germany in the Late Middle Ages as part of the Romani emigration from the Indian Subcontinent, eventually splitting into two groups: Eftavagarja (""the Seven Caravans"") and Estraxarja (""from Austria""). They arrived in Germany before 1540. The two groups expanded, the Eftavagarja into France, Portugal and Brazil, where they are called ""Manouches"", and the Estraxarja into Italy and Central Europe, mainly what are now Croatia, Slovenia, Hungary, Romania, the Czech Republic and Slovakia, eventually adopting various regional names.","164","0","0","what","0","0","17","24"
+"What are some of the challenges and solutions involved in growing tomatoes in the Pacific Northwest?","25","0","0","what","1","0","1","919"
+"What did the Triceratops use their horns for?
+
+Context: There has been much speculation over the functions of Triceratops' head adornments. The two main theories have revolved around use in combat and in courtship display, with the latter now thought to be the most likely primary function.
+
+Early on, Lull postulated that the frills may have served as anchor points for the jaw muscles to aid chewing by allowing increased size and thus power for the muscles. This has been put forward by other authors over the years, but later studies do not find evidence of large muscle attachments on the frill bones.
+
+Triceratops were long thought to have used their horns and frills in combat with predators such as Tyrannosaurus, the idea being discussed first by Charles H. Sternberg in 1917 and 70 years later by Robert Bakker. There is evidence that Tyrannosaurus did have aggressive head-on encounters with Triceratops, based on partially healed tyrannosaur tooth marks on a Triceratops brow horn and squamosal; the bitten horn is also broken, with new bone growth after the break. Which animal was the aggressor is not known. Paleontologist Peter Dodson estimates that in a battle against a bull Triceratops, the Triceratops had the upper hand and would successfully defend itself by inflicting fatal wounds to the Tyrannosaurus using its sharp horns. Tyrannosaurus is also known to have fed on Triceratops, as shown by a heavily tooth-scored Triceratops ilium and sacrum.","367","1","0","what","0","0","17","34"
+"Can you summarize for me in no more than three paragraphs the book, ""The Little Engine That Could"", by Watty Piper?
+
+Context: The Little Engine That Could is an American folktale (existing in the form of several illustrated children's books and films) that became widely known in the United States after publication in 1930 by Platt & Munk. The story is used to teach children the value of optimism and hard work. Based on a 2007 online poll, the National Education Association listed the book as one of its ""Teachers' Top 100 Books for Children""","136","0","0","summarize","0","1","5","290"
+"Who is Lord Voldemort?","5","0","0","other","1","0","0","353"
+"Who composed the 'Moonlight Sonata', and when?","11","0","0","other","1","0","2","79"
+"Identify from this list which are Crayola crayon colors: banana biscuits, razzle dazzle rose, whoopsie daisies, purple pizzazz, carnation pink, cotton candy, unmellow yellow, macaroni and cheese, coffee table blue, craisin, aquamarine, jazzberry jam, sea green","65","0","0","list","0","1","13","35"
+"Why do we need robots?","5","0","0","why","1","0","0","70"
+"Given the reference text about moths, what family does Bityla sericea belong to?
+
+Context: Bityla sericea is a species of moth in the family Noctuidae. This species is endemic to New Zealand. It is classified as ""At Risk, Naturally Uncommon"" by the New Zealand Department of Conservation. This species was first described by Arthur Gardiner Butler in 1877 using a specimen obtained from John Enys and collected in the South Island. George Hudson discussed and illustrated this species both in his 1898 book, New Zealand moths and butterflies (Macro-lepidoptera) and his 1928 publication The Butterflies and Moths of New Zealand. In 1905 Hudson, thinking he was describing a new species, also gave the species the name Orthosia pallida. George Francis Hampson, also mistakenly believing this was a separate species placed O. pallida in the genus Bityla. Hudson discussed B. pallida in his 1928 publication. John S. Dugdale synonymised B. pallida with B. sericea in 1988. The holotype specimen of B. sericea is held at the Natural History Museum, London.","263","0","0","describe","0","0","12","2"
+"Give me a bulleted list of ingredients that I need to bake chewy chocolate chip cookies, and include volume measurements for any ingredient I have to measure out.","40","0","0","list","0","1","2","54"
+"Tell me five ways to build relationships with my neighbors.","14","0","0","other","0","0","0","321"
+"What is the difference between tennis and pickleball?","13","0","0","what","1","0","1","78"
+"What is the difference between Angular and AngularJS?","13","0","0","what","1","0","1","48"
+"Give me a list of top five tourist attractions to visit in Europe","16","0","0","list","0","1","0","227"
+"What is Chromosomal Deletion Syndrome?
+
+Context: Chromosomal deletion syndromes result from deletion of parts of chromosomes. Depending on the location, size, and whom the deletion is inherited from, there are a few known different variations of chromosome deletions. Chromosomal deletion syndromes typically involve larger deletions that are visible using karyotyping techniques. Smaller deletions result in Microdeletion syndrome, which are detected using fluorescence in situ hybridization (FISH)
+
+Examples of chromosomal deletion syndromes include 5p-Deletion (cri du chat syndrome), 4p-Deletion (Wolf–Hirschhorn syndrome), Prader–Willi syndrome, and Angelman syndrome.","168","0","0","what","0","0","9","1490"
+"Why are dogs called dogs?","6","0","0","why","1","0","0","211"
+"How to avoid world war?","5","0","0","how","1","0","0","144"
+"What is the best food?","5","0","0","what","1","0","0","305"
+"Give me a bulleted list of the the first five books in the bible old testament?","19","0","0","list","1","1","0","281"
+"What are three crafts with a wire coat hanger?","11","0","0","what","1","0","0","55"
+"Who is LBJ?
+
+Context: Lyndon Baines Johnson (/ˈlɪndən ˈbeɪnz/; August 27, 1908 – January 22, 1973), often referred to by his initials LBJ, was an American politician who served as the 36th president of the United States from 1963 to 1969. He previously served as the 37th vice president from 1961 to 1963 under President John F. Kennedy, and was sworn in shortly after Kennedy's assassination. A Democrat from Texas, Johnson also served as a U.S. representative, U.S. Senator and the Senate's majority leader. He holds the distinction of being one of the few presidents who served in all elected offices at the federal level.","156","0","1","other","0","0","10","1427"
+"Should we continue to use Daylight savings?","10","0","0","other","1","0","0","995"
+"How do you fix a puncture on a Mountain Bike?","11","0","0","how","1","0","0","1496"
+"What are the most important tools to own when I am an apartment renter?","17","0","0","what","1","0","0","924"
+"What is some advice for planning an Alaskan vacation?","13","0","0","what","1","0","0","827"
+"What is there to do in Cleveland Ohio?","9","0","0","what","1","0","0","72"
+"Extract a list of all of the communties and counties mentioned in this article about SH 115.
+
+Context: SH 115 begins at an intersection with Interstate 20 and Farm to Market Road 1927 in Pyote. The route travels north along the eastern edge of town and through Far West Texas oil fields before reaching Wink. The route then turns northeast, next reaching Kermit. The route travels through downtown Kermit, passing the Winkler County Courthouse. The route continues to the northeast, crossing oil fields of Winkler and Andrews Counties, before reaching Andrews. The route travels through Andrews, intersecting U.S. Route 385. The route continues northeast, crossing through the intersection of Andrews, Gaines, Martin, and Dawson Counties before reaching its terminus at SH 349 at the unincorporated community of Patricia, Texas.","207","0","0","list","0","1","15","17"
+"Who does Machiavelli believe exemplifies the characteristics of a true prince in The Prince, and why does he hold this belief?","31","0","0","why","1","0","2","1178"
+"Classify the following as a 'Country', 'State' or 'City': California, Sacramento, Chicago, Singapore, New Delhi, London, Tennessee, New York","35","0","0","other","0","0","8","39"
+"What are some tricks to baking a really good cake?","12","0","0","what","1","0","0","893"
+"How did the United States win the Cold War?","10","0","0","how","1","0","0","400"
+"Describe a trip to Tokyo. What should I be prepared for? What should I eat? Any can't-miss attractions?","25","0","0","describe","1","0","0","833"
+"What is GeneBass?","4","0","0","what","1","0","0","262"
+"What is The Lord Of The Rings?
+
+Context: The Lord of the Rings is an epic high-fantasy novel by English author and scholar J. R. R. Tolkien. Set in Middle-earth, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.","107","0","0","what","0","0","7","691"
+"Create content for an AirBnB guest pamphlet for a house that is on the beach in Florida. It should include the property address, host contact information, wi-fi network and password, check-in/out instructions, practical information about the property (e.g., garbage & recycling days), and the best restaurants, bars and activities near the house.","86","0","0","other","0","1","10","1497"
+"What is a good second language to learn beyond English, and why?","16","0","0","what","1","0","2","81"
+"Who is the finest Indian cricketer right now?
+
+Context: Virat Kohli (Hindi pronunciation:  born 5 November 1988) is an Indian international cricketer and former captain of the Indian national cricket team. He now plays as a right-handed batter for Royal Challengers Bangalore in the IPL and for Delhi in Indian domestic cricket. He is widely recognised as one of the best batsman in cricket history. He is the second most prolific international century batsman in cricket history. The International Cricket Council elected him the male cricketer of the decade despite holding the record for most runs in T20 internationals and the IPL. Kohli has also contributed to a number of India's victories, including the 2011 World Cup and the 2013 Champions Trophy.","189","0","0","other","0","0","5","587"
+"Who is Bill Clinton?
+
+Context: William Jefferson Clinton (né Blythe III; born August 19, 1946) is an American politician who served as the 42nd president of the United States from 1993 to 2001. He previously served as governor of Arkansas from 1979 to 1981 and again from 1983 to 1992, and as attorney general of Arkansas from 1977 to 1979. A member of the Democratic Party, Clinton became known as a New Democrat, as many of his policies reflected a centrist ""Third Way"" political philosophy. He is the husband of Hillary Clinton, who was a U.S. senator from New York from 2001 to 2009, secretary of state from 2009 to 2013 and the Democratic nominee for president in the 2016 presidential election.","175","0","0","other","0","0","10","1216"
+"Write a short blog post about why you have chosen to delete your instagram account and why you think that instagram has an negative impact on society.","37","0","0","write","0","0","1","304"
