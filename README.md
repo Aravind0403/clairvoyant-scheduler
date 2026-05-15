@@ -15,7 +15,7 @@ FCFS (default):    [long ██████████████████�
                     ^ short requests wait the full long generation time
 
 SJF (Clairvoyant): [short ██] [short ██] [short ██] [long ████████████████████]
-                    ^ short requests served first — 44% lower P50
+                    ^ short requests served first; end-to-end GPU benchmarks in progress
 ```
 
 > **Scope:** Clairvoyant targets serial-dispatch backends (Ollama, single-process model servers) — the dominant deployment model for on-premise LLM serving at small-to-medium scale. vLLM's continuous batching solves a different layer of the problem (within-batch scheduling, not admission ordering) and is explicitly out of scope.
@@ -64,10 +64,11 @@ Incoming Request
 
 | Metric | Value |
 |--------|-------|
-| ONNX inference latency | **0.029ms** (344× under the 10ms target) |
-| Ranking accuracy | **76.29%** (random baseline: 33%) |
-| SJF ordering accuracy | **100%** at τ = 120s (Apple M1, Gemma3:4b) |
-| P50 latency reduction — short requests | **44%** vs FCFS |
+| ONNX inference latency | **0.029ms** (>100× below any meaningful generation latency) |
+| In-distribution ranking accuracy | **62–96%** across three models (random baseline: 50%) |
+| SJF ordering accuracy | **100%** at τ = 120s (Apple M1, Gemma3:4b, n=8) |
+| Cross-distribution ranking accuracy | **52–66%** |
+| End-to-end GPU latency benchmark | In progress (RTX 4090, Vast.ai) |
 | Backend modification required | **None** |
 
 **Starvation timeout formula** — empirically derived, hardware-agnostic:
@@ -76,7 +77,7 @@ Incoming Request
 τ = 3 × expected_short_request_latency
 ```
 
-Validated across Apple M1 Pro (τ=120s, ~40s/request) and NVIDIA RTX 4090 (τ=15s, ~4s/request).
+Apple M1 + Ollama (~40s/req) → τ = 120s. RTX 4090 (~4s/req) → τ = 15s.
 
 GPU benchmark across two model families (Gemma3:4b, Llama3.1:8b) with P50/P95/P99 measurements in progress.
 
@@ -84,7 +85,7 @@ GPU benchmark across two model families (Gemma3:4b, Llama3.1:8b) with P50/P95/P9
 
 ## Why Ranking Accuracy, Not Classification Accuracy
 
-Classification accuracy is **47.6%** (random baseline: 33.3%). Ranking accuracy is **76.29%**. The scheduler needs to order Short before Long — not predict exact token counts. Medium misclassification has limited impact on SJF ordering. Ranking accuracy captures the metric that actually matters.
+Classification accuracy across three models: 41–67% (random baseline: 33.3%). Ranking accuracy: **62–96%** (random baseline: 50%). The scheduler needs to order Short before Long — not predict exact token counts. Medium misclassification has limited impact on SJF ordering. Ranking accuracy captures the metric that actually matters, and consistently exceeds classification accuracy by 21–29 percentage points.
 
 The core finding: **19 surface-level lexical features are sufficient for ranking quality that produces correct SJF ordering**. Code requests are longer than factual questions regardless of which dataset or model you train on — because `has_code_keyword` fires on vocabulary, not model behaviour.
 
@@ -192,9 +193,9 @@ This is a production hazard — any XGBoost 2.x model with binary features will 
 
 ## Paper
 
-**Clairvoyant: Eliminating Head-of-Line Blocking in LLM Inference via Lexical-Feature SJF Scheduling**
+**Clairvoyant: Predictive SJF Scheduling for Head-of-Line Blocking Mitigation in LLM Serving**
 
-In preparation. Targeting MLSys 2027.
+arXiv preprint (v1). Targeting MLSys 2027.
 
 ---
 
