@@ -1,0 +1,49 @@
+{
+  "simulation": [
+    {
+      "rho": 0.3,
+      "lambda": 0.0484,
+      "fcfs_p50": 3.87,
+      "sjf_p50": 3.88,
+      "reduction_pct": -0.4,
+      "reduction_std": 1.7
+    },
+    {
+      "rho": 0.5,
+      "lambda": 0.0806,
+      "fcfs_p50": 4.53,
+      "sjf_p50": 4.41,
+      "reduction_pct": 2.7,
+      "reduction_std": 3.7
+    },
+    {
+      "rho": 0.6,
+      "lambda": 0.0968,
+      "fcfs_p50": 5.73,
+      "sjf_p50": 5.11,
+      "reduction_pct": 10.9,
+      "reduction_std": 3.9
+    },
+    {
+      "rho": 0.74,
+      "lambda": 0.1194,
+      "fcfs_p50": 9.58,
+      "sjf_p50": 7.92,
+      "reduction_pct": 17.4,
+      "reduction_std": 10.1
+    },
+    {
+      "rho": 0.85,
+      "lambda": 0.1371,
+      "fcfs_p50": 15.66,
+      "sjf_p50": 14.1,
+      "reduction_pct": 10.0,
+      "reduction_std": 14.3
+    }
+  ],
+  "burst": {
+    "rho_approx": ">>1",
+    "reduction_pct": 70.0,
+    "source": "RTX4090 Gemma3:4b benchmark n=250"
+  }
+}

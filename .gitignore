@@ -39,6 +39,19 @@ scheduler/clairvoyant-scheduler
 stage3_*.txt
 stage3_*.log
 
+# Paper draft — kept local during active editing, will add when stable
+PAPER_DRAFT.tex
+PAPER_DRAFT.aux
+PAPER_DRAFT.bbl
+PAPER_DRAFT.blg
+PAPER_DRAFT.out
+PAPER_DRAFT.pdf
+PAPER_DRAFT.log
+*.aux
+*.bbl
+*.blg
+*.out
+
 # IDE
 .idea/
 .vscode/
