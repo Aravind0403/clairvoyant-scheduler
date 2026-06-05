@@ -139,7 +139,7 @@ Simulation at ρ = 0.74, Poisson arrivals, 5 seeds (service times 𝒩(3.5 s, 0.
 
 τ = 3 × µ_short sits at the Pareto elbow: 17% short P50 improvement over FCFS while bounding long P95 penalty to 17%. In the burst benchmark, τ has negligible effect (<1% variation) — all short requests clear within ~175 s regardless of τ.
 
-**Calibration rule:** measure µ_short under representative mixed-workload queueing conditions (not sequential service times). Apple M1 + Ollama → µ_short ≈ 40 s → τ = 120 s. RTX 4090 → µ_short ≈ 3.5 s → τ = 10.5 s.
+**Calibration rule:** measure µ_short under representative mixed-workload queueing conditions (not sequential service times). Apple M1 + Ollama → µ_short ≈ 40 s → τ = 120 s. RTX 4090 → µ_short ≈ 3.5 s → recommended τ = 10.5 s (benchmark used τ = 15 s to confirm robustness to over-specification).
 
 ---
 
@@ -153,7 +153,7 @@ Ranking accuracy (62–96%) exceeds classification accuracy by 21–29 pp across
 
 ## Dataset Bias Finding
 
-**Curated instruction datasets are systematically unusable as SJF training sources.**
+**Curated instruction datasets are systematically unsuitable as SJF training sources.**
 
 | Dataset | Long (≥800 tokens) | % Long | Usable? |
 |---------|-------------------|--------|---------|
@@ -287,7 +287,7 @@ This affects any XGBoost 2.x model with binary features and will fail silently w
 
 ## Paper
 
-**Clairvoyant: Predictive SJF Scheduling for Head-of-Line Blocking Mitigation in LLM Serving**  
+**Clairvoyant: Predictive SJF Scheduling to Mitigate Head-of-Line Blocking in Serial LLM Backends**  
 Aravind Sundaresan — Independent Researcher — aravindsharma20@gmail.com  
 arXiv preprint — https://github.com/Aravind0403/clairvoyant-scheduler
 
