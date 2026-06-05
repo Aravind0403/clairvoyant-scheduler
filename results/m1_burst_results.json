@@ -1,0 +1,113 @@
+{
+  "model": "gemma3:4b",
+  "url": "http://[::1]:8080/v1/chat/completions",
+  "hardware": "Apple M1 (set manually if needed)",
+  "n_short": 4,
+  "n_long": 4,
+  "runs": [
+    {
+      "run": 1,
+      "short_avg_finish_s": 239.62,
+      "long_avg_finish_s": 155.99,
+      "advantage_s": -83.63,
+      "ordering_accuracy": 25.0,
+      "wall_time_s": 340.37,
+      "short_finish_times": [
+        308.19,
+        34.3,
+        340.37,
+        275.64
+      ],
+      "long_finish_times": [
+        81.98,
+        176.95,
+        244.42,
+        120.62
+      ]
+    },
+    {
+      "run": 2,
+      "short_avg_finish_s": 81.17,
+      "long_avg_finish_s": 246.18,
+      "advantage_s": 165.01,
+      "ordering_accuracy": 100.0,
+      "wall_time_s": 312.98,
+      "short_finish_times": [
+        33.23,
+        66.55,
+        128.38,
+        96.53
+      ],
+      "long_finish_times": [
+        170.51,
+        227.55,
+        273.68,
+        312.98
+      ]
+    },
+    {
+      "run": 3,
+      "short_avg_finish_s": 89.01,
+      "long_avg_finish_s": 238.0,
+      "advantage_s": 149.0,
+      "ordering_accuracy": 93.8,
+      "wall_time_s": 330.59,
+      "short_finish_times": [
+        28.75,
+        61.39,
+        87.29,
+        178.6
+      ],
+      "long_finish_times": [
+        147.79,
+        330.59,
+        260.95,
+        212.68
+      ]
+    },
+    {
+      "run": 4,
+      "short_avg_finish_s": 119.02,
+      "long_avg_finish_s": 239.69,
+      "advantage_s": 120.68,
+      "ordering_accuracy": 81.2,
+      "wall_time_s": 340.38,
+      "short_finish_times": [
+        28.18,
+        58.39,
+        90.99,
+        298.51
+      ],
+      "long_finish_times": [
+        148.85,
+        265.77,
+        203.78,
+        340.38
+      ]
+    },
+    {
+      "run": 5,
+      "short_avg_finish_s": 72.61,
+      "long_avg_finish_s": 255.18,
+      "advantage_s": 182.57,
+      "ordering_accuracy": 100.0,
+      "wall_time_s": 317.36,
+      "short_finish_times": [
+        26.45,
+        57.99,
+        86.99,
+        119.01
+      ],
+      "long_finish_times": [
+        236.44,
+        182.61,
+        284.32,
+        317.36
+      ]
+    }
+  ],
+  "aggregate": {
+    "mean_advantage_s": 106.73,
+    "stdev_s": 108.82
+  }
+}

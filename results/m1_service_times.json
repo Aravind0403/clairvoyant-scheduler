@@ -1,0 +1,63 @@
+{
+  "model": "gemma3:4b",
+  "backend": "Ollama direct (no scheduler)",
+  "hardware": "Apple M1 (set manually if needed)",
+  "n_per_class": 5,
+  "records": [
+    {
+      "class": "SHORT",
+      "elapsed_s": 2.297,
+      "prompt_preview": "When did Virgin Australia start operating?\n\nContext: Virgin Australia, the tradi"
+    },
+    {
+      "class": "SHORT",
+      "elapsed_s": 1.413,
+      "prompt_preview": "When was Tomoaki Komorida born?\n\nContext: Komorida was born in Kumamoto Prefectu"
+    },
+    {
+      "class": "SHORT",
+      "elapsed_s": 3.068,
+      "prompt_preview": "Given a reference text about Lollapalooza, where does it take place, who started"
+    },
+    {
+      "class": "SHORT",
+      "elapsed_s": 1.368,
+      "prompt_preview": "Who was Kyle Van Zyl playing against when he scored 36 of hisa teams 61 points?\n"
+    },
+    {
+      "class": "SHORT",
+      "elapsed_s": 1.26,
+      "prompt_preview": "Who was the first to record the Needles and Pins song?\n\nContext: \"Needles and Pi"
+    },
+    {
+      "class": "LONG",
+      "elapsed_s": 35.252,
+      "prompt_preview": "Explain how new technologies, like LLMs and ChatGPT, may revolutionize Applicati"
+    },
+    {
+      "class": "LONG",
+      "elapsed_s": 3.67,
+      "prompt_preview": "Write a paragraph about AI governance."
+    },
+    {
+      "class": "LONG",
+      "elapsed_s": 23.794,
+      "prompt_preview": "Why should people convert lawns and ornamental gardens to native plants?"
+    },
+    {
+      "class": "LONG",
+      "elapsed_s": 24.716,
+      "prompt_preview": "Should superheroes be allowed to break the law?"
+    },
+    {
+      "class": "LONG",
+      "elapsed_s": 25.297,
+      "prompt_preview": "Write a story where a princess discovers an abandon cave. The story should have "
+    }
+  ],
+  "summary": {
+    "avg_short_s": 1.88,
+    "avg_long_s": 22.55,
+    "gap_s": 20.66
+  }
+}

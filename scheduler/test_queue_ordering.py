@@ -91,78 +91,133 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--url",   default="http://[::1]:8080/v1/chat/completions")
     parser.add_argument("--model", default="gemma3:4b")
+    parser.add_argument("--runs",  type=int, default=1, help="Number of repeat runs")
+    parser.add_argument("--save",  default="results/m1_burst_results.json")
     args = parser.parse_args()
 
-    results: list[Result] = []
-    for p in SHORT_PROMPTS:
-        results.append(Result(label="SHORT", prompt=p, start=0.0))
-    for p in LONG_PROMPTS:
-        results.append(Result(label="LONG",  prompt=p, start=0.0))
+    import os
+    all_run_summaries = []
 
-    print(f"Firing {len(SHORT_PROMPTS)} SHORT + {len(LONG_PROMPTS)} LONG requests concurrently")
-    print(f"Target: {args.url}  model: {args.model}\n")
+    for run_idx in range(1, args.runs + 1):
+        if args.runs > 1:
+            print(f"\n{'━'*80}")
+            print(f"RUN {run_idx}/{args.runs}")
+            print(f"{'━'*80}")
 
-    threads = [
-        threading.Thread(target=send_request, args=(args.url, args.model, r), daemon=True)
-        for r in results
-    ]
+        results: list[Result] = []
+        for p in SHORT_PROMPTS:
+            results.append(Result(label="SHORT", prompt=p, start=0.0))
+        for p in LONG_PROMPTS:
+            results.append(Result(label="LONG",  prompt=p, start=0.0))
 
-    batch_start = time.time()
-    for t in threads:
-        t.start()
-    for t in threads:
-        t.join()
-    batch_end = time.time()
+        print(f"Firing {len(SHORT_PROMPTS)} SHORT + {len(LONG_PROMPTS)} LONG requests concurrently")
+        print(f"Target: {args.url}  model: {args.model}\n")
 
-    # Normalise finish times to seconds after batch start
-    for r in results:
-        r.end = r.end - batch_start
-        r.start = r.start - batch_start
+        threads = [
+            threading.Thread(target=send_request, args=(args.url, args.model, r), daemon=True)
+            for r in results
+        ]
 
-    # ── Results table ─────────────────────────────────────────────────────────
-    print(f"{'LABEL':<8} {'FINISH(s)':>10} {'DURATION(s)':>12}  PROMPT (first 60 chars)")
-    print("─" * 80)
+        batch_start = time.time()
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+        batch_end = time.time()
 
-    sorted_results = sorted(results, key=lambda r: r.end)
-    for r in sorted_results:
-        err = f"  ← ERROR {r.error}" if r.error else ""
-        print(f"{r.label:<8} {r.end:>10.2f} {r.duration:>12.2f}  {r.prompt[:60]!r}{err}")
+        for r in results:
+            r.end = r.end - batch_start
+            r.start = r.start - batch_start
 
-    # ── Summary ───────────────────────────────────────────────────────────────
-    short_ok = [r for r in results if r.label == "SHORT" and not r.error]
-    long_ok  = [r for r in results if r.label == "LONG"  and not r.error]
+        # ── Results table ─────────────────────────────────────────────────────
+        print(f"{'LABEL':<8} {'FINISH(s)':>10} {'DURATION(s)':>12}  PROMPT (first 60 chars)")
+        print("─" * 80)
 
-    if not short_ok or not long_ok:
-        print("\nNot enough successful results to summarise.")
-        return
+        sorted_results = sorted(results, key=lambda r: r.end)
+        for r in sorted_results:
+            err = f"  ← ERROR {r.error}" if r.error else ""
+            print(f"{r.label:<8} {r.end:>10.2f} {r.duration:>12.2f}  {r.prompt[:60]!r}{err}")
 
-    short_finish = [r.end for r in short_ok]
-    long_finish  = [r.end for r in long_ok]
+        # ── Summary ───────────────────────────────────────────────────────────
+        short_ok = [r for r in results if r.label == "SHORT" and not r.error]
+        long_ok  = [r for r in results if r.label == "LONG"  and not r.error]
 
-    short_avg = statistics.mean(short_finish)
-    long_avg  = statistics.mean(long_finish)
+        if not short_ok or not long_ok:
+            print("\nNot enough successful results to summarise.")
+            continue
 
-    short_finished_first = sum(
-        1 for s in short_finish for l in long_finish if s < l
-    )
-    total_pairs = len(short_finish) * len(long_finish)
-    ordering_accuracy = short_finished_first / total_pairs * 100
+        short_finish = [r.end for r in short_ok]
+        long_finish  = [r.end for r in long_ok]
 
-    print("\n" + "─" * 80)
-    print("SUMMARY")
-    print(f"  Short avg finish : {short_avg:.2f}s")
-    print(f"  Long  avg finish : {long_avg:.2f}s")
-    print(f"  Advantage        : {long_avg - short_avg:+.2f}s")
-    print(f"  Ordering accuracy: {short_finished_first}/{total_pairs} pairs = {ordering_accuracy:.1f}%")
-    print(f"  Total wall time  : {batch_end - batch_start:.2f}s")
-    print()
+        short_avg = statistics.mean(short_finish)
+        long_avg  = statistics.mean(long_finish)
+        advantage = long_avg - short_avg
 
-    if ordering_accuracy >= 80:
-        print("✓ PASS — Short requests finished before Long in the majority of pairs")
-    elif ordering_accuracy >= 50:
-        print("~ PARTIAL — Some ordering benefit but not consistent")
-    else:
-        print("✗ FAIL — Long requests finishing before Short (check predictor / queue)")
+        short_finished_first = sum(
+            1 for s in short_finish for l in long_finish if s < l
+        )
+        total_pairs = len(short_finish) * len(long_finish)
+        ordering_accuracy = short_finished_first / total_pairs * 100
+
+        print("\n" + "─" * 80)
+        print("SUMMARY")
+        print(f"  Short avg finish : {short_avg:.2f}s")
+        print(f"  Long  avg finish : {long_avg:.2f}s")
+        print(f"  Advantage        : {advantage:+.2f}s  ← long_avg − short_avg")
+        print(f"  Ordering accuracy: {short_finished_first}/{total_pairs} pairs = {ordering_accuracy:.1f}%")
+        print(f"  Total wall time  : {batch_end - batch_start:.2f}s")
+        print()
+
+        if ordering_accuracy >= 80:
+            print("✓ PASS")
+        elif ordering_accuracy >= 50:
+            print("~ PARTIAL")
+        else:
+            print("✗ FAIL")
+
+        all_run_summaries.append({
+            "run": run_idx,
+            "short_avg_finish_s": round(short_avg, 2),
+            "long_avg_finish_s":  round(long_avg,  2),
+            "advantage_s":        round(advantage,  2),
+            "ordering_accuracy":  round(ordering_accuracy, 1),
+            "wall_time_s":        round(batch_end - batch_start, 2),
+            "short_finish_times": [round(t, 2) for t in short_finish],
+            "long_finish_times":  [round(t, 2) for t in long_finish],
+        })
+
+    # ── Multi-run aggregate ────────────────────────────────────────────────────
+    if len(all_run_summaries) > 1:
+        advantages = [r["advantage_s"] for r in all_run_summaries]
+        print(f"\n{'═'*80}")
+        print(f"AGGREGATE ({len(all_run_summaries)} runs)")
+        print(f"  Advantage per run : {[f'{a:.1f}s' for a in advantages]}")
+        print(f"  Mean advantage    : {statistics.mean(advantages):.2f}s")
+        print(f"  Stdev             : {statistics.stdev(advantages):.2f}s")
+        print(f"{'═'*80}")
+
+    # ── Save ──────────────────────────────────────────────────────────────────
+    if args.save and all_run_summaries:
+        import json as _json
+        from pathlib import Path
+        out = {
+            "model":    args.model,
+            "url":      args.url,
+            "hardware": "Apple M1 (set manually if needed)",
+            "n_short":  len(SHORT_PROMPTS),
+            "n_long":   len(LONG_PROMPTS),
+            "runs":     all_run_summaries,
+        }
+        if len(all_run_summaries) > 1:
+            advantages = [r["advantage_s"] for r in all_run_summaries]
+            out["aggregate"] = {
+                "mean_advantage_s": round(statistics.mean(advantages), 2),
+                "stdev_s":          round(statistics.stdev(advantages), 2),
+            }
+        save_path = Path(args.save)
+        save_path.parent.mkdir(parents=True, exist_ok=True)
+        save_path.write_text(_json.dumps(out, indent=2))
+        print(f"\n  Saved → {save_path}")
 
 
 if __name__ == "__main__":
