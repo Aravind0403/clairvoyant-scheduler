@@ -1,0 +1,35 @@
+[
+  {
+    "dataset": "ShareGPT",
+    "ranking_accuracy_pct": 79.9,
+    "classification_acc_pct": 52.5,
+    "n_train": 320,
+    "n_test": 80,
+    "n_short_test": 38,
+    "n_long_test": 42,
+    "epochs": 1,
+    "model": "distilbert-base-uncased"
+  },
+  {
+    "dataset": "LMSYS",
+    "ranking_accuracy_pct": 92.0,
+    "classification_acc_pct": 55.0,
+    "n_train": 320,
+    "n_test": 80,
+    "n_short_test": 39,
+    "n_long_test": 41,
+    "epochs": 1,
+    "model": "distilbert-base-uncased"
+  },
+  {
+    "dataset": "OASST1",
+    "ranking_accuracy_pct": 69.5,
+    "classification_acc_pct": 65.0,
+    "n_train": 320,
+    "n_test": 80,
+    "n_short_test": 40,
+    "n_long_test": 40,
+    "epochs": 1,
+    "model": "distilbert-base-uncased"
+  }
+]

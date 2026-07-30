@@ -13,9 +13,10 @@ type Config struct {
 	ListenAddr string // LISTEN_ADDR, default :8080
 	BackendURL string // BACKEND_URL, default http://localhost:11434
 
-	// Queue
+	// Queue & Dispatcher
 	QueueCapacity     int           // QUEUE_CAPACITY, default 256
 	StarvationTimeout time.Duration // STARVATION_TIMEOUT_SEC, default 15
+	MaxConcurrency    int           // MAX_CONCURRENCY, default 1 (increase for vLLM batching)
 
 	// ONNX
 	ONNXModelPath      string // ONNX_MODEL_PATH, default model/predictor.onnx
@@ -30,6 +31,7 @@ func Load() *Config {
 		BackendURL:        getEnv("BACKEND_URL", "http://localhost:11434"),
 		QueueCapacity:     getEnvInt("QUEUE_CAPACITY", 256),
 		StarvationTimeout: time.Duration(getEnvInt("STARVATION_TIMEOUT_SEC", 15)) * time.Second,
+		MaxConcurrency:    getEnvInt("MAX_CONCURRENCY", 1),
 		ONNXModelPath:     getEnv("ONNX_MODEL_PATH", "model/predictor.onnx"),
 		ONNXLibPath:       getEnv("ONNX_LIB_PATH", ""),
 		ONNXOutputLabel:   getEnv("ONNX_OUTPUT_LABEL", "label"),

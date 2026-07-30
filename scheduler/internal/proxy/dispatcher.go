@@ -18,37 +18,57 @@ import (
 
 // ── Dispatcher ───────────────────────────────────────────────────────────────
 
-// Dispatcher pops requests from the SJF queue and forwards them one at a time
-// to the backend (single dispatch — Ollama is single-threaded).
+// Dispatcher pops requests from the SJF queue and forwards them to the backend.
+// Supports single-threaded serial dispatch (maxConcurrency=1, e.g. Ollama)
+// or multi-concurrent dispatch (maxConcurrency>1, e.g. vLLM continuous batching).
 type Dispatcher struct {
-	backendURL string
-	q          *queue.Queue
-	client     *http.Client
+	backendURL     string
+	q              *queue.Queue
+	client         *http.Client
+	maxConcurrency int
+	sem            chan struct{}
 }
 
 func NewDispatcher(backendURL string, q *queue.Queue) *Dispatcher {
+	return NewDispatcherWithConcurrency(backendURL, q, 1)
+}
+
+func NewDispatcherWithConcurrency(backendURL string, q *queue.Queue, maxConcurrency int) *Dispatcher {
+	if maxConcurrency <= 0 {
+		maxConcurrency = 1
+	}
 	return &Dispatcher{
-		backendURL: backendURL,
-		q:          q,
-		client:     &http.Client{Timeout: 5 * time.Minute},
+		backendURL:     backendURL,
+		q:              q,
+		client:         &http.Client{Timeout: 5 * time.Minute},
+		maxConcurrency: maxConcurrency,
+		sem:            make(chan struct{}, maxConcurrency),
 	}
 }
 
 // Run blocks until the queue is closed. Call as a goroutine.
 func (d *Dispatcher) Run() {
-	log.Println("dispatcher: started")
+	log.Printf("dispatcher: started (maxConcurrency=%d)", d.maxConcurrency)
 	for {
+		// Acquire a concurrency slot in the admission gate
+		d.sem <- struct{}{}
+
 		req, ok := d.q.Pop()
 		if !ok {
+			<-d.sem // Release slot if queue closed
 			log.Println("dispatcher: queue closed, stopping")
 			return
 		}
 
 		waited := time.Since(req.EnqueuedAt)
-		log.Printf("dispatcher: dequeued class=%d waited=%.1fms qlen=%d",
-			req.Class, float64(waited.Microseconds())/1000.0, d.q.Len())
+		log.Printf("dispatcher: dequeued class=%d waited=%.1fms qlen=%d (in-flight=%d/%d)",
+			req.Class, float64(waited.Microseconds())/1000.0, d.q.Len(), len(d.sem), d.maxConcurrency)
 
-		req.RespChan <- d.forward(req)
+		// Dispatch worker goroutine
+		go func(r *queue.Request) {
+			defer func() { <-d.sem }()
+			r.RespChan <- d.forward(r)
+		}(req)
 	}
 }
 

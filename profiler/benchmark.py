@@ -228,7 +228,8 @@ def percentile(data: list[float], p: int) -> float:
     return sorted_data[lo] + (sorted_data[hi] - sorted_data[lo]) * (k - lo)
 
 
-def summarise(results: list[Result]) -> dict:
+def summarise(results: list[Result]) -> list[dict]:
+    """Pooled summary across all runs (original behaviour)."""
     by_condition: dict[str, dict[str, list[float]]] = {}
     for r in results:
         if r.error:
@@ -248,6 +249,76 @@ def summarise(results: list[Result]) -> dict:
                 "mean_ms":      round(statistics.mean(latencies), 1),
             })
     return rows
+
+
+def summarise_per_run(results: list[Result]) -> list[dict]:
+    """
+    Per-run P50/P95/P99, then mean ± std dev across runs.
+    Returns one row per (condition, prompt_class) with mean and stdev columns.
+    """
+    # Group: condition → prompt_class → run_id → [latency_ms]
+    data: dict[str, dict[str, dict[int, list[float]]]] = {}
+    for r in results:
+        if r.error:
+            continue
+        data \
+            .setdefault(r.condition, {}) \
+            .setdefault(r.prompt_class, {}) \
+            .setdefault(r.run_id, []) \
+            .append(r.latency_ms)
+
+    rows = []
+    for condition in sorted(data):
+        for prompt_class in sorted(data[condition]):
+            runs = data[condition][prompt_class]
+            run_ids = sorted(runs)
+
+            per_run_p50 = [percentile(runs[rid], 50) for rid in run_ids]
+            per_run_p95 = [percentile(runs[rid], 95) for rid in run_ids]
+            per_run_p99 = [percentile(runs[rid], 99) for rid in run_ids]
+
+            def ms(vals):
+                mean = statistics.mean(vals)
+                std  = statistics.stdev(vals) if len(vals) > 1 else 0.0
+                return round(mean, 1), round(std, 1)
+
+            p50_mean, p50_std = ms(per_run_p50)
+            p95_mean, p95_std = ms(per_run_p95)
+            p99_mean, p99_std = ms(per_run_p99)
+
+            row = {
+                "condition":    condition,
+                "prompt_class": prompt_class,
+                "n_runs":       len(run_ids),
+                # per-run values (comma-separated for CSV)
+                "p50_per_run_ms": ",".join(f"{v:.1f}" for v in per_run_p50),
+                "p95_per_run_ms": ",".join(f"{v:.1f}" for v in per_run_p95),
+                "p99_per_run_ms": ",".join(f"{v:.1f}" for v in per_run_p99),
+                # mean ± std
+                "p50_mean_ms": p50_mean, "p50_std_ms": p50_std,
+                "p95_mean_ms": p95_mean, "p95_std_ms": p95_std,
+                "p99_mean_ms": p99_mean, "p99_std_ms": p99_std,
+            }
+            rows.append(row)
+
+    return rows
+
+
+def print_per_run_table(per_run_rows: list[dict]) -> None:
+    """Print paper-ready mean ± std table to stdout."""
+    print(f"\n{'─'*75}")
+    print(f"  Per-run summary (mean ± std dev across runs)")
+    print(f"{'─'*75}")
+    print(f"  {'COND':<6} {'CLASS':<8} {'RUNS':>5}  "
+          f"{'P50 mean±std':>16}  {'P95 mean±std':>16}  {'P99 mean±std':>16}")
+    print(f"  {'─'*70}")
+    for r in per_run_rows:
+        def fmt(mean, std):
+            return f"{mean/1000:.2f}±{std/1000:.2f}s"
+        print(f"  {r['condition']:<6} {r['prompt_class']:<8} {r['n_runs']:>5}  "
+              f"{fmt(r['p50_mean_ms'], r['p50_std_ms']):>16}  "
+              f"{fmt(r['p95_mean_ms'], r['p95_std_ms']):>16}  "
+              f"{fmt(r['p99_mean_ms'], r['p99_std_ms']):>16}")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -299,7 +370,7 @@ def main():
 
             all_results.extend(results)
 
-    # Write raw results
+    # ── Write raw results ────────────────────────────────────────────────────
     out_path = Path(args.out)
     with out_path.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=[
@@ -316,22 +387,37 @@ def main():
                 "error":        r.error,
                 "prompt":       r.prompt[:80],
             })
-    print(f"\nRaw results → {out_path}")
+    print(f"\nRaw results  → {out_path}")
 
-    # Write summary
+    # ── Pooled summary (original) ────────────────────────────────────────────
     summary_rows = summarise(all_results)
     summary_path = Path(args.summary)
     with summary_path.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=["condition", "prompt_class", "n", "p50_ms", "p95_ms", "p99_ms", "mean_ms"])
+        writer = csv.DictWriter(f, fieldnames=[
+            "condition", "prompt_class", "n", "p50_ms", "p95_ms", "p99_ms", "mean_ms"
+        ])
         writer.writeheader()
         writer.writerows(summary_rows)
+    print(f"Pooled summary → {summary_path}")
 
-    print(f"Summary      → {summary_path}\n")
-    print(f"{'CONDITION':<8} {'CLASS':<8} {'N':>5} {'P50(s)':>8} {'P95(s)':>8} {'P99(s)':>8}")
+    print(f"\n{'CONDITION':<8} {'CLASS':<8} {'N':>5} {'P50(s)':>8} {'P95(s)':>8} {'P99(s)':>8}")
     print("─" * 55)
     for row in summary_rows:
         print(f"{row['condition']:<8} {row['prompt_class']:<8} {row['n']:>5} "
               f"{row['p50_ms']/1000:>8.2f} {row['p95_ms']/1000:>8.2f} {row['p99_ms']/1000:>8.2f}")
+
+    # ── Per-run summary (mean ± std) ─────────────────────────────────────────
+    per_run_rows = summarise_per_run(all_results)
+    per_run_path = Path(args.summary).with_name(
+        Path(args.summary).stem + "_per_run.csv"
+    )
+    with per_run_path.open("w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(per_run_rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(per_run_rows)
+    print(f"Per-run summary → {per_run_path}")
+
+    print_per_run_table(per_run_rows)
 
 
 if __name__ == "__main__":

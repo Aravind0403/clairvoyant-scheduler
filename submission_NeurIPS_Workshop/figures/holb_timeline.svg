@@ -1,0 +1,86 @@
+<svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+
+  <!-- Background -->
+  <rect width="760" height="220" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">Head-of-Line Blocking: FCFS vs. Clairvoyant SJF</text>
+
+  <!-- ── ROW 1: FCFS ── -->
+  <text x="14" y="65" font-size="11" font-weight="bold" fill="#333">FCFS</text>
+
+  <!-- Long job occupies server -->
+  <rect x="80" y="45" width="300" height="32" rx="4" fill="#e05252" stroke="#b03030" stroke-width="1"/>
+  <text x="230" y="66" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Long Job (~70 s)</text>
+
+  <!-- Short job waiting -->
+  <rect x="382" y="45" width="160" height="32" rx="4" fill="#f0a0a0" stroke="#c06060" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="462" y="61" text-anchor="middle" font-size="10" fill="#7a2020">Short Job</text>
+  <text x="462" y="74" text-anchor="middle" font-size="10" fill="#7a2020">waiting 70 s…</text>
+
+  <!-- Short job finally runs -->
+  <rect x="544" y="45" width="55" height="32" rx="4" fill="#4c9e4c" stroke="#2e6e2e" stroke-width="1"/>
+  <text x="571" y="65" text-anchor="middle" font-size="10" fill="white">~8 s</text>
+
+  <!-- HOLB annotation -->
+  <line x1="382" y1="38" x2="543" y2="38" stroke="#e05252" stroke-width="1.2" marker-end="url(#arrowRed)" marker-start="url(#arrowRedL)"/>
+  <text x="462" y="33" text-anchor="middle" font-size="9.5" fill="#c03030">HOLB: +70 s delay</text>
+
+  <!-- ── ROW 2: SJF ── -->
+  <text x="14" y="135" font-size="11" font-weight="bold" fill="#333">SJF</text>
+  <text x="14" y="148" font-size="9" fill="#555">(Clairvoyant)</text>
+
+  <!-- Short job dispatched first -->
+  <rect x="80" y="115" width="55" height="32" rx="4" fill="#4c9e4c" stroke="#2e6e2e" stroke-width="1"/>
+  <text x="107" y="135" text-anchor="middle" font-size="10" fill="white">~8 s</text>
+
+  <!-- Long job runs after -->
+  <rect x="137" y="115" width="300" height="32" rx="4" fill="#e05252" stroke="#b03030" stroke-width="1"/>
+  <text x="287" y="136" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Long Job (~70 s)</text>
+
+  <!-- Minimal wait annotation -->
+  <line x1="80" y1="108" x2="134" y2="108" stroke="#4c9e4c" stroke-width="1.2" marker-end="url(#arrowGreen)" marker-start="url(#arrowGreenL)"/>
+  <text x="107" y="103" text-anchor="middle" font-size="9.5" fill="#2e6e2e">~8 s wait</text>
+
+  <!-- ── Time axis ── -->
+  <line x1="80" y1="175" x2="660" y2="175" stroke="#555" stroke-width="1.2" marker-end="url(#arrowGray)"/>
+  <text x="666" y="178" font-size="10" fill="#333">time</text>
+
+  <!-- Time ticks -->
+  <line x1="80"  y1="172" x2="80"  y2="179" stroke="#555" stroke-width="1"/>
+  <text x="80"  y="190" text-anchor="middle" font-size="9" fill="#444">0 s</text>
+  <line x1="137" y1="172" x2="137" y2="179" stroke="#555" stroke-width="1"/>
+  <text x="137" y="190" text-anchor="middle" font-size="9" fill="#444">8 s</text>
+  <line x1="382" y1="172" x2="382" y2="179" stroke="#555" stroke-width="1"/>
+  <text x="382" y="190" text-anchor="middle" font-size="9" fill="#444">70 s</text>
+  <line x1="437" y1="172" x2="437" y2="179" stroke="#555" stroke-width="1"/>
+  <text x="437" y="190" text-anchor="middle" font-size="9" fill="#444">78 s</text>
+
+  <!-- ── Legend ── -->
+  <rect x="80"  y="200" width="14" height="10" rx="2" fill="#e05252"/>
+  <text x="98"  y="210" font-size="9" fill="#333">Long generation job</text>
+  <rect x="230" y="200" width="14" height="10" rx="2" fill="#4c9e4c"/>
+  <text x="248" y="210" font-size="9" fill="#333">Short factual query</text>
+  <rect x="380" y="200" width="14" height="10" rx="2" fill="#f0a0a0" stroke="#c06060" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="398" y="210" font-size="9" fill="#333">Short query blocked (HOLB)</text>
+
+  <!-- ── Arrow markers ── -->
+  <defs>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c03030"/>
+    </marker>
+    <marker id="arrowRedL" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c03030"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#2e6e2e"/>
+    </marker>
+    <marker id="arrowGreenL" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#2e6e2e"/>
+    </marker>
+  </defs>
+
+</svg>

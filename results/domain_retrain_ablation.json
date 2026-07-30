@@ -1,0 +1,56 @@
+{
+  "baseline_model_b": {
+    "mean_pct": 95.48,
+    "std_pct": 0.74
+  },
+  "ablation": {
+    "90": {
+      "n_total": 90,
+      "n_per_class": 30,
+      "n_seeds": 5,
+      "mean_pct": 79.44,
+      "std_pct": 13.68,
+      "min_pct": 58.33,
+      "max_pct": 100.0,
+      "per_seed": [
+        86.11,
+        75.0,
+        100.0,
+        58.33,
+        77.78
+      ]
+    },
+    "180": {
+      "n_total": 180,
+      "n_per_class": 60,
+      "n_seeds": 5,
+      "mean_pct": 81.25,
+      "std_pct": 7.01,
+      "min_pct": 69.44,
+      "max_pct": 88.19,
+      "per_seed": [
+        77.08,
+        86.11,
+        85.42,
+        69.44,
+        88.19
+      ]
+    },
+    "240": {
+      "n_total": 240,
+      "n_per_class": 80,
+      "n_seeds": 5,
+      "mean_pct": 82.27,
+      "std_pct": 2.89,
+      "min_pct": 77.34,
+      "max_pct": 85.16,
+      "per_seed": [
+        84.77,
+        77.34,
+        85.16,
+        83.2,
+        80.86
+      ]
+    }
+  }
+}

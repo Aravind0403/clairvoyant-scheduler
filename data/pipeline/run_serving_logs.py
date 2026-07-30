@@ -53,13 +53,15 @@ def count_tokens(text: str) -> int:
 
 
 # ── Ollama API call ───────────────────────────────────────────────────────────
-def call_ollama(prompt: str, model: str, base_url: str, timeout: int) -> str:
+def call_ollama(prompt: str, model: str, base_url: str, timeout: int,
+               max_tokens: int = 900) -> str:
     """Send prompt to Ollama, return full response text."""
     url = base_url.rstrip("/") + "/api/generate"
     payload = json.dumps({
-        "model":  model,
-        "prompt": prompt,
-        "stream": False,
+        "model":       model,
+        "prompt":      prompt,
+        "stream":      False,
+        "num_predict": max_tokens,   # cap generation — Long class (≥800) still correct
     }).encode("utf-8")
 
     req = urllib.request.Request(
@@ -117,7 +119,8 @@ def main(prompts_path, out_path, model, base_url, timeout):
             t0 = time.time()
 
             try:
-                response = call_ollama(prompt, model, base_url, timeout)
+                response = call_ollama(prompt, model, base_url, timeout,
+                                       max_tokens=args.max_tokens)
                 elapsed  = time.time() - t0
 
                 if not response.strip():
@@ -172,7 +175,11 @@ if __name__ == "__main__":
     parser.add_argument("--out",     default="data/serving_logs.jsonl")
     parser.add_argument("--model",   default="gemma3:4b")
     parser.add_argument("--url",     default="http://localhost:11434")
-    parser.add_argument("--timeout", type=int, default=300,
+    parser.add_argument("--timeout",    type=int, default=300,
                         help="Per-request timeout in seconds (default: 300)")
+    parser.add_argument("--max-tokens", type=int, default=900,
+                        dest="max_tokens",
+                        help="Cap Ollama generation length (default: 900). "
+                             "Responses hitting cap still classified as Long (≥800).")
     args = parser.parse_args()
     main(args.prompts, args.out, args.model, args.url, args.timeout)

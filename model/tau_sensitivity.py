@@ -333,7 +333,11 @@ def plot_workload_spectrum(spectrum: list, out_dir: pathlib.Path):
                         textcoords="offset points", xytext=(6, 4), fontsize=7.5,
                         color="#2E86AB")
 
-        ax.axvline(x=1.0, color="gray", linestyle=":", linewidth=1, alpha=0.6)
+        ax.axvspan(1.0, 1.25, alpha=0.08, color="gray", zorder=0)
+        ax.axvline(x=1.0, color="gray", linestyle="--", linewidth=1.5, alpha=0.8,
+                   label=r"$\rho=1$ (M/G/1 stability boundary)")
+        ax.text(1.015, 78, "Transient\noverload", fontsize=7.5, color="gray",
+                va="top", style="italic")
         ax.set_xlabel("Queue utilisation ρ", fontsize=12)
         ax.set_ylabel("Short-request P50 reduction vs. FCFS (%)", fontsize=11)
         ax.set_title("SJF benefit scales with queue pressure", fontsize=13)

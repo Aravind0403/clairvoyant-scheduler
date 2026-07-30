@@ -141,6 +141,15 @@ Simulation at ρ = 0.74, Poisson arrivals, 5 seeds (service times 𝒩(3.5 s, 0.
 
 **Calibration rule:** measure µ_short under representative mixed-workload queueing conditions (not sequential service times). Apple M1 + Ollama → µ_short ≈ 40 s → τ = 120 s. RTX 4090 → µ_short ≈ 3.5 s → recommended τ = 10.5 s (benchmark used τ = 15 s to confirm robustness to over-specification).
 
+### Real-Workload Trace Replay (GCP NVIDIA L4 GPU)
+
+Replay of real LMSYS conversation prompts on GCP Compute Engine (`g2-standard-4`, 1× NVIDIA L4 24GB VRAM) under Poisson arrivals ($\rho = 0.80$, mean service time $E[S] = 6.2\text{ s}$):
+
+| Policy / Endpoint | Short TTFT P50 | Short Queue Wait P50 | Short End-to-End P50 | Latency Reduction |
+|-------------------|----------------|----------------------|----------------------|-------------------|
+| FCFS Baseline (Ollama :11434) | 10.47 s | 10.47 s | 10.86 s | Baseline |
+| **Clairvoyant SJF (Proxy :8080)** | **1.71 s** | **1.71 s** | **1.71 s** | **-83.6% Reduction** (6.1× faster) |
+
 ---
 
 ## Why Ranking Accuracy, Not Classification Accuracy
@@ -173,47 +182,76 @@ Root cause: GPT-generated instruction datasets impose brevity constraints that e
 
 ```
 clairvoyant/
-├── data/pipeline/
-│   ├── download.py                # pull ShareGPT from HuggingFace
-│   ├── clean.py                   # first-turn extraction, length filters
-│   ├── featurize.py               # 19-feature extraction, labelling
-│   ├── collect_lmsys_labeled.py   # LMSYS-Chat-1M, existing response text
-│   ├── collect_oasst1.py          # OASST1, parent-child pairing, EN only
-│   ├── collect_dolly.py           # Dolly 15K (test-only)
-│   ├── collect_cnn_dailymail.py   # CNN/DM RAG surrogate (test-only)
-│   ├── featurize_serving_logs.py  # Model D — production log retraining
-│   └── run_serving_logs.py        # orchestration for Model D pipeline
+├── data/
+│   ├── pipeline/
+│   │   ├── download.py                # pull ShareGPT from HuggingFace
+│   │   ├── clean.py                   # first-turn extraction, length filters
+│   │   ├── featurize.py               # 19-feature extraction, labelling
+│   │   ├── collect_alpaca.py          # Alpaca 52K dataset collector
+│   │   ├── collect_code_alpaca.py     # CodeAlpaca 20K dataset collector
+│   │   ├── collect_lmsys.py           # LMSYS-Chat-1M prompt collector
+│   │   ├── collect_lmsys_labeled.py   # LMSYS-Chat-1M, existing response text
+│   │   ├── collect_oasst1.py          # OASST1, parent-child pairing, EN only
+│   │   ├── collect_dolly.py           # Dolly 15K (test-only)
+│   │   ├── collect_cnn_dailymail.py   # CNN/DM RAG surrogate (test-only)
+│   │   ├── collect_wildchat.py        # WildChat prompt collector
+│   │   ├── featurize_serving_logs.py  # Model D — production log retraining
+│   │   └── run_serving_logs.py        # orchestration for Model D pipeline
 ├── model/
 │   ├── train.py                   # XGBoost, 3-class softmax, 80/20 stratified split
+│   ├── train_distilbert.py        # DistilBERT baseline comparison classifier
 │   ├── export.py                  # ONNX export + XGBoost 2.x split_condition fix
-│   ├── evaluate.py                # ranking accuracy + classification accuracy
 │   ├── evaluate_ranking.py        # cross-distribution matrix (--matrix flag)
 │   ├── ablation.py                # drop-one feature study
 │   ├── baseline_table.py          # prompt-length rule + keyword heuristic baselines
-│   └── tau_sensitivity.py         # τ Pareto sweep + ρ workload spectrum simulation
+│   ├── tau_sensitivity.py         # τ Pareto sweep + ρ workload spectrum simulation
+│   ├── tau_cs2_sweep.py           # coefficient of variation sensitivity sweep
+│   ├── domain_retrain_ablation.py # sample-size convergence study for domain retraining
+│   ├── compare_minimal.py         # lightweight baseline comparator
+│   └── distilbert_colab.ipynb     # Colab notebook for transformer baseline training
 ├── profiler/
 │   ├── benchmark.py               # RTX 4090 GPU benchmark (asyncio.gather burst)
-│   └── feature_extractor.py       # Python reference implementation of features.go
+│   ├── feature_extractor.py       # Python reference implementation of features.go
+│   ├── llm_client.py              # async client wrapper for Ollama backend
+│   ├── profiler.py                # prompt profiler and token counting helper
+│   ├── prompts.py                 # benchmark prompt suites (Short/Long distributions)
+│   └── trace_replay.py            # real-workload trace replay simulator (GCP L4)
 ├── results/
+│   ├── EXPERIMENT_RESULTS_SUMMARY.md # consolidated index of all benchmark data
 │   ├── benchmark_summary_gemma3.csv
 │   ├── benchmark_summary_llama.csv
-│   ├── workload_spectrum.png      # SJF benefit vs ρ (Figure 3 in paper)
-│   ├── workload_spectrum.json     # raw simulation data
+│   ├── gcp_l4_fcfs_rho08.json     # GCP L4 FCFS trace replay log
+│   ├── gcp_l4_sjf_rho08.json      # GCP L4 SJF trace replay log
+│   ├── trace_replay_fcfs_rho074_lmsys.json
+│   ├── trace_replay_sjf_rho074_lmsys.json
+│   ├── distilbert_baseline.json
+│   ├── distilbert_results.txt
+│   ├── domain_retrain_ablation.json
+│   ├── m1_burst_results.json
+│   ├── m1_service_times.json
+│   ├── tau_cs2_sweep.json / .png
+│   ├── workload_spectrum.json / .png # SJF benefit vs ρ (Figure 3 in paper)
 │   ├── tau_sensitivity.png
 │   └── tau_pareto.png
 ├── figures/
-│   ├── holb_timeline.svg/.pdf     # HOLB timeline diagram (Figure 1)
-│   └── architecture.svg/.pdf      # system architecture diagram (Figure 2)
+│   ├── holb_timeline.svg / .pdf   # HOLB timeline diagram (Figure 1)
+│   └── architecture.svg / .pdf    # system architecture diagram (Figure 2)
 ├── scheduler/
-│   ├── config/config.go
-│   ├── predictor/
-│   │   ├── features.go            # Go port of feature extractor
-│   │   └── onnx.go                # onnxruntime_go wrapper
-│   ├── queue/queue.go             # min-heap + starvation timeout
-│   ├── proxy/proxy.go             # HTTP intercept and response streaming
-│   └── main.go
-└── tests/
-    └── test_ordering_dolly.py     # n=8 ordering-correctness test (Dolly 15K prompts)
+│   ├── cmd/
+│   │   └── main.go                # HTTP proxy entry point & wireup
+│   ├── internal/
+│   │   ├── config/config.go       # env-driven configuration
+│   │   ├── predictor/
+│   │   │   ├── features.go        # 19-feature extraction in Go
+│   │   │   ├── features_test.go   # Go feature extractor unit tests
+│   │   │   └── onnx.go            # onnxruntime_go wrapper
+│   │   ├── queue/queue.go         # min-heap priority queue + starvation timeout
+│   │   └── proxy/
+│   │       ├── proxy.go           # HTTP intercept & response streaming handler
+│   │       └── aging.go           # periodic queue reheap aging monitor
+├── tests/
+│   ├── test_ordering_dolly.py     # n=8 ordering-correctness test (Dolly 15K prompts)
+│   └── m1_service_times.py        # Apple Silicon service-time profiling test
 ```
 
 ---
@@ -261,8 +299,10 @@ At ~500 balanced Short/Long examples, XGBoost training completes in under 10 sec
 | `BACKEND_URL` | `http://localhost:11434` | Upstream inference backend |
 | `QUEUE_CAPACITY` | `256` | Max queued requests (429 on overflow) |
 | `STARVATION_TIMEOUT_SEC` | `15` | τ in seconds — set to 3 × µ_short under queueing conditions |
+| `MAX_CONCURRENCY` | `1` | Max concurrent dispatches to backend (increase for batching engines) |
 | `ONNX_MODEL_PATH` | `model/predictor.onnx` | Path to ONNX model |
 | `ONNX_LIB_PATH` | *(system linker)* | Path to `libonnxruntime.so/.dylib` |
+| `ONNX_OUTPUT_LABEL` | `label` | Output tensor name in ONNX model (e.g. `label` or `output_label`) |
 
 ---
 
@@ -289,7 +329,7 @@ This affects any XGBoost 2.x model with binary features and will fail silently w
 
 **Clairvoyant: Predictive SJF Scheduling to Mitigate Head-of-Line Blocking in Serial LLM Backends**  
 Aravind Sundaresan — Independent Researcher — aravindsharma20@gmail.com  
-arXiv preprint — https://github.com/Aravind0403/clairvoyant-scheduler
+arXiv preprint — https://arxiv.org/abs/2606.07248
 
 ---
 

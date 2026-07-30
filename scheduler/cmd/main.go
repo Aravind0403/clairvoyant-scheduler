@@ -49,7 +49,7 @@ func main() {
 	log.Printf("queue: capacity=%d starvation_timeout=%s", cfg.QueueCapacity, cfg.StarvationTimeout)
 
 	// ── dispatcher ────────────────────────────────────────────────────────────
-	dispatcher := proxy.NewDispatcher(cfg.BackendURL, q)
+	dispatcher := proxy.NewDispatcherWithConcurrency(cfg.BackendURL, q, cfg.MaxConcurrency)
 	go dispatcher.Run()
 
 	// ── aging monitor (1s tick) ───────────────────────────────────────────────
