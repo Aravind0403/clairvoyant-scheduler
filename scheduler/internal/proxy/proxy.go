@@ -49,12 +49,14 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	class := h.classify(body)
+	pred := h.predict(body)
 
 	respChan := make(chan queue.Result, 1)
 	req := &queue.Request{
+		Ctx:        r.Context(),
 		Body:       body,
-		Class:      class,
+		Class:      pred.Class,
+		PLong:      pred.PLong,
 		EnqueuedAt: time.Now(),
 		RespChan:   respChan,
 	}
@@ -84,24 +86,24 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	_, _ = w.Write(result.Body)
 }
 
-// classify predicts the output length class (0/1/2) for a raw request body.
-// Falls back to Medium (1) on any error so the request is never dropped.
-func (h *Handler) classify(body []byte) int {
+// predict predicts the output length class (0/1/2) and continuous P(Long) for a raw request body.
+// Falls back to Medium (PLong=0.5) on any error so the request is never dropped.
+func (h *Handler) predict(body []byte) predictor.Prediction {
 	prompt, err := extractLastUserMessage(body)
 	if err != nil {
 		log.Printf("warn: prompt extraction failed (%v) — defaulting to Medium", err)
-		return predictor.Medium
+		return predictor.Prediction{Class: predictor.Medium, PLong: 0.5}
 	}
 
-	class, err := h.pred.Predict(prompt)
+	pred, err := h.pred.Predict(prompt)
 	if err != nil {
 		log.Printf("warn: prediction failed (%v) — defaulting to Medium", err)
-		return predictor.Medium
+		return predictor.Prediction{Class: predictor.Medium, PLong: 0.5}
 	}
 
 	classNames := [3]string{"Short", "Medium", "Long"}
-	log.Printf("predict: class=%d (%s)  prompt=%q", class, classNames[class], truncate(prompt, 60))
-	return class
+	log.Printf("predict: class=%d (%s) pLong=%.3f  prompt=%q", pred.Class, classNames[pred.Class], pred.PLong, truncate(prompt, 60))
+	return pred
 }
 
 func truncate(s string, n int) string {

@@ -141,14 +141,16 @@ Simulation at ρ = 0.74, Poisson arrivals, 5 seeds (service times 𝒩(3.5 s, 0.
 
 **Calibration rule:** measure µ_short under representative mixed-workload queueing conditions (not sequential service times). Apple M1 + Ollama → µ_short ≈ 40 s → τ = 120 s. RTX 4090 → µ_short ≈ 3.5 s → recommended τ = 10.5 s (benchmark used τ = 15 s to confirm robustness to over-specification).
 
-### Real-Workload Trace Replay (GCP NVIDIA L4 GPU)
+### Real-Workload Trace Replay (LMSYS, Poisson Arrivals, n=150)
 
-Replay of real LMSYS conversation prompts on GCP Compute Engine (`g2-standard-4`, 1× NVIDIA L4 24GB VRAM) under Poisson arrivals ($\rho = 0.80$, mean service time $E[S] = 6.2\text{ s}$):
+Replay of real LMSYS conversation prompts on an NVIDIA GPU under sustained Poisson arrivals ($\rho = 0.74$, mean service time $E[S] = 7.0\text{ s}$, $n=150$ requests, 100% completion rate):
 
-| Policy / Endpoint | Short TTFT P50 | Short Queue Wait P50 | Short End-to-End P50 | Latency Reduction |
-|-------------------|----------------|----------------------|----------------------|-------------------|
-| FCFS Baseline (Ollama :11434) | 10.47 s | 10.47 s | 10.86 s | Baseline |
-| **Clairvoyant SJF (Proxy :8080)** | **1.71 s** | **1.71 s** | **1.71 s** | **-83.6% Reduction** (6.1× faster) |
+| Policy / Endpoint | Short TTFT P50 | Short TTFT P95 | Short Queue Wait P50 | Short End-to-End P50 | Latency Reduction |
+|-------------------|----------------|----------------|----------------------|----------------------|-------------------|
+| FCFS Baseline (Ollama :11434) | 20.28 s | 58.10 s | 20.28 s | 22.62 s | Baseline |
+| **Clairvoyant SJF (Proxy :8081)** | **11.35 s** | **29.05 s** | **11.35 s** | **11.36 s** | **-44.0% P50 / -50.0% P95** (1.8× faster TTFT) |
+
+Total system throughput is preserved ($0.106\text{ req/s}$) as work-conserving queue reordering adds zero overhead.
 
 ---
 

@@ -1,13 +1,15 @@
-// queue.go — thread-safe SJF priority queue with starvation prevention.
+// queue.go — thread-safe SJF priority queue with continuous P(Long) ordering
+// and starvation prevention.
 //
 // Ordering:
-//   Primary:   effective_priority (0=Short, 1=Medium, 2=Long)
-//   Secondary: enqueue_time (FIFO within the same class)
+//   Primary:   effective_priority (ascending P(Long) in [0.0, 1.0])
+//   Secondary: enqueue_time (FIFO for requests with equal priority)
 //
 // Starvation prevention:
 //   If a request has waited ≥ StarvationTimeout, its effective priority
-//   is promoted to 0 (Short). The AgingMonitor calls Reheap() periodically
-//   so promoted requests bubble up before the next Pop().
+//   is promoted to negative values (< 0.0), guaranteeing that starved requests
+//   bubble to the top. The oldest starving request gets the lowest value,
+//   preserving FIFO among starved requests.
 //
 // Queue full policy: Push() returns false → caller sends HTTP 429.
 
@@ -15,6 +17,7 @@ package queue
 
 import (
 	"container/heap"
+	"context"
 	"sync"
 	"time"
 )
@@ -29,8 +32,10 @@ type Result struct {
 
 // Request is one inference job waiting in the priority queue.
 type Request struct {
+	Ctx        context.Context // client HTTP request context for cancellation
 	Body       []byte
-	Class      int       // predictor output: 0/1/2
+	Class      int             // predictor output: 0=Short, 1=Medium, 2=Long (argmax)
+	PLong      float32         // continuous scheduling key in [0.0, 1.0]
 	EnqueuedAt time.Time
 	RespChan   chan Result
 
@@ -38,12 +43,17 @@ type Request struct {
 }
 
 // effectivePriority returns the scheduling priority, accounting for aging.
-// A request that has waited ≥ timeout is promoted to 0 (highest).
-func (r *Request) effectivePriority(timeout time.Duration) int {
-	if time.Since(r.EnqueuedAt) >= timeout {
-		return 0
+// If a request has waited ≥ timeout, its priority becomes negative (< 0.0),
+// bubbling it ahead of all unstarved requests (with oldest starved requests first).
+// Otherwise, it returns PLong in [0.0, 1.0].
+func (r *Request) effectivePriority(timeout time.Duration) float32 {
+	waited := time.Since(r.EnqueuedAt)
+	if waited >= timeout {
+		// Negative priority proportional to how long it has been starving.
+		// Older starved requests get more negative values, popping first.
+		return -1.0 - float32(waited.Seconds())
 	}
-	return r.Class
+	return r.PLong
 }
 
 // ── internal heap ────────────────────────────────────────────────────────────
@@ -90,10 +100,11 @@ func (h *minHeap) Pop() any {
 
 // Queue is a thread-safe SJF priority queue.
 type Queue struct {
-	mu       sync.Mutex
-	h        minHeap
-	cap      int
-	ready    chan struct{} // signals dispatcher: at least one item available
+	mu     sync.Mutex
+	h      minHeap
+	cap    int
+	ready  chan struct{} // signals dispatcher: at least one item available
+	closed bool
 }
 
 // New creates a queue with the given capacity and starvation timeout.
@@ -110,12 +121,12 @@ func New(capacity int, starvationTimeout time.Duration) *Queue {
 	return q
 }
 
-// Push enqueues a request. Returns false if the queue is at capacity (caller → 429).
+// Push enqueues a request. Returns false if the queue is closed or full (caller → 429).
 func (q *Queue) Push(r *Request) bool {
 	q.mu.Lock()
 	defer q.mu.Unlock()
 
-	if len(q.h.items) >= q.cap {
+	if q.closed || len(q.h.items) >= q.cap {
 		return false
 	}
 	heap.Push(&q.h, r)
@@ -150,14 +161,14 @@ func (q *Queue) Pop() (*Request, bool) {
 
 // Reheap re-evaluates all priority comparisons — call periodically from
 // the AgingMonitor so that requests promoted by starvation bubble to the top.
-// Returns the number of requests whose effective priority changed to 0 due to aging.
+// Returns the number of requests currently in starved state (waited ≥ timeout).
 func (q *Queue) Reheap() int {
 	q.mu.Lock()
 	defer q.mu.Unlock()
 
 	promoted := 0
 	for _, r := range q.h.items {
-		if r.Class > 0 && r.effectivePriority(q.h.timeout) == 0 {
+		if time.Since(r.EnqueuedAt) >= q.h.timeout {
 			promoted++
 		}
 	}
@@ -167,7 +178,12 @@ func (q *Queue) Reheap() int {
 
 // Close unblocks any waiting Pop() calls and signals the dispatcher to stop.
 func (q *Queue) Close() {
-	close(q.ready)
+	q.mu.Lock()
+	defer q.mu.Unlock()
+	if !q.closed {
+		q.closed = true
+		close(q.ready)
+	}
 }
 
 // Len returns the current number of queued requests.
@@ -176,4 +192,3 @@ func (q *Queue) Len() int {
 	defer q.mu.Unlock()
 	return len(q.h.items)
 }
-

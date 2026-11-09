@@ -101,12 +101,14 @@ Discrete-Event Simulation ($n=2,000$ requests, 5 seeds):
 
 ---
 
-## 7. GCP NVIDIA L4 GPU Real Workload Trace Replay Benchmarks
+## 7. Real Workload Trace Replay Benchmarks (LMSYS, Poisson Arrivals)
 
-Empirical validation on GCP Compute Engine (`g2-standard-4`, 1x NVIDIA L4 24GB VRAM GPU) replaying real LMSYS conversation prompts under Poisson arrivals ($\rho=0.80$, $E[S]=6.2\text{s}$):
+Empirical validation replaying real LMSYS conversation prompts under sustained Poisson arrivals ($\rho=0.74$, $E[S]=7.0\text{s}$, $n=150$ requests, 100% completion rate):
 
-| Policy / Endpoint | Short TTFT P50 | Short Queue Wait P50 | Short End-to-End P50 | Latency Reduction |
-| --- | --- | --- | --- | --- |
-| **FCFS Baseline (Ollama :11434)** | 10.47 s | 10.47 s | 10.86 s | Baseline |
-| **Clairvoyant SJF (Proxy :8080)** | **1.71 s** | **1.71 s** | **1.71 s** | **-83.6% Reduction** ($6.1\times$ faster) |
+| Policy / Endpoint | Short TTFT P50 | Short TTFT P95 | Short Queue Wait P50 | Short End-to-End P50 | Latency Reduction |
+| --- | --- | --- | --- | --- | --- |
+| **FCFS Baseline (Ollama :11434)** | 20.28 s | 58.10 s | 20.28 s | 22.62 s | Baseline |
+| **Clairvoyant SJF (Proxy :8081)** | **11.35 s** | **29.05 s** | **11.35 s** | **11.36 s** | **-44.0% P50 / -50.0% P95** ($1.8\times$ faster) |
+
+*Preserves total system throughput ($0.106\text{ req/s}$) as work-conserving queue reordering adds zero overhead.*
 

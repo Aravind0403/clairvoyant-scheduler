@@ -8,6 +8,7 @@ package proxy
 
 import (
 	"bytes"
+	"context"
 	"io"
 	"log"
 	"net/http"
@@ -61,8 +62,17 @@ func (d *Dispatcher) Run() {
 		}
 
 		waited := time.Since(req.EnqueuedAt)
-		log.Printf("dispatcher: dequeued class=%d waited=%.1fms qlen=%d (in-flight=%d/%d)",
-			req.Class, float64(waited.Microseconds())/1000.0, d.q.Len(), len(d.sem), d.maxConcurrency)
+
+		// Check if client disconnected while waiting in queue
+		if req.Ctx != nil && req.Ctx.Err() != nil {
+			<-d.sem
+			log.Printf("dispatcher: discarded canceled request class=%d pLong=%.3f waited=%.1fms",
+				req.Class, req.PLong, float64(waited.Microseconds())/1000.0)
+			continue
+		}
+
+		log.Printf("dispatcher: dequeued class=%d pLong=%.3f waited=%.1fms qlen=%d (in-flight=%d/%d)",
+			req.Class, req.PLong, float64(waited.Microseconds())/1000.0, d.q.Len(), len(d.sem), d.maxConcurrency)
 
 		// Dispatch worker goroutine
 		go func(r *queue.Request) {
@@ -74,7 +84,12 @@ func (d *Dispatcher) Run() {
 
 // forward sends the request body to the backend and returns the result.
 func (d *Dispatcher) forward(req *queue.Request) queue.Result {
-	backendReq, err := http.NewRequest(
+	ctx := req.Ctx
+	if ctx == nil {
+		ctx = context.Background()
+	}
+	backendReq, err := http.NewRequestWithContext(
+		ctx,
 		http.MethodPost,
 		d.backendURL+"/v1/chat/completions",
 		bytes.NewReader(req.Body),
