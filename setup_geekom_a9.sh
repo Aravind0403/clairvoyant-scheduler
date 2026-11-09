@@ -71,3 +71,4 @@ echo " Setup & Smoke Test Complete!"
 echo "=================================================="
 echo "To start the scheduler proxy on :8080 forwarding to llama.cpp-server (:8000):"
 echo "  ONNX_LIB_PATH=\"${ONNX_LIB_PATH}\" ONNX_MODEL_PATH=model/predictor.onnx BACKEND_URL=http://localhost:8000 ./scheduler/clairvoyant"
+
