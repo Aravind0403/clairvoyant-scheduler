@@ -18,8 +18,8 @@ Evaluate whether predictive Shortest-Job-First (SJF) request admission eliminate
 * **Node Scope:** 1× standalone GEEKOM A9 Mega unit (a 4-node cluster is explicitly not required; single-node admission isolates scheduling dynamics).
 * **Permissions:** Standard user-level shell account with ROCm device access (`/dev/kfd`, `/dev/dri`) and write permissions in a dedicated home workspace. Root access is neither requested nor required.
 * **Testing Window:** 
-  * Phase 1: 30–45 minute smoke test (environment verification, ROCm check, single-prompt end-to-end baseline, and empirical $\mathbb{E}[S_{\text{short}}]$ measurement).
-  * Phase 2: Dedicated benchmark windows scheduled during off-peak hours (UTC+8) to eliminate latency variance from background host activity (~8–10 hours of active execution time total).
+  * Phase 1: 30–45 minute smoke test (environment verification, ROCm check, single-prompt end-to-end baseline, empirical 70B decode speed and $\mathbb{E}[S_{\text{short}}]$ measurement).
+  * Phase 2: Dedicated benchmark windows scheduled during off-peak hours (UTC+8) to eliminate latency variance from background host activity (initial estimate 10–15 hours of active execution time total across scheduled windows, confirmed after measuring decode speed in Phase 1).
 
 ---
 
@@ -51,15 +51,15 @@ To scientifically decouple scheduler benefit from proxy overhead, every test run
 
 ## 5. Workload Profiles & Benchmark Suite
 
-Autoregressive decode speed scales with model size and memory bandwidth (~120–135 GB/s on the 395, yielding ~10–11 tok/s on a 70B Q4). Workloads are sized to guarantee statistical significance while respecting physical execution constraints:
+Autoregressive decode on large unified memory models is memory-bandwidth bound, meaning long generations hold the execution slot for substantial durations. Actual decode speed will be directly measured during the Phase 1 smoke test, and run sizes will be calibrated accordingly. Workloads are sized to clearly demonstrate the effect and its direction while respecting physical machine time constraints:
 
 ### Workload A: Burst Contention Benchmark
 * **70B Model Grid (Scaled for Service Time):**
-  * 10 Short prompts ($<200$ tokens) + 10 Long prompts ($>800$ tokens) queued concurrently.
-  * 3 repeats per arm (9 runs total $\approx 2.5\text{ hours}$ total GPU time).
+  * 10 Short prompts ($<200$ tokens) + 10 Long prompts ($>800$ tokens) queued concurrently (enough to show the effect and its direction without excessive machine reservation).
+  * 3 repeats per arm (9 runs total; duration determined by measured decode speed, with batch size adjusted further if measured speed is near 4–5 tok/s).
 * **8B Model Grid (Full Scale):**
   * 50 Short prompts + 50 Long prompts queued concurrently.
-  * 5 repeats per arm (15 runs total $\approx 2.5\text{ hours}$ total GPU time).
+  * 5 repeats per arm (15 runs total).
 * **Metrics:** 
   * Short requests: P50, P95, P99 completion latency.
   * Long requests: P50, P95, P99 completion latency.
@@ -80,7 +80,7 @@ Autoregressive decode speed scales with model size and memory bandwidth (~120–
 
 In accordance with queueing theory and empirical findings from Section 5.6 of the preprint:
 $$\tau = 3 \times \mathbb{E}[S_{\text{short}}]$$
-* On the 70B model, $\mathbb{E}[S_{\text{short}}]$ will be empirically measured during the Phase 1 smoke test (expected ~15–20 s, giving $\tau \approx 45\text{--}60\text{ s}$).
+* On the 70B model, $\mathbb{E}[S_{\text{short}}]$ will be empirically measured during the Phase 1 smoke test to calibrate $\tau$ directly on-device.
 * Any request waiting in queue longer than $\tau$ is automatically promoted to negative priority values ($< 0.0$), guaranteeing a deterministic upper bound on tail latency for long jobs under high queue saturation.
 
 ---
